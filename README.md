@@ -152,9 +152,13 @@ When tools don't exist, I build them—including **OmniZenit** (GA4/tracking val
 
 <div align="center">
 
-![GitHub Summary Cards](https://github-profile-summary-cards.vercel.app/api/repos/jrodeiro5?theme=github_dark)
+![Profile Details](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/github_dark/0-profile-details.svg)
 
-![GitHub Summary Cards](https://github-profile-summary-cards.vercel.app/api/profile-detail/jrodeiro5?theme=github_dark)
+![Repos Per Language](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/github_dark/1-repos-per-language.svg)
+![Most Commit Language](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/github_dark/2-most-commit-language.svg)
+
+![Stats](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/github_dark/3-stats.svg)
+![Productive Time](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/github_dark/4-productive-time.svg)
 
 </div>
 
