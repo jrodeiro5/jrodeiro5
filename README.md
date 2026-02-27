@@ -1,6 +1,6 @@
 # Javier Rodeiro
 
-Digital Product & Data Analyst | AI Product Strategist | Data Engineering Specialist
+Digital Product & Data Analyst | AI Solutions Developer | Marketing Data Science
 
 <p>
   <img src="https://komarev.com/ghpvc/?username=jrodeiro5&label=Profile%20Views&color=000000&style=flat" alt="Profile views" />
@@ -14,7 +14,7 @@ Digital Product & Data Analyst | AI Product Strategist | Data Engineering Specia
 
 I build data products and analytics systems grounded in clean architecture, rigorous validation, and user-centric design. At Ayesa/Inditex, I manage global analytics infrastructure for PULL&BEAR (56+ markets) using GA4, BigQuery, and automated dashboards. 
 
-When tools don't exist, I build them—including Chrome extensions for tracking validation and custom automation frameworks now adopted across Inditex.
+When tools don't exist, I build them—including OmniZenit (Chrome extension for GA4/tracking validation) and custom automation frameworks now adopted across Inditex.
 
 **Currently:** Digital Product & Data Analyst at Ayesa (Client: Inditex/PULL&BEAR)  
 **Studying:** MSc Data Science & AI, Complutense University of Madrid  
@@ -32,8 +32,8 @@ Documentation tool for Google marketing platforms
 End-to-end GA4, BigQuery, Looker Studio ecosystem for 56+ global markets  
 ![Badge](https://img.shields.io/badge/Scope-Global-000000?style=flat) ![Badge](https://img.shields.io/badge/Users-Enterprise-000000?style=flat)
 
-### Chrome Extensions Portfolio
-ProjectParrot (Jira tracking) | EZ-DS-ORG (Power BI/Looker Studio)  
+### Chrome Extensions
+OmniZenit (Inditex tracking validation)
 ![Badge](https://img.shields.io/badge/Impact-Inditex%20Adoption-000000?style=flat)
 
 ---
@@ -69,7 +69,7 @@ Jira · Linear · Notion · Git · Docker
 - Manage end-to-end analytics for PULL&BEAR web and app across 56+ global markets
 - Extract, process, and transform GA4 and BigQuery data into executive-level reports
 - Design and maintain interactive Looker Studio dashboards with automated daily updates
-- Develop Chrome extensions for tracking validation and custom automation tools adopted across Inditex
+- Develop OmniZenit (Chrome extension for GA4/tracking validation) and custom automation tools adopted across Inditex
 - Conduct hypothesis-driven investigations to identify performance opportunities
 - Implement Kanban framework to optimize analytics team workflow
 
