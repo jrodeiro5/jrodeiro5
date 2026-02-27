@@ -84,11 +84,9 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
     </ul>
   </td>
   <td width="50%">
-    <h4>AI & LLM</h4>
+    <h4>AI</h4>
     <ul>
-      <li>Claude Code</li>
-      <li>LiteLLM</li>
-      <li>AI Automation Frameworks</li>
+      <li>Specialized in Google AI and Vercel environments and products</li>
     </ul>
   </td>
 </tr>
