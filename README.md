@@ -39,7 +39,7 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 **Specialized Tools:**
 - Google Analytics 4, Google Tag Manager, Piwik Pro
 - Google BigQuery, Supabase, Looker Studio
-- Tableau, Power BI, Scimago Graphica
+- Adobe Analytics, Power BI, Scimago Graphica
 - Make, n8n, Google Apps Scripts, Zapier
 - Jira, Linear, Notion
 - Hotjar, Microsoft Clarity
@@ -122,7 +122,7 @@ Designed & delivered comprehensive training on AI automation workflows for data 
 **In Progress (MSc Program Modules):**
 - Linux & Git Fundamentals
 - SQL & NoSQL Databases
-- Business Intelligence (Tableau)
+- Business Intelligence (Adobe Analytics)
 - Python Programming
 - Statistics & Data Analysis
 - Data Mining & Predictive Modeling
@@ -197,8 +197,8 @@ Designed & delivered comprehensive training on AI automation workflows for data 
         <small><strong>Piwik PRO</strong></small>
       </td>
       <td align="center">
-        <img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" width="50" height="50" alt="Tableau" /><br/>
-        <small><strong>Tableau BI</strong></small>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/adobe-analytics.svg" width="50" height="50" alt="Adobe Analytics" /><br/>
+        <small><strong>Adobe<br/>Analytics</strong></small>
       </td>
       <td align="center">
         <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/scimago.jpg" width="50" height="50" alt="Scimago" /><br/>
