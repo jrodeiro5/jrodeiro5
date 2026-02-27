@@ -89,7 +89,32 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 ## Education
 
 **Master's Degrees**
-- **MSc Data Science, Big Data & AI** — Complutense University of Madrid (Oct 2025 - Sep 2026, In Progress)
+
+<div align="center">
+
+<img src="https://seeklogo.com/images/U/Universidad-Complutense-de-Madrid-logo-C3B1D3E1D4-seeklogo.com.png" width="60" height="60" alt="UCM" />
+
+**MSc Data Science, Big Data & AI** — Complutense University of Madrid
+*Oct 2025 - Sep 2026 (In Progress)*
+
+</div>
+
+**In Progress (MSc Program Modules):**
+- Linux & Git Fundamentals
+- SQL & NoSQL Databases
+- Business Intelligence (Tableau)
+- Python Programming
+- Statistics & Data Analysis
+- Data Mining & Predictive Modeling
+- Machine Learning
+- Advanced Data Visualization
+- Deep Learning & AI
+- Apache Spark
+- Big Data Technologies
+- Model Productionization
+- Applied Data Science
+
+**Other Master's**
 - **Master in Digital Analytics** — KSchool (Nov 2023 - Jun 2024)
 
 **Bachelor's**
