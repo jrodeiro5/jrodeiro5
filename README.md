@@ -90,14 +90,8 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 
 **Master's Degrees**
 
-<div align="center">
-
-<img src="https://seeklogo.com/images/U/Universidad-Complutense-de-Madrid-logo-C3B1D3E1D4-seeklogo.com.png" width="60" height="60" alt="UCM" />
-
-**MSc Data Science, Big Data & AI** — Complutense University of Madrid
+**MSc Data Science, Big Data & AI** — [Complutense University of Madrid](https://www.ucm.es/)
 *Oct 2025 - Sep 2026 (In Progress)*
-
-</div>
 
 **In Progress (MSc Program Modules):**
 - Linux & Git Fundamentals
