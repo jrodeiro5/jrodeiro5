@@ -6,8 +6,6 @@
 
 ### 👋 Welcome! I'm Javier
 
-![Wave](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/happy-bouncing.gif)
-
 **Digital Product & Data Analyst** | **AI Solutions Developer** | **MSc Data Science & AI**
 
 **Madrid - A Coruña, Spain** | [LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) | [Website](https://javierrodeiro.com) | [hello@javierrodeiro.com](mailto:hello@javierrodeiro.com)
@@ -290,8 +288,6 @@ I'm interested in discussing data analytics, product strategy, AI automation, an
 ---
 
 <h3 align="center">💡 Let's build something amazing together! 💡</h3>
-
-![Sparkles](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/sparkles.gif)
 
 ![Let's Connect](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/footer.gif)
 
