@@ -31,7 +31,7 @@ Currently pursuing an MSc in Data Science & AI at Complutense University of Madr
 
 <img src="https://github-readme-stats.vercel.app/api?username=jrodeiro5&show_icons=true&theme=transparent&hide_border=true&count_private=true&title_color=000000&text_color=000000" alt="GitHub Stats" />
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=jrodeiro5&theme=transparent&hide_border=true&stroke=000000&ring=000000&fire=000000" alt="Contribution Streak" />
+<img src="https://streak-stats.demolab.com/?user=jrodeiro5&theme=transparent&hide_border=true&stroke=000000&ring=000000&fire=000000" alt="Contribution Streak" />
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=jrodeiro5&show_icons=true&theme=transparent&hide_border=true&layout=compact&title_color=000000&text_color=000000" alt="Top Languages" />
 
