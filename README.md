@@ -57,12 +57,12 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/pullandbear-logo.svg" width="100" height="40" alt="Pull&Bear" /><br/><br/>
+      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/pull_and_bear.png" width="100" height="40" alt="Pull&Bear" /><br/><br/>
       <strong>Pull&Bear Analytics Infrastructure</strong><br/>
       <small>End-to-end GA4, BigQuery, Looker Studio ecosystem for 56+ global markets. Manage analytics across EMEA, Americas, APAC. Design & maintain 50+ dashboards with automated daily updates.</small>
     </td>
     <td align="center" width="50%">
-      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/inditex-logo.jpg" width="100" height="40" alt="Inditex" /><br/><br/>
+      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/inditex_logo.png" width="100" height="40" alt="Inditex" /><br/><br/>
       <strong>OmniZenit Chrome Extension</strong><br/>
       <small>GA4 & tracking validation tool for Inditex teams. Real-time validation of implementations. Custom automation for audits. Adopted across organization.</small>
     </td>
@@ -71,7 +71,7 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 
 ### AI & Automation
 
-<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/ayesa-logo.svg" width="120" height="50" alt="Ayesa" /><br/><br/>
+<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/ayesa_logo.jpg" width="120" height="50" alt="Ayesa" /><br/><br/>
 **AI & Automation Training Program** — 2-month internal program at Ayesa
 Designed & delivered comprehensive training on AI automation workflows for data analysts and engineers.
 
@@ -257,7 +257,7 @@ Designed & delivered comprehensive training on AI automation workflows for data 
       <small>Documentation tool for<br/>Google marketing platforms</small>
     </td>
     <td align="center" width="33%">
-      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/firecrawl-logo.svg" width="80" height="40" alt="Firecrawl" /><br/><br/>
+      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/firecrawl.png" width="80" height="40" alt="Firecrawl" /><br/><br/>
       <strong>Creator Program</strong><br/>
       <small>Web scraping &<br/>data extraction</small>
     </td>
