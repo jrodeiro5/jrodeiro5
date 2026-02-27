@@ -112,7 +112,7 @@ Designed & delivered comprehensive training on AI automation workflows for data 
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/UCM.png" width="80" height="80" alt="UCM" />
+<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/UCM.png" width="140" height="54" alt="UCM" />
 
 **MSc Data Science, Big Data & AI** — [Complutense University of Madrid](https://www.ucm.es/)
 *Oct 2025 - Sep 2026 (In Progress)*
@@ -258,7 +258,7 @@ Designed & delivered comprehensive training on AI automation workflows for data 
       <small>Documentation tool for<br/>Google marketing platforms</small>
     </td>
     <td align="center" width="33%">
-      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/firecrawl.png" width="80" height="40" alt="Firecrawl" /><br/><br/>
+      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/firecrawl.png" width="120" height="120" alt="Firecrawl" /><br/><br/>
       <strong>Creator Program</strong><br/>
       <small>Web scraping &<br/>data extraction</small>
     </td>
