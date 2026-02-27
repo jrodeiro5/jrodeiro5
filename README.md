@@ -27,16 +27,6 @@ Currently pursuing an MSc in Data Science & AI at Complutense University of Madr
 
 ---
 
-## GitHub Stats
-
-<img src="https://github-readme-stats.vercel.app/api?username=jrodeiro5&show_icons=true&theme=transparent&hide_border=true&count_private=true&title_color=000000&text_color=000000" alt="GitHub Stats" />
-
-<img src="https://streak-stats.demolab.com/?user=jrodeiro5&theme=transparent&hide_border=true&stroke=000000&ring=000000&fire=000000" alt="Contribution Streak" />
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=jrodeiro5&show_icons=true&theme=transparent&hide_border=true&layout=compact&title_color=000000&text_color=000000" alt="Top Languages" />
-
----
-
 ## Experience
 
 ### Digital Product & Data Analyst
@@ -128,14 +118,6 @@ Jira | Linear | Trello | Notion
 
 ---
 
----
-
-## GitHub Trophy
-
-<img src="https://github-profile-trophy.vercel.app/?username=jrodeiro5&theme=flat&no-frame=true&column=8&margin-w=5" alt="GitHub Trophies" />
-
----
-
 ## Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
@@ -155,16 +137,19 @@ Spanish (native) | Galician (native) | English (C2 – Cambridge) | French (work
 hello@javierrodeiro.com
 
 <p>
-  <a href="https://linkedin.com/in/javier-rodeiro-rodriguez" target="_blank">
+  <a href="https://linkedin.com/in/javier-rodeiro-rodriguez" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="https://javierrodeiro.com" target="_blank">
+  &nbsp;&nbsp;
+  <a href="https://javierrodeiro.com" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Website-000000?style=flat&logo=globe&logoColor=white" alt="Website" />
   </a>
-  <a href="https://dev.to/jrodeiro5" target="_blank">
+  &nbsp;&nbsp;
+  <a href="https://dev.to/jrodeiro5" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Dev.to-0A0A0A?style=flat&logo=devdotto&logoColor=white" alt="Dev.to" />
   </a>
-  <a href="https://medium.com/@jrodeiro.dev" target="_blank">
+  &nbsp;&nbsp;
+  <a href="https://medium.com/@jrodeiro.dev" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Medium-000000?style=flat&logo=medium&logoColor=white" alt="Medium" />
   </a>
 </p>
