@@ -6,7 +6,7 @@
 
 ### 👋 Welcome! I'm Javier
 
-![Smooth Intro](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/hero-intro.gif)
+![Smooth Intro](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/intro-smooth.gif)
 
 **Digital Product & Data Analyst** | **AI Solutions Developer** | **MSc Data Science & AI**
 
@@ -291,7 +291,7 @@ I'm interested in discussing data analytics, product strategy, AI automation, an
 
 <h3 align="center">💡 Let's build something amazing together! 💡</h3>
 
-![Smooth Outro](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/hero-outro.gif)
+![Smooth Outro](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/outro-smooth.gif)
 
 ![Let's Connect](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/footer.gif)
 
