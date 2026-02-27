@@ -128,6 +128,14 @@ Jira | Linear | Trello | Notion
 
 ---
 
+---
+
+## GitHub Trophy
+
+<img src="https://github-profile-trophy.vercel.app/?username=jrodeiro5&theme=flat&no-frame=true&column=8&margin-w=5" alt="GitHub Trophies" />
+
+---
+
 ## Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
@@ -146,7 +154,20 @@ Spanish (native) | Galician (native) | English (C2 – Cambridge) | French (work
 
 hello@javierrodeiro.com
 
-[LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) | [Website](https://javierrodeiro.com) | [Dev.to](https://dev.to/jrodeiro5) | [Medium](https://medium.com/@jrodeiro.dev) | [GitHub](https://github.com/jrodeiro5)
+<p>
+  <a href="https://linkedin.com/in/javier-rodeiro-rodriguez" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://javierrodeiro.com" target="_blank">
+    <img src="https://img.shields.io/badge/Website-000000?style=flat&logo=globe&logoColor=white" alt="Website" />
+  </a>
+  <a href="https://dev.to/jrodeiro5" target="_blank">
+    <img src="https://img.shields.io/badge/Dev.to-0A0A0A?style=flat&logo=devdotto&logoColor=white" alt="Dev.to" />
+  </a>
+  <a href="https://medium.com/@jrodeiro.dev" target="_blank">
+    <img src="https://img.shields.io/badge/Medium-000000?style=flat&logo=medium&logoColor=white" alt="Medium" />
+  </a>
+</p>
 
 ---
 
