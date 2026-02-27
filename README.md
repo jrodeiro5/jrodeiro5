@@ -1,10 +1,8 @@
-# 👋 Javier Rodeiro Rodríguez
+# Javier Rodeiro Rodríguez
 
 <div align="center">
 
-![GitHub Banner](https://capsule-render.vercel.app/api?type=waving&color=000000&height=200&section=header&text=Javier%20Rodeiro&fontSize=90&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Digital%20Product%20%7C%20Data%20Analytics%20%7C%20AI%20Solutions&descAlignY=60&descAlign=center)
-
-**Digital Product & Data Analyst | AI Solutions Developer | MSc Data Science & AI**
+**Digital Product & Data Analyst** | **AI Solutions Developer** | **MSc Data Science & AI**
 
 <p>
   <a href="https://linkedin.com/in/javier-rodeiro-rodriguez" target="_blank">
@@ -32,33 +30,33 @@
 
 ---
 
-## 🚀 About Me
+## About
 
-I build **data products and analytics systems** grounded in clean data, rigorous validation, and user feedback. Currently managing end-to-end analytics at **Ayesa** (Client: **Inditex/PULL&BEAR**) across 56+ global markets, delivering insights and testing through GA4, BigQuery, and custom tools.
+I build data products and analytics systems grounded in clean data, rigorous validation, and user feedback. Currently managing end-to-end analytics at **Ayesa** (Client: **Inditex/PULL&BEAR**) across 56+ global markets, delivering insights through GA4, BigQuery, and custom tools.
 
-Less time on "What happened?" — more time on "What can I solve?" When tools don't exist, I build them. I'm pursuing an **MSc in Data Science & AI** while developing expertise in uncovering patterns through quantitative and qualitative insights, with a focus on **Product-Led Growth** and **Data Storytelling**.
+When tools don't exist, I build them. I'm pursuing an **MSc in Data Science & AI** while developing expertise in uncovering patterns through quantitative and qualitative insights, with a focus on **Product-Led Growth** and **Data Storytelling**.
 
-**📊 Currently:**
+**Currently**
 - Digital Product & Data Analyst at Ayesa (Inditex/PULL&BEAR)
-- Pursuing MSc Data Science, Big Data & AI @ Complutense University of Madrid
+- MSc Data Science, Big Data & AI @ Complutense University of Madrid
 - Speaker at Measure Camp Madrid 2025
-- Contributor at Datola & Creator Programs (Firecrawl, LinkedMash)
+- Contributor at Datola & Creator Programs
 
-**📍 Based in:** A Coruña, Spain | Work: Madrid - A Coruña
-
----
-
-## 🎯 Core Competencies
-
-- **Product Lifecycle Management & Product-Led Growth** – Strategy and execution
-- **Data Analysis & Storytelling** – Insights that drive decisions
-- **Data Visualization & BI** – Making data accessible and actionable
-- **Agile Management** – 4x Certified (Scrum, Kanban, Product Owner, Lean)
-- **AI Solutions Development** – Specialized in Google AI and Vercel environments
+**Based in** A Coruña, Spain | Work: Madrid - A Coruña
 
 ---
 
-## 🛠️ Tech Stack
+## Core Competencies
+
+- Product Lifecycle Management & Product-Led Growth
+- Data Analysis & Storytelling
+- Data Visualization & BI
+- Agile Management (4x Certified: Scrum, Kanban, Product Owner, Lean)
+- AI Solutions Development
+
+---
+
+## Tech Stack
 
 <table>
 <tr>
@@ -96,80 +94,31 @@ Less time on "What happened?" — more time on "What can I solve?" When tools do
 
 ---
 
-## 📊 Featured Projects & Work
+## Featured Work
 
-<table>
-<tr>
-  <td width="50%">
-    <h3>🌍 Pull&Bear Analytics Infrastructure</h3>
-    <p><strong>End-to-end GA4, BigQuery, Looker Studio ecosystem for 56+ global markets</strong></p>
-    <ul>
-      <li>Manage analytics for Web & App across EMEA, Americas, APAC</li>
-      <li>Extract, process, transform GA4/BigQuery data into executive-level insights</li>
-      <li>Design & maintain 50+ interactive dashboards with automated daily updates</li>
-      <li>Conduct hypothesis-driven investigations for performance optimization</li>
-    </ul>
-    <p>
-      <img src="https://img.shields.io/badge/Scope-Global-000000?style=flat" />
-      <img src="https://img.shields.io/badge/Impact-Enterprise-000000?style=flat" />
-    </p>
-  </td>
-  <td width="50%">
-    <h3>⚙️ OmniZenit Chrome Extension</h3>
-    <p><strong>GA4 & tracking validation tool for Inditex teams</strong></p>
-    <ul>
-      <li>Real-time validation of Google Analytics 4 implementations</li>
-      <li>Custom automation for tracking audits across 56+ markets</li>
-      <li>Adopted across Inditex organization for debugging & optimization</li>
-      <li>Improves team efficiency & data quality</li>
-    </ul>
-    <p>
-      <img src="https://img.shields.io/badge/Tech-JavaScript-F7DF1E?style=flat&logo=javascript" />
-      <img src="https://img.shields.io/badge/Status-Production-000000?style=flat" />
-    </p>
-  </td>
-</tr>
-<tr>
-  <td width="50%">
-    <h3>📋 Addocu</h3>
-    <p><strong>Documentation tool for Google marketing platforms</strong></p>
-    <p>Founder project to streamline GA4, GTM, and Analytics documentation in clicks</p>
-    <p>
-      <img src="https://img.shields.io/badge/Status-Founder-000000?style=flat" />
-      <img src="https://img.shields.io/badge/Link-addocu.com-000000?style=flat" />
-    </p>
-  </td>
-  <td width="50%">
-    <h3>🎓 AI & Automation Training Program</h3>
-    <p><strong>2-month internal program at Ayesa</strong></p>
-    <p>Designed & delivered comprehensive training on AI automation workflows and modern tools for data analysts and engineers</p>
-    <p>
-      <img src="https://img.shields.io/badge/Impact-Team%20Enablement-000000?style=flat" />
-    </p>
-  </td>
-</tr>
-</table>
+| Project | Description | Details |
+|---------|-------------|---------|
+| **Pull&Bear Analytics Infrastructure** | End-to-end GA4, BigQuery, Looker Studio ecosystem for 56+ global markets | Manage analytics across EMEA, Americas, APAC. Design & maintain 50+ dashboards with automated daily updates. Conduct hypothesis-driven investigations for optimization. |
+| **OmniZenit Chrome Extension** | GA4 & tracking validation tool for Inditex teams | Real-time validation of GA4 implementations. Custom automation for tracking audits across 56+ markets. Adopted across Inditex organization. |
+| **Addocu** | Documentation tool for Google marketing platforms | Streamline GA4, GTM, and Analytics documentation in clicks. Built to solve real problems in analytics workflows. |
+| **AI & Automation Training Program** | 2-month internal program at Ayesa | Designed & delivered comprehensive training on AI automation workflows and modern tools for data analysts and engineers. |
 
 ---
 
-## 🎁 Open Source
+## Open Source
 
-<div align="center">
-
-### **Addocu**
+### Addocu
 *Documentation tool for Google marketing platforms*
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Addocu%2Faddocu-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Addocu/addocu)
+[![GitHub](https://img.shields.io/badge/GitHub-Addocu%2Faddocu-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Addocu/addocu)
 [![Stars](https://img.shields.io/github/stars/Addocu/addocu?style=flat-square&color=FDB750&label=Stars)](https://github.com/Addocu/addocu)
 [![License](https://img.shields.io/github/license/Addocu/addocu?style=flat-square&color=green)](https://github.com/Addocu/addocu)
 
-Streamline GA4, GTM, and Analytics documentation in clicks. A tool built to solve a real problem in the analytics workflow.
-
-</div>
+Streamline GA4, GTM, and Analytics documentation in clicks.
 
 ---
 
-## 📈 GitHub Activity
+## GitHub Activity
 
 <div align="center">
 
@@ -185,71 +134,58 @@ Streamline GA4, GTM, and Analytics documentation in clicks. A tool built to solv
 
 ---
 
-## 🎓 Education & Certifications
+## Education & Certifications
 
-### **Master's Degrees**
-- **MSc Data Science, Big Data & AI** — Complutense University of Madrid (2025–2026, in progress)
-- **Master in Digital Analytics** — KSchool (2023–2024)
+**Master's Degrees**
+- MSc Data Science, Big Data & AI — Complutense University of Madrid (2025–2026, in progress)
+- Master in Digital Analytics — KSchool (2023–2024)
 
-### **Agile & Product Certifications**
+**Certifications**
+
 <div>
   <img src="https://img.shields.io/badge/Certified_ScrumMaster-0052CC?style=flat-square&logo=scrum&logoColor=white" alt="CSM" />
   <img src="https://img.shields.io/badge/Product_Owner-0052CC?style=flat-square&logo=scrum&logoColor=white" alt="PO" />
   <img src="https://img.shields.io/badge/Kanban_Essentials-FF6B35?style=flat-square&logoColor=white" alt="Kanban" />
   <img src="https://img.shields.io/badge/Lean-004B87?style=flat-square&logoColor=white" alt="Lean" />
-  <img src="https://img.shields.io/badge/PLGC-PLGC-FF6B9D?style=flat-square&logoColor=white" alt="PLG" />
-  <img src="https://img.shields.io/badge/AI%20%26%20Innovation-FF6B9D?style=flat-square&logo=design&logoColor=white" alt="Design Thinking" />
-</div>
-
-### **Analytics & Data Certifications**
-<div>
+  <img src="https://img.shields.io/badge/PLGC-PLG-FF6B9D?style=flat-square&logoColor=white" alt="PLG" />
   <img src="https://img.shields.io/badge/Google_Analytics_4-E37400?style=flat-square&logo=googleanalytics&logoColor=white" alt="GA4" />
   <img src="https://img.shields.io/badge/BigQuery-F4B400?style=flat-square&logo=googlebigquery&logoColor=white" alt="BigQuery" />
-  <img src="https://img.shields.io/badge/Piwik_PRO-3152A0?style=flat-square&logoColor=white" alt="Piwik" />
   <img src="https://img.shields.io/badge/Google_Data_Studio-EA4335?style=flat-square&logo=googledatastudio&logoColor=white" alt="Data Studio" />
-  <img src="https://img.shields.io/badge/Scimago_Graphica-4472C4?style=flat-square&logoColor=white" alt="Scimago" />
   <img src="https://img.shields.io/badge/Make_Advanced-FF6D00?style=flat-square&logo=make&logoColor=white" alt="Make" />
-  <img src="https://img.shields.io/badge/MIDE_Auditoría-0066CC?style=flat-square&logoColor=white" alt="MIDE" />
 </div>
 
-### **Bachelor's**
+**Bachelor's**
 - Advertising & Public Relations — San Jorge University (2018–2022)
 
 ---
 
-## 🌍 Languages
+## Languages
 
-- **Spanish** (Native or Bilingual)
-- **Galician** (Native or Bilingual)
-- **English** (C2 Proficiency – Cambridge Certificate)
-- **French** (Limited working proficiency)
+- Spanish (Native)
+- Galician (Native)
+- English (C2 Proficiency – Cambridge Certificate)
+- French (Working proficiency)
 
 ---
 
-## 🎤 Speaking & Community
+## Speaking & Community
 
-- **Speaker** — Measure Camp Madrid 2025 · *"MCP Servers in Data & Analytics"*
-- **Contributor** — Datola · *"Agile Analysis with AI" series author*
+- **Speaker** — Measure Camp Madrid 2025 · "MCP Servers in Data & Analytics"
+- **Contributor** — Datola · "Agile Analysis with AI" series author
 - **Founder** — Addocu · Documentation tool for Google marketing platforms
-- **Trainer** — Designed & delivered AI/automation program at Ayesa
-- **Creator Program Member** — Firecrawl & LinkedMash
+- **Trainer** — AI/automation program at Ayesa
+- **Creator Programs** — Firecrawl & LinkedMash
 
 ---
 
-## 📫 Let's Connect!
+## Connect
 
-I'm always interested in discussing **data analytics, product strategy, AI automation, and building tools that solve real problems**. Whether you're exploring new technologies, optimizing analytics infrastructure, or just want to chat about data—let's connect!
-
-<div align="center">
-
-**✉️ javierrodeirorodriguez@gmail.com**
-
-<a href="https://linkedin.com/in/javier-rodeiro-rodriguez">LinkedIn</a> · <a href="https://javierrodeiro.com">Website</a> · <a href="https://dev.to/jrodeiro5">Dev.to</a> · <a href="https://medium.com/@jrodeiro.dev">Medium</a>
-
-</div>
-
----
+I'm interested in discussing data analytics, product strategy, AI automation, and building tools that solve real problems.
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=ffffff&height=100&section=footer" />
+
+**hello@javierrodeiro.com**
+
+[LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) · [Website](https://javierrodeiro.com) · [Dev.to](https://dev.to/jrodeiro5) · [Medium](https://medium.com/@jrodeiro.dev)
+
 </div>
