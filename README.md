@@ -1,16 +1,22 @@
-# Javier Rodeiro Rodríguez
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=header" width="100%">
 
 <div align="center">
 
 ![Data Analytics Animation](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/data-science.gif)
 
-### 👋 Welcome! I'm Javier
+<h1>👋 Hi, I'm Javier Rodeiro Rodríguez</h1>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=Digital+Product+%26+Data+Analyst;AI+Solutions+Developer;MSc+Data+Science+%26+AI;Building+Tools+That+Solve+Real+Problems" alt="Typing SVG" />
+</p>
 
 ![Smooth Intro](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/intro-smooth.gif)
 
-**Digital Product & Data Analyst** | **AI Solutions Developer** | **MSc Data Science & AI**
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=jrodeiro5&color=6366f1&style=flat-square&label=Profile+Views" alt="Profile views" width="200" height="35">
+</p>
 
-**Madrid - A Coruña, Spain** | [LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) | [Website](https://javierrodeiro.com) | [hello@javierrodeiro.com](mailto:hello@javierrodeiro.com)
+**📍 Madrid - A Coruña, Spain** | [LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) | [Website](https://javierrodeiro.com) | [📧 hello@javierrodeiro.com](mailto:hello@javierrodeiro.com)
 
 </div>
 
@@ -146,9 +152,9 @@ Designed & delivered comprehensive training on AI automation workflows for data 
 
 ---
 
-## Professional Certifications
+<h2 align="center">🎓 Professional Certifications</h2>
 
-**Agile & Product Management**
+<h3 align="center">📊 Agile & Product Management</h3>
 
 <div align="center">
   <table>
@@ -177,7 +183,7 @@ Designed & delivered comprehensive training on AI automation workflows for data 
   </table>
 </div>
 
-**Analytics & Data Certifications**
+<h3 align="center">📈 Analytics & Data Certifications</h3>
 
 <div align="center">
   <table>
@@ -212,7 +218,7 @@ Designed & delivered comprehensive training on AI automation workflows for data 
   </table>
 </div>
 
-**Other Certifications**
+<h3 align="center">🏆 Other Certifications</h3>
 
 <div align="center">
   <table>
@@ -279,13 +285,58 @@ Designed & delivered comprehensive training on AI automation workflows for data 
 
 ## Connect
 
-I'm interested in discussing data analytics, product strategy, AI automation, and building tools that solve real problems.
-
 <div align="center">
 
-[LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) · [Website](https://javierrodeiro.com) · [Dev.to](https://dev.to/jrodeiro5) · [Medium](https://medium.com/@jrodeiro.dev) · [Email](mailto:hello@javierrodeiro.com)
+<p>I'm interested in discussing data analytics, product strategy, AI automation, and building tools that solve real problems.</p>
 
-[![Scrum Manager Profile](https://img.shields.io/badge/Scrum_Manager-Verified_Professional-0052CC?style=for-the-badge)](https://scrummanager.com/website/c/profile/member.php?id=49067)
+<h3>🌐 Let's Connect</h3>
+
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <a href="https://linkedin.com/in/javier-rodeiro-rodriguez">
+        <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://javierrodeiro.com">
+        <img src="https://img.shields.io/badge/Website-6366F1?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website"/>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://dev.to/jrodeiro5">
+        <img src="https://img.shields.io/badge/Dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white" alt="Dev.to"/>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://medium.com/@jrodeiro.dev">
+        <img src="https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="25%">
+      <a href="mailto:hello@javierrodeiro.com">
+        <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://scrummanager.com/website/c/profile/member.php?id=49067">
+        <img src="https://img.shields.io/badge/Scrum_Manager-0052CC?style=for-the-badge&logo=scrumalliance&logoColor=white" alt="Scrum Manager"/>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://github.com/jrodeiro5">
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://linkedin.com/in/javier-rodeiro-rodriguez">
+        <img src="https://img.shields.io/badge/Connect-6366F1?style=for-the-badge&logo=handshake&logoColor=white" alt="Connect"/>
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -296,3 +347,5 @@ I'm interested in discussing data analytics, product strategy, AI automation, an
 ![Let's Connect](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/footer.gif)
 
 </div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer" width="100%">
