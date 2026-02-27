@@ -2,6 +2,8 @@
 
 <div align="center">
 
+![Data Analytics Animation](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/data-science.gif)
+
 **Digital Product & Data Analyst** | **AI Solutions Developer** | **MSc Data Science & AI**
 
 <p>
@@ -201,5 +203,9 @@ I'm interested in discussing data analytics, product strategy, AI automation, an
 **hello@javierrodeiro.com**
 
 [LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) · [Website](https://javierrodeiro.com) · [Dev.to](https://dev.to/jrodeiro5) · [Medium](https://medium.com/@jrodeiro.dev)
+
+---
+
+![Let's Connect](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/footer.gif)
 
 </div>
