@@ -90,8 +90,14 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 
 **Master's Degrees**
 
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/UCM.png" width="60" height="60" alt="UCM" />
+
 **MSc Data Science, Big Data & AI** — [Complutense University of Madrid](https://www.ucm.es/)
 *Oct 2025 - Sep 2026 (In Progress)*
+
+</div>
 
 **In Progress (MSc Program Modules):**
 - Linux & Git Fundamentals
@@ -123,21 +129,25 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 <div align="center">
   <table>
     <tr>
-      <td align="center" width="25%">
+      <td align="center" width="20%">
         <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/scrum_master.jfif" width="60" height="60" alt="CSM" /><br/>
         <small><strong>Certified<br/>Scrum Master</strong></small>
       </td>
-      <td align="center" width="25%">
+      <td align="center" width="20%">
         <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/product_owner.jfif" width="60" height="60" alt="Product Owner" /><br/>
         <small><strong>Product<br/>Owner</strong></small>
       </td>
-      <td align="center" width="25%">
+      <td align="center" width="20%">
         <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/kanban_essentials.jfif" width="60" height="60" alt="Kanban" /><br/>
         <small><strong>Kanban<br/>Essentials</strong></small>
       </td>
-      <td align="center" width="25%">
+      <td align="center" width="20%">
         <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/lean.jfif" width="60" height="60" alt="Lean" /><br/>
         <small><strong>Lean</strong></small>
+      </td>
+      <td align="center" width="20%">
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/agile_foundation.jfif" width="60" height="60" alt="Agile Foundation" /><br/>
+        <small><strong>Agile<br/>Foundation</strong></small>
       </td>
     </tr>
   </table>
@@ -188,13 +198,12 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
         <small><strong>Make Advanced</strong></small>
       </td>
       <td align="center" width="50%">
-        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/agile_foundation.jfif" width="60" height="60" alt="Agile Foundation" /><br/>
-        <small><strong>Agile<br/>Foundation</strong></small>
+        <small><strong>Product-Led Growth (PLGC)™</strong> · Product School</small>
       </td>
     </tr>
     <tr>
       <td align="center" colspan="2">
-        <small><strong>Product-Led Growth (PLGC)™</strong> · Product School | <strong>AI & Innovation Compact</strong> (Design Thinking)</small>
+        <small><strong>AI & Innovation Compact</strong> (Design Thinking)</small>
       </td>
     </tr>
   </table>
