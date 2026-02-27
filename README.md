@@ -37,9 +37,9 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 [![Data Stack](https://skillicons.dev/icons?i=googlecloud,postgresql,mysql,git,github,docker,vscode)](https://skillicons.dev)
 
 **Specialized Tools:**
-- Google Analytics 4, Google Tag Manager, Piwik Pro
-- Google BigQuery, Supabase, Looker Studio
-- Adobe Analytics, Power BI, Scimago Graphica
+- Google Analytics 4, Adobe Analytics, Google Tag Manager, Piwik Pro
+- Google BigQuery, Supabase
+- Tableau, Looker Studio, Power BI, Scimago Graphica
 - Make, n8n, Google Apps Scripts, Zapier
 - Jira, Linear, Notion
 - Hotjar, Microsoft Clarity
@@ -218,7 +218,8 @@ Designed & delivered comprehensive training on AI automation workflows for data 
         <small><strong>Make Advanced</strong></small>
       </td>
       <td align="center" width="50%">
-        <small><strong>Product-Led Growth (PLGC)™</strong> · Product School</small>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/product-school.svg" width="60" height="60" alt="Product School" /><br/>
+        <small><strong>Product-Led Growth<br/>(PLGC)™</strong></small>
       </td>
     </tr>
     <tr>
