@@ -2,6 +2,8 @@
 
 <div align="center">
 
+![Data Analytics Animation](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/data-science.gif)
+
 **Digital Product & Data Analyst** | **AI Solutions Developer** | **MSc Data Science & AI**
 
 <p>
@@ -65,38 +67,56 @@ When tools don't exist, I build them. I'm pursuing an **MSc in Data Science & AI
     <table>
       <tr>
         <td align="center" width="25%">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/google/google-original.svg" width="35" height="35" alt="GA4" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googleanalytics.svg" width="35" height="35" alt="GA4" /><br/>
           <small>GA4</small>
         </td>
         <td align="center" width="25%">
-          <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="35" height="35" alt="BigQuery" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlebigquery.svg" width="35" height="35" alt="BigQuery" /><br/>
           <small>BigQuery</small>
         </td>
         <td align="center" width="25%">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="35" height="35" alt="JavaScript" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/javascript.svg" width="35" height="35" alt="JavaScript" /><br/>
           <small>JavaScript</small>
         </td>
         <td align="center" width="25%">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="35" height="35" alt="Python" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/python.svg" width="35" height="35" alt="Python" /><br/>
           <small>Python</small>
         </td>
       </tr>
       <tr>
         <td align="center">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="35" height="35" alt="React" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/react.svg" width="35" height="35" alt="React" /><br/>
           <small>React</small>
         </td>
         <td align="center">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="35" height="35" alt="MySQL" /><br/>
-          <small>MySQL</small>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/nextdotjs.svg" width="35" height="35" alt="Next.js" /><br/>
+          <small>Next.js</small>
         </td>
         <td align="center">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="35" height="35" alt="Docker" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/docker.svg" width="35" height="35" alt="Docker" /><br/>
           <small>Docker</small>
         </td>
         <td align="center">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="35" height="35" alt="Git" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/git.svg" width="35" height="35" alt="Git" /><br/>
           <small>Git</small>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/typescript.svg" width="35" height="35" alt="TypeScript" /><br/>
+          <small>TypeScript</small>
+        </td>
+        <td align="center">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/supabase.svg" width="35" height="35" alt="Supabase" /><br/>
+          <small>Supabase</small>
+        </td>
+        <td align="center">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/looker.svg" width="35" height="35" alt="Looker" /><br/>
+          <small>Looker</small>
+        </td>
+        <td align="center">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/nodejs.svg" width="35" height="35" alt="Node.js" /><br/>
+          <small>Node.js</small>
         </td>
       </tr>
     </table>
@@ -170,22 +190,67 @@ Streamline GA4, GTM, and Analytics documentation in clicks.
 - MSc Data Science, Big Data & AI — Complutense University of Madrid (2025–2026, in progress)
 - Master in Digital Analytics — KSchool (2023–2024)
 
-**Certifications**
+**Certifications & Professional Tools**
 
-<div>
-  <img src="https://img.shields.io/badge/Certified_ScrumMaster-0052CC?style=flat-square&logo=scrum&logoColor=white" alt="CSM" />
-  <img src="https://img.shields.io/badge/Product_Owner-0052CC?style=flat-square&logo=scrum&logoColor=white" alt="PO" />
-  <img src="https://img.shields.io/badge/Kanban_Essentials-FF6B35?style=flat-square&logoColor=white" alt="Kanban" />
-  <img src="https://img.shields.io/badge/Lean-004B87?style=flat-square&logoColor=white" alt="Lean" />
-  <img src="https://img.shields.io/badge/PLGC-PLG-FF6B9D?style=flat-square&logoColor=white" alt="PLG" />
-  <img src="https://img.shields.io/badge/Google_Analytics_4-E37400?style=flat-square&logo=googleanalytics&logoColor=white" alt="GA4" />
-  <img src="https://img.shields.io/badge/BigQuery-F4B400?style=flat-square&logo=googlebigquery&logoColor=white" alt="BigQuery" />
-  <img src="https://img.shields.io/badge/Google_Data_Studio-EA4335?style=flat-square&logo=googledatastudio&logoColor=white" alt="Data Studio" />
-  <img src="https://img.shields.io/badge/Make_Advanced-FF6D00?style=flat-square&logo=make&logoColor=white" alt="Make" />
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="33%">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/scrum.svg" width="40" height="40" alt="Scrum Master" /><br/>
+        <small><strong>Certified Scrum Master</strong></small>
+      </td>
+      <td align="center" width="33%">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googleanalytics.svg" width="40" height="40" alt="GA4" /><br/>
+        <small><strong>Google Analytics 4</strong></small>
+      </td>
+      <td align="center" width="33%">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlebigquery.svg" width="40" height="40" alt="BigQuery" /><br/>
+        <small><strong>BigQuery</strong></small>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/make.svg" width="40" height="40" alt="Make" /><br/>
+        <small><strong>Make Advanced</strong></small>
+      </td>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/jira.svg" width="40" height="40" alt="Jira" /><br/>
+        <small><strong>Jira</strong></small>
+      </td>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/notion.svg" width="40" height="40" alt="Notion" /><br/>
+        <small><strong>Notion</strong></small>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tableau.svg" width="40" height="40" alt="Tableau" /><br/>
+        <small><strong>Tableau BI</strong></small>
+      </td>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/looker.svg" width="40" height="40" alt="Looker" /><br/>
+        <small><strong>Looker Studio</strong></small>
+      </td>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/postgresql.svg" width="40" height="40" alt="PostgreSQL" /><br/>
+        <small><strong>PostgreSQL</strong></small>
+      </td>
+    </tr>
+  </table>
 </div>
 
 **Bachelor's**
 - Advertising & Public Relations — San Jorge University (2018–2022)
+
+**Professional Certifications & Skill Verification**
+
+<div align="center">
+
+[![Scrum Manager Profile](https://img.shields.io/badge/Scrum_Manager-Verified_Professional-0052CC?style=for-the-badge)](https://scrummanager.com/website/c/profile/member.php?id=49067)
+
+**302 Skill Points** · 5 Academic Credentials · Certified Professional
+
+</div>
 
 ---
 
@@ -217,5 +282,9 @@ I'm interested in discussing data analytics, product strategy, AI automation, an
 **hello@javierrodeiro.com**
 
 [LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) · [Website](https://javierrodeiro.com) · [Dev.to](https://dev.to/jrodeiro5) · [Medium](https://medium.com/@jrodeiro.dev)
+
+---
+
+![Let's Connect](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/footer.gif)
 
 </div>
