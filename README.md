@@ -6,138 +6,108 @@
 
 **Digital Product & Data Analyst** | **AI Solutions Developer** | **MSc Data Science & AI**
 
-<p>
-  <a href="https://linkedin.com/in/javier-rodeiro-rodriguez" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://javierrodeiro.com" target="_blank">
-    <img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=globe&logoColor=white" alt="Website" />
-  </a>
-  <a href="https://dev.to/jrodeiro5" target="_blank">
-    <img src="https://img.shields.io/badge/Dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white" alt="Dev.to" />
-  </a>
-  <a href="https://medium.com/@jrodeiro.dev" target="_blank">
-    <img src="https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" />
-  </a>
-  <a href="mailto:hello@javierrodeiro.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-</p>
-
-<img src="https://komarev.com/ghpvc/?username=jrodeiro5&label=Profile%20Views&color=000000&style=flat-square" alt="Profile views" />
-&nbsp;
-<img src="https://img.shields.io/github/followers/jrodeiro5?style=flat-square&color=000000&label=Followers" alt="GitHub followers" />
+**Madrid - A Coruña, Spain** | [LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) | [Website](https://javierrodeiro.com) | [hello@javierrodeiro.com](mailto:hello@javierrodeiro.com)
 
 </div>
 
 ---
 
-## About
+## Professional Summary
 
-I build data products and analytics systems grounded in clean data, rigorous validation, and user feedback. Currently managing end-to-end analytics at **Ayesa** (Client: **Inditex/PULL&BEAR**) across 56+ global markets, delivering insights through GA4, BigQuery, and custom tools.
-
-When tools don't exist, I build them. I'm pursuing an **MSc in Data Science & AI** while developing expertise in uncovering patterns through quantitative and qualitative insights, with a focus on **Product-Led Growth** and **Data Storytelling**.
-
-**Currently**
-- Digital Product & Data Analyst at Ayesa (Inditex/PULL&BEAR)
-- MSc Data Science, Big Data & AI @ Complutense University of Madrid
-- Speaker at Measure Camp Madrid 2025
-- Contributor at Datola & Creator Programs
-
-**Based in** A Coruña, Spain | Work: Madrid - A Coruña
+I build products and conduct analysis—both grounded in clean data, rigorous validation, and user feedback. At Ayesa/Inditex, I deliver insights and testing through GA4, BigQuery, and custom tools. Less time on "What happened?" more time on "What can I solve?" When tools don't exist, I build them. Currently pursuing an **MSc in Data Science & AI**, focused on uncovering patterns through quantitative and qualitative insights.
 
 ---
 
 ## Core Competencies
 
-- Product Lifecycle Management & Product-Led Growth
-- Data Analysis & Storytelling
-- Data Visualization & BI
-- Agile Management (4x Certified: Scrum, Kanban, Product Owner, Lean)
-- AI Solutions Development
+- **Product Lifecycle Management** & Product-Led Growth
+- **Data Analysis** & Data Storytelling
+- **Data Visualization** & Business Intelligence
+- **AI Solutions Development**
+- **Agile Management** (4x Certified: Scrum, Kanban, Product Owner, Lean)
 
 ---
 
-## Tech Stack & Learning
+## Tech Stack
 
 <table>
 <tr>
   <td width="50%">
-    <h3>Current Stack</h3>
-    <table>
-      <tr>
-        <td align="center" width="25%">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/googlecloud/googlecloud-original.svg" width="35" height="35" alt="GA4" /><br/>
-          <small>GA4</small>
-        </td>
-        <td align="center" width="25%">
-          <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="35" height="35" alt="BigQuery" /><br/>
-          <small>BigQuery</small>
-        </td>
-        <td align="center" width="25%">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" width="35" height="35" alt="JavaScript" /><br/>
-          <small>JavaScript</small>
-        </td>
-        <td align="center" width="25%">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/python/python-original.svg" width="35" height="35" alt="Python" /><br/>
-          <small>Python</small>
-        </td>
-      </tr>
-      <tr>
-        <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/react/react-original.svg" width="35" height="35" alt="React" /><br/>
-          <small>React</small>
-        </td>
-        <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/nextjs/nextjs-original.svg" width="35" height="35" alt="Next.js" /><br/>
-          <small>Next.js</small>
-        </td>
-        <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/docker/docker-original.svg" width="35" height="35" alt="Docker" /><br/>
-          <small>Docker</small>
-        </td>
-        <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/git/git-original.svg" width="35" height="35" alt="Git" /><br/>
-          <small>Git</small>
-        </td>
-      </tr>
-      <tr>
-        <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/typescript/typescript-original.svg" width="35" height="35" alt="TypeScript" /><br/>
-          <small>TypeScript</small>
-        </td>
-        <td align="center">
-          <img src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg" width="35" height="35" alt="Supabase" /><br/>
-          <small>Supabase</small>
-        </td>
-        <td align="center">
-          <img src="https://www.vectorlogo.zone/logos/looker/looker-icon.svg" width="35" height="35" alt="Looker" /><br/>
-          <small>Looker</small>
-        </td>
-        <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/nodejs/nodejs-original.svg" width="35" height="35" alt="Node.js" /><br/>
-          <small>Node.js</small>
-        </td>
-      </tr>
-    </table>
+    <h4>Analytics & Tracking</h4>
+    <ul>
+      <li>Google Analytics 4</li>
+      <li>Google Tag Manager</li>
+      <li>Piwik Pro</li>
+      <li>Amplitude, PostHog</li>
+      <li>Google Search Console</li>
+    </ul>
   </td>
   <td width="50%">
-    <h3>In Progress (MSc Program)</h3>
-    <p><small><strong>Complutense University of Madrid</strong></small></p>
-
-    - Linux & Git Fundamentals
-    - SQL & NoSQL Databases
-    - Business Intelligence (Tableau)
-    - Python Programming
-    - Statistics & Data Analysis
-    - Data Mining & Predictive Modeling
-    - Machine Learning
-    - Advanced Data Visualization
-    - Deep Learning & AI
-    - Apache Spark
-    - Big Data Technologies
-    - Model Productionization
-    - Applied Data Science
+    <h4>Data & Databases</h4>
+    <ul>
+      <li>Google BigQuery</li>
+      <li>Supabase (PostgreSQL)</li>
+      <li>Excel</li>
+      <li>SQL & NoSQL</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td width="50%">
+    <h4>Data Visualization & BI</h4>
+    <ul>
+      <li>Looker Studio</li>
+      <li>Tableau</li>
+      <li>Power BI</li>
+      <li>Scimago Graphica</li>
+    </ul>
+  </td>
+  <td width="50%">
+    <h4>Development</h4>
+    <ul>
+      <li>JavaScript (ES6+)</li>
+      <li>TypeScript</li>
+      <li>React & Next.js</li>
+      <li>Node.js</li>
+      <li>Python</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td width="50%">
+    <h4>Automation & Integration</h4>
+    <ul>
+      <li>Google Apps Scripts</li>
+      <li>Make</li>
+      <li>n8n</li>
+      <li>Zapier</li>
+    </ul>
+  </td>
+  <td width="50%">
+    <h4>AI & LLM</h4>
+    <ul>
+      <li>Claude Code</li>
+      <li>LiteLLM</li>
+      <li>AI Automation Frameworks</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td width="50%">
+    <h4>CRO & User Experience</h4>
+    <ul>
+      <li>Hotjar</li>
+      <li>Microsoft Clarity</li>
+    </ul>
+  </td>
+  <td width="50%">
+    <h4>Project Management</h4>
+    <ul>
+      <li>Jira</li>
+      <li>Linear</li>
+      <li>Notion</li>
+      <li>Trello</li>
+    </ul>
   </td>
 </tr>
 </table>
@@ -146,12 +116,12 @@ When tools don't exist, I build them. I'm pursuing an **MSc in Data Science & AI
 
 ## Featured Work
 
-| Project | Description | Details |
-|---------|-------------|---------|
-| **Pull&Bear Analytics Infrastructure** | End-to-end GA4, BigQuery, Looker Studio ecosystem for 56+ global markets | Manage analytics across EMEA, Americas, APAC. Design & maintain 50+ dashboards with automated daily updates. Conduct hypothesis-driven investigations for optimization. |
-| **OmniZenit Chrome Extension** | GA4 & tracking validation tool for Inditex teams | Real-time validation of GA4 implementations. Custom automation for tracking audits across 56+ markets. Adopted across Inditex organization. |
-| **Addocu** | Documentation tool for Google marketing platforms | Streamline GA4, GTM, and Analytics documentation in clicks. Built to solve real problems in analytics workflows. |
-| **AI & Automation Training Program** | 2-month internal program at Ayesa | Designed & delivered comprehensive training on AI automation workflows and modern tools for data analysts and engineers. |
+| Project | Description |
+|---------|-------------|
+| **Pull&Bear Analytics Infrastructure** | End-to-end GA4, BigQuery, Looker Studio ecosystem for 56+ global markets. Manage analytics across EMEA, Americas, APAC. Design & maintain 50+ dashboards with automated daily updates. |
+| **OmniZenit Chrome Extension** | GA4 & tracking validation tool for Inditex teams. Real-time validation of implementations. Custom automation for audits. Adopted across organization. |
+| **Addocu** | Documentation tool for Google marketing platforms. Streamline GA4, GTM, and Analytics documentation in clicks. |
+| **AI & Automation Training Program** | 2-month internal program at Ayesa. Designed & delivered comprehensive training on AI automation workflows for data analysts and engineers. |
 
 ---
 
@@ -163,8 +133,6 @@ When tools don't exist, I build them. I'm pursuing an **MSc in Data Science & AI
 [![GitHub](https://img.shields.io/badge/GitHub-Addocu%2Faddocu-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Addocu/addocu)
 [![Stars](https://img.shields.io/github/stars/Addocu/addocu?style=flat-square&color=FDB750&label=Stars)](https://github.com/Addocu/addocu)
 [![License](https://img.shields.io/github/license/Addocu/addocu?style=flat-square&color=green)](https://github.com/Addocu/addocu)
-
-Streamline GA4, GTM, and Analytics documentation in clicks.
 
 ---
 
@@ -184,21 +152,49 @@ Streamline GA4, GTM, and Analytics documentation in clicks.
 
 ---
 
-## Education & Certifications
+## Education
 
 **Master's Degrees**
-- MSc Data Science, Big Data & AI — Complutense University of Madrid (2025–2026, in progress)
-- Master in Digital Analytics — KSchool (2023–2024)
+- **MSc Data Science, Big Data & AI** — Complutense University of Madrid (Oct 2025 - Sep 2026, In Progress)
+- **Master in Digital Analytics** — KSchool (Nov 2023 - Jun 2024)
 
-**Certifications & Professional Tools**
+**Bachelor's**
+- **Advertising & Public Relations** — San Jorge University (Sep 2018 - Jun 2022)
+
+---
+
+## Professional Certifications
+
+**Agile & Product Management**
 
 <div align="center">
   <table>
     <tr>
-      <td align="center" width="33%">
-        <img src="https://www.vectorlogo.zone/logos/scrumalliance/scrumalliance-icon.svg" width="40" height="40" alt="Scrum Master" /><br/>
+      <td align="center" width="25%">
+        <img src="https://www.vectorlogo.zone/logos/scrumalliance/scrumalliance-icon.svg" width="40" height="40" alt="CSM" /><br/>
         <small><strong>Certified Scrum Master</strong></small>
       </td>
+      <td align="center" width="25%">
+        <img src="https://www.vectorlogo.zone/logos/scrumalliance/scrumalliance-icon.svg" width="40" height="40" alt="Product Owner" /><br/>
+        <small><strong>Product Owner</strong></small>
+      </td>
+      <td align="center" width="25%">
+        <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/docker/docker-original.svg" width="40" height="40" alt="Kanban" /><br/>
+        <small><strong>Kanban Essentials</strong></small>
+      </td>
+      <td align="center" width="25%">
+        <img src="https://www.vectorlogo.zone/logos/devpost/devpost-icon.svg" width="40" height="40" alt="Lean" /><br/>
+        <small><strong>Lean</strong></small>
+      </td>
+    </tr>
+  </table>
+</div>
+
+**Analytics & Data Certifications**
+
+<div align="center">
+  <table>
+    <tr>
       <td align="center" width="33%">
         <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/googlecloud/googlecloud-original.svg" width="40" height="40" alt="GA4" /><br/>
         <small><strong>Google Analytics 4</strong></small>
@@ -207,68 +203,51 @@ Streamline GA4, GTM, and Analytics documentation in clicks.
         <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="40" height="40" alt="BigQuery" /><br/>
         <small><strong>BigQuery</strong></small>
       </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <img src="https://www.vectorlogo.zone/logos/make/make-icon.svg" width="40" height="40" alt="Make" /><br/>
-        <small><strong>Make Advanced</strong></small>
-      </td>
-      <td align="center">
-        <img src="https://www.vectorlogo.zone/logos/atlassian_jira/atlassian_jira-icon.svg" width="40" height="40" alt="Jira" /><br/>
-        <small><strong>Jira</strong></small>
-      </td>
-      <td align="center">
-        <img src="https://www.vectorlogo.zone/logos/notion/notion-icon.svg" width="40" height="40" alt="Notion" /><br/>
-        <small><strong>Notion</strong></small>
+      <td align="center" width="33%">
+        <img src="https://www.vectorlogo.zone/logos/google/google-icon.svg" width="40" height="40" alt="Data Studio" /><br/>
+        <small><strong>Data Studio Essential</strong></small>
       </td>
     </tr>
     <tr>
+      <td align="center">
+        <img src="https://www.vectorlogo.zone/logos/piwik/piwik-icon.svg" width="40" height="40" alt="Piwik PRO" /><br/>
+        <small><strong>Piwik PRO</strong></small>
+      </td>
       <td align="center">
         <img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" width="40" height="40" alt="Tableau" /><br/>
         <small><strong>Tableau BI</strong></small>
       </td>
       <td align="center">
-        <img src="https://www.vectorlogo.zone/logos/looker/looker-icon.svg" width="40" height="40" alt="Looker" /><br/>
-        <small><strong>Looker Studio</strong></small>
-      </td>
-      <td align="center">
-        <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/postgresql/postgresql-original.svg" width="40" height="40" alt="PostgreSQL" /><br/>
-        <small><strong>PostgreSQL</strong></small>
+        <img src="https://www.vectorlogo.zone/logos/scimago/scimago-icon.svg" width="40" height="40" alt="Scimago" /><br/>
+        <small><strong>Scimago Graphica</strong></small>
       </td>
     </tr>
   </table>
 </div>
 
-**Bachelor's**
-- Advertising & Public Relations — San Jorge University (2018–2022)
+**Other Certifications**
 
-**Professional Certifications & Skill Verification**
-
-<div align="center">
-
-[![Scrum Manager Profile](https://img.shields.io/badge/Scrum_Manager-Verified_Professional-0052CC?style=for-the-badge)](https://scrummanager.com/website/c/profile/member.php?id=49067)
-
-**302 Skill Points** · 5 Academic Credentials · Certified Professional
-
-</div>
+- Product-Led Growth Micro-Certification (PLGC)™ · Product School
+- Make Advanced Certification
+- AI & Innovation Compact (Design Thinking)
 
 ---
 
 ## Languages
 
-- Spanish (Native)
-- Galician (Native)
-- English (C2 Proficiency – Cambridge Certificate)
-- French (Working proficiency)
+- **Spanish** — Native or Bilingual
+- **Galician** — Native or Bilingual
+- **English** — C2 Proficiency (Cambridge Certificate)
+- **French** — Limited Working Proficiency
 
 ---
 
-## Speaking & Community
+## Community & Speaking
 
 - **Speaker** — Measure Camp Madrid 2025 · "MCP Servers in Data & Analytics"
-- **Contributor** — Datola · "Agile Analysis with AI" series author
+- **Contributor** — Datola · Author of "Agile Analysis with AI" series
 - **Founder** — Addocu · Documentation tool for Google marketing platforms
-- **Trainer** — AI/automation program at Ayesa
+- **Trainer** — AI/Automation Program at Ayesa (2-month comprehensive program)
 - **Creator Programs** — Firecrawl & LinkedMash
 
 ---
@@ -279,9 +258,9 @@ I'm interested in discussing data analytics, product strategy, AI automation, an
 
 <div align="center">
 
-**hello@javierrodeiro.com**
+[LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) · [Website](https://javierrodeiro.com) · [Dev.to](https://dev.to/jrodeiro5) · [Medium](https://medium.com/@jrodeiro.dev) · [Email](mailto:hello@javierrodeiro.com)
 
-[LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) · [Website](https://javierrodeiro.com) · [Dev.to](https://dev.to/jrodeiro5) · [Medium](https://medium.com/@jrodeiro.dev)
+[![Scrum Manager Profile](https://img.shields.io/badge/Scrum_Manager-Verified_Professional-0052CC?style=for-the-badge)](https://scrummanager.com/website/c/profile/member.php?id=49067)
 
 ---
 
