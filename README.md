@@ -19,7 +19,7 @@
   <a href="https://medium.com/@jrodeiro.dev" target="_blank">
     <img src="https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" />
   </a>
-  <a href="mailto:javierrodeirorodriguez@gmail.com">
+  <a href="mailto:hello@javierrodeiro.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
@@ -64,52 +64,35 @@ Less time on "What happened?" — more time on "What can I solve?" When tools do
 <tr>
   <td align="center" width="20%">
     <strong>Analytics & Tracking</strong><br/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/google/google-original.svg" width="40" height="40" alt="Google" />
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/google/google-original.svg" width="40" height="40" alt="GA4" /><br/>
+    <small>GA4</small>
   </td>
   <td align="center" width="20%">
     <strong>Databases & Data</strong><br/>
     <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="40" height="40" alt="BigQuery" />
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="40" height="40" alt="MySQL" />
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="40" height="40" alt="MySQL" /><br/>
+    <small>BigQuery · MySQL</small>
   </td>
   <td align="center" width="20%">
     <strong>Web Development</strong><br/>
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript" />
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="40" height="40" alt="React" />
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="40" height="40" alt="React" /><br/>
+    <small>JavaScript · React</small>
   </td>
   <td align="center" width="20%">
     <strong>Backend & Scripting</strong><br/>
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" height="40" alt="Python" />
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="Node.js" />
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="Node.js" /><br/>
+    <small>Python · Node.js</small>
   </td>
   <td align="center" width="20%">
     <strong>Tools & Platforms</strong><br/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40" height="40" alt="Git" />
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="40" height="40" alt="Docker" />
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40" height="40" alt="Git" /><br/>
+    <small>Docker · Git</small>
   </td>
 </tr>
 </table>
-
-### **Development**
-- **JavaScript/TypeScript** · React · Next.js · Node.js · Python · SQL
-- Google Apps Scripts · n8n · FastAPI
-
-### **Analytics & Tracking**
-- Google Analytics 4 · Google Tag Manager · Piwik Pro · Amplitude · PostHog
-- Trackingplan · Google Search Console
-
-### **Data & Databases**
-- Google BigQuery · Supabase · MySQL · Excel
-
-### **Visualization & BI**
-- Looker Studio · Power BI · Tableau · Scimago Graphica
-
-### **CRO & User Experience**
-- Hotjar · Microsoft Clarity
-
-### **Automation & Integration**
-- n8n · Make · Zapier · Google Apps Scripts
-
-### **Project Management**
-- Jira · Linear · Trello · Notion
 
 ---
 
@@ -169,6 +152,16 @@ Less time on "What happened?" — more time on "What can I solve?" When tools do
 
 ---
 
+## 🎁 Open Source
+
+<div align="center">
+
+[![Addocu - Documentation tool for Google marketing platforms](https://github-readme-stats.vercel.app/api/pin/?username=Addocu&repo=addocu&theme=dark&bg_color=000000&title_color=ffffff&text_color=ffffff&border_color=333333)](https://github.com/Addocu/addocu)
+
+</div>
+
+---
+
 ## 📈 GitHub Activity
 
 <div align="center">
@@ -192,18 +185,25 @@ Less time on "What happened?" — more time on "What can I solve?" When tools do
 - **Master in Digital Analytics** — KSchool (2023–2024)
 
 ### **Agile & Product Certifications**
-- Certified ScrumMaster · Product Owner · Kanban Essentials · Lean
-- Product-Led Growth Micro-Certification (PLGC)™ · Product School
-- AI & Innovation Compact (Design Thinking)
+<div>
+  <img src="https://img.shields.io/badge/Certified_ScrumMaster-0052CC?style=flat-square&logo=scrum&logoColor=white" alt="CSM" />
+  <img src="https://img.shields.io/badge/Product_Owner-0052CC?style=flat-square&logo=scrum&logoColor=white" alt="PO" />
+  <img src="https://img.shields.io/badge/Kanban_Essentials-FF6B35?style=flat-square&logoColor=white" alt="Kanban" />
+  <img src="https://img.shields.io/badge/Lean-004B87?style=flat-square&logoColor=white" alt="Lean" />
+  <img src="https://img.shields.io/badge/PLGC-PLGC-FF6B9D?style=flat-square&logoColor=white" alt="PLG" />
+  <img src="https://img.shields.io/badge/AI%20%26%20Innovation-FF6B9D?style=flat-square&logo=design&logoColor=white" alt="Design Thinking" />
+</div>
 
 ### **Analytics & Data Certifications**
-- Google Analytics 4 Certification
-- Query GA4 Data in BigQuery (Simmer)
-- Piwik PRO Analytics Suite | Tag & Consent Manager
-- Google Data Studio Essential
-- Scimago Graphica Certification
-- MIDE Taller Auditoría Técnica en Analítica Digital
-- Make Advanced
+<div>
+  <img src="https://img.shields.io/badge/Google_Analytics_4-E37400?style=flat-square&logo=googleanalytics&logoColor=white" alt="GA4" />
+  <img src="https://img.shields.io/badge/BigQuery-F4B400?style=flat-square&logo=googlebigquery&logoColor=white" alt="BigQuery" />
+  <img src="https://img.shields.io/badge/Piwik_PRO-3152A0?style=flat-square&logoColor=white" alt="Piwik" />
+  <img src="https://img.shields.io/badge/Google_Data_Studio-EA4335?style=flat-square&logo=googledatastudio&logoColor=white" alt="Data Studio" />
+  <img src="https://img.shields.io/badge/Scimago_Graphica-4472C4?style=flat-square&logoColor=white" alt="Scimago" />
+  <img src="https://img.shields.io/badge/Make_Advanced-FF6D00?style=flat-square&logo=make&logoColor=white" alt="Make" />
+  <img src="https://img.shields.io/badge/MIDE_Auditoría-0066CC?style=flat-square&logoColor=white" alt="MIDE" />
+</div>
 
 ### **Bachelor's**
 - Advertising & Public Relations — San Jorge University (2018–2022)
