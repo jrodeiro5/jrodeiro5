@@ -135,24 +135,10 @@ Designed & delivered comprehensive training on AI automation workflows for data 
 - Applied Data Science
 
 **Other Master's**
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/kschool-logo.png" width="60" height="60" alt="KSchool" />
-
-**Master in Digital Analytics** — [KSchool](https://kschool.com/) (Nov 2023 - Jun 2024)
-
-</div>
+- **Master in Digital Analytics** — KSchool (Nov 2023 - Jun 2024)
 
 **Bachelor's**
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/sanjorge-logo.png" width="60" height="60" alt="San Jorge University" />
-
-**Advertising & Public Relations** — [San Jorge University](https://www.usj.es/) (Sep 2018 - Jun 2022)
-
-</div>
+- **Advertising & Public Relations** — San Jorge University (Sep 2018 - Jun 2022)
 
 ---
 
