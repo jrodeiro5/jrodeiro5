@@ -8,17 +8,31 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Configure Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
       
       - uses: vn7n24fzkq/github-profile-summary-cards@release
+        with:
+          USERNAME: jrodeiro5
         env:
           GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
       
       - name: Commit and push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add profile-summary-card-output/
-          git commit -m "🔄 Update profile summary cards" || echo "No changes to commit"
-          git push
+          if [ -d "profile-summary-card-output" ]; then
+            git add profile-summary-card-output/ || true
+            git commit -m "🔄 Update profile summary cards" || echo "No changes to commit"
+            git push
+          else
+            echo "No profile-summary-card-output directory found"
+          fi
