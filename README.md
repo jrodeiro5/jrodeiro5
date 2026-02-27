@@ -122,7 +122,7 @@ Designed & delivered comprehensive training on AI automation workflows for data 
 **In Progress (MSc Program Modules):**
 - Linux & Git Fundamentals
 - SQL & NoSQL Databases
-- Business Intelligence (Adobe Analytics)
+- Business Intelligence (Tableau)
 - Python Programming
 - Statistics & Data Analysis
 - Data Mining & Predictive Modeling
