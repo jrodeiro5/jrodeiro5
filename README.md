@@ -10,20 +10,6 @@
 
 **Madrid - A Coruña, Spain** | [LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) | [Website](https://javierrodeiro.com) | [hello@javierrodeiro.com](mailto:hello@javierrodeiro.com)
 
-<style>
-  @keyframes wave {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-  }
-  .wave { animation: wave 2.5s infinite; display: inline-block; }
-</style>
-
 </div>
 
 ---
@@ -301,25 +287,7 @@ I'm interested in discussing data analytics, product strategy, AI automation, an
 
 ---
 
-<div>
-
-<h3 align="center">
-  <span style="animation: pulse 2s infinite;">💡 Let's build something amazing together!</span>
-</h3>
-
-<style>
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-  }
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  .bounce { animation: bounce 2s infinite; display: inline-block; }
-</style>
-
-</div>
+<h3 align="center">💡 Let's build something amazing together! 💡</h3>
 
 ![Let's Connect](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/footer.gif)
 
