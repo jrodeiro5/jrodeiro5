@@ -208,15 +208,15 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
     </tr>
     <tr>
       <td align="center">
-        <img src="https://www.vectorlogo.zone/logos/piwik/piwik-icon.svg" width="40" height="40" alt="Piwik PRO" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/matomo/matomo-icon.svg" width="40" height="40" alt="Piwik PRO" /><br/>
         <small><strong>Piwik PRO</strong></small>
       </td>
       <td align="center">
-        <img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" width="40" height="40" alt="Tableau" /><br/>
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tableau.svg" width="40" height="40" alt="Tableau" /><br/>
         <small><strong>Tableau BI</strong></small>
       </td>
       <td align="center">
-        <img src="https://www.vectorlogo.zone/logos/scimago/scimago-icon.svg" width="40" height="40" alt="Scimago" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/elsevier/elsevier-icon.svg" width="40" height="40" alt="Scimago" /><br/>
         <small><strong>Scimago Graphica</strong></small>
       </td>
     </tr>
