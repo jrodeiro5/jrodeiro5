@@ -122,13 +122,13 @@ Streamline GA4, GTM, and Analytics documentation in clicks.
 
 <div align="center">
 
-![Profile Details](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/dracula/0-profile-details.svg)
+![Profile Details](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/dracula/0-profile-details.svg?v=1)
 
-![Repos Per Language](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/dracula/1-repos-per-language.svg)
-![Most Commit Language](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/dracula/2-most-commit-language.svg)
+![Repos Per Language](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/dracula/1-repos-per-language.svg?v=2)
+![Most Commit Language](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/dracula/2-most-commit-language.svg?v=2)
 
-![Stats](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/dracula/3-stats.svg)
-![Productive Time](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/dracula/4-productive-time.svg)
+![Stats](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/dracula/3-stats.svg?v=1)
+![Productive Time](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/dracula/4-productive-time.svg?v=1)
 
 </div>
 
