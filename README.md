@@ -32,7 +32,7 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 
 <table>
 <tr>
-  <td width="50%">
+  <td width="33%">
     <h4>Analytics & Tracking</h4>
     <ul>
       <li>Google Analytics 4</li>
@@ -42,7 +42,7 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
       <li>Google Search Console</li>
     </ul>
   </td>
-  <td width="50%">
+  <td width="33%">
     <h4>Data & Databases</h4>
     <ul>
       <li>Google BigQuery</li>
@@ -51,9 +51,7 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
       <li>SQL & NoSQL</li>
     </ul>
   </td>
-</tr>
-<tr>
-  <td width="50%">
+  <td width="33%">
     <h4>Data Visualization & BI</h4>
     <ul>
       <li>Looker Studio</li>
@@ -62,7 +60,9 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
       <li>Scimago Graphica</li>
     </ul>
   </td>
-  <td width="50%">
+</tr>
+<tr>
+  <td width="33%">
     <h4>Development</h4>
     <ul>
       <li>JavaScript (ES6+)</li>
@@ -72,9 +72,7 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
       <li>Python</li>
     </ul>
   </td>
-</tr>
-<tr>
-  <td width="50%">
+  <td width="33%">
     <h4>Automation & Integration</h4>
     <ul>
       <li>Google Apps Scripts</li>
@@ -83,7 +81,7 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
       <li>Zapier</li>
     </ul>
   </td>
-  <td width="50%">
+  <td width="33%">
     <h4>AI</h4>
     <ul>
       <li>Specialized in Google AI and Vercel environments and products</li>
@@ -91,14 +89,14 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
   </td>
 </tr>
 <tr>
-  <td width="50%">
+  <td width="33%">
     <h4>CRO & User Experience</h4>
     <ul>
       <li>Hotjar</li>
       <li>Microsoft Clarity</li>
     </ul>
   </td>
-  <td width="50%">
+  <td width="33%">
     <h4>Project Management</h4>
     <ul>
       <li>Jira</li>
@@ -106,6 +104,8 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
       <li>Notion</li>
       <li>Trello</li>
     </ul>
+  </td>
+  <td width="33%">
   </td>
 </tr>
 </table>
