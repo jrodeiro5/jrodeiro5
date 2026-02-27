@@ -10,8 +10,6 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=Digital+Product+%26+Data+Analyst;AI+Solutions+Developer;MSc+Data+Science+%26+AI;Building+Tools+That+Solve+Real+Problems" alt="Typing SVG" />
 </p>
 
-![Smooth Intro](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/intro-smooth.gif)
-
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=jrodeiro5&color=6366f1&style=flat-square&label=Profile+Views" alt="Profile views" width="200" height="35">
 </p>
@@ -341,8 +339,6 @@ Designed & delivered comprehensive training on AI automation workflows for data 
 ---
 
 <h3 align="center">💡 Let's build something amazing together! 💡</h3>
-
-![Smooth Outro](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/outro-smooth.gif)
 
 ![Let's Connect](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/footer.gif)
 
