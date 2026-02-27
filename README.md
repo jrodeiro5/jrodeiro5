@@ -4,7 +4,9 @@
 
 ![Data Analytics Animation](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/data-science.gif)
 
-### 👋 Welcome!
+### 👋 Welcome! I'm Javier
+
+![Wave](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/happy-bouncing.gif)
 
 **Digital Product & Data Analyst** | **AI Solutions Developer** | **MSc Data Science & AI**
 
@@ -288,6 +290,8 @@ I'm interested in discussing data analytics, product strategy, AI automation, an
 ---
 
 <h3 align="center">💡 Let's build something amazing together! 💡</h3>
+
+![Sparkles](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/sparkles.gif)
 
 ![Let's Connect](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/footer.gif)
 
