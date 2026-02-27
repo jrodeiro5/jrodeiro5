@@ -57,14 +57,14 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/pull_and_bear.png" width="100" height="40" alt="Pull&Bear" /><br/><br/>
+      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/pull_and_bear.png" width="120" height="120" alt="Pull&Bear" /><br/><br/>
       <strong>Pull&Bear Analytics Infrastructure</strong><br/>
       <small>End-to-end GA4, BigQuery, Looker Studio ecosystem for 56+ global markets. Manage analytics across EMEA, Americas, APAC. Design & maintain 50+ dashboards with automated daily updates.</small>
     </td>
     <td align="center" width="50%">
-      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/inditex_logo.png" width="100" height="40" alt="Inditex" /><br/><br/>
+      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/inditex_logo.png" width="120" height="90" alt="Inditex" /><br/><br/>
       <strong>OmniZenit Chrome Extension</strong><br/>
-      <small>GA4 & tracking validation tool for Inditex teams. Real-time validation of implementations. Custom automation for audits. Adopted across organization.</small>
+      <small>Custom internal analytics tool for Inditex teams. Real-time validation of implementations. Custom automation for audits. Adopted across organization.</small>
     </td>
   </tr>
 </table>
