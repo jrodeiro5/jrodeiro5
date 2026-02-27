@@ -173,6 +173,16 @@ Streamline GA4, GTM, and Analytics documentation in clicks.
 **Bachelor's**
 - Advertising & Public Relations — San Jorge University (2018–2022)
 
+**Professional Certifications & Skill Verification**
+
+<div align="center">
+
+[![Scrum Manager Profile](https://img.shields.io/badge/Scrum_Manager-Verified_Professional-0052CC?style=for-the-badge)](https://scrummanager.com/website/c/profile/member.php?id=49067)
+
+**302 Skill Points** · 5 Academic Credentials · Certified Professional
+
+</div>
+
 ---
 
 ## Languages
