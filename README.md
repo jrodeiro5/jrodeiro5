@@ -194,7 +194,7 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
   <table>
     <tr>
       <td align="center" width="33%">
-        <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/googlecloud/googlecloud-original.svg" width="40" height="40" alt="GA4" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/google_analytics/google_analytics-icon.svg" width="40" height="40" alt="GA4" /><br/>
         <small><strong>Google Analytics 4</strong></small>
       </td>
       <td align="center" width="33%">
@@ -202,21 +202,21 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
         <small><strong>BigQuery</strong></small>
       </td>
       <td align="center" width="33%">
-        <img src="https://www.vectorlogo.zone/logos/google/google-icon.svg" width="40" height="40" alt="Data Studio" /><br/>
-        <small><strong>Data Studio Essential</strong></small>
+        <img src="https://seeklogo.com/images/L/looker-studio-logo-C8FED55D23-seeklogo.com.png" width="40" height="40" alt="Looker Studio" /><br/>
+        <small><strong>Looker Studio</strong></small>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://www.vectorlogo.zone/logos/matomo/matomo-icon.svg" width="40" height="40" alt="Piwik PRO" /><br/>
+        <img src="https://seeklogo.com/images/P/Piwik-Pro-logo-9BA9B2E1C5-seeklogo.com.png" width="40" height="40" alt="Piwik PRO" /><br/>
         <small><strong>Piwik PRO</strong></small>
       </td>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tableau.svg" width="40" height="40" alt="Tableau" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" width="40" height="40" alt="Tableau" /><br/>
         <small><strong>Tableau BI</strong></small>
       </td>
       <td align="center">
-        <img src="https://www.vectorlogo.zone/logos/elsevier/elsevier-icon.svg" width="40" height="40" alt="Scimago" /><br/>
+        <img src="https://www.graphica.app/static/images/logo.png" width="40" height="40" alt="Scimago Graphica" /><br/>
         <small><strong>Scimago Graphica</strong></small>
       </td>
     </tr>
@@ -225,9 +225,21 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 
 **Other Certifications**
 
-- Product-Led Growth Micro-Certification (PLGC)™ · Product School
-- Make Advanced Certification
-- AI & Innovation Compact (Design Thinking)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <img src="https://uploads-ssl.webflow.com/5d4b5d8e9a2b1f3f3f3f3f3f/logo.png" width="40" height="40" alt="Product School" /><br/>
+        <small><strong>Product-Led Growth PLGC™</strong></small><br/>
+        <small>Product School</small>
+      </td>
+      <td align="center" width="50%">
+        <img src="https://www.vectorlogo.zone/logos/make/make-icon.svg" width="40" height="40" alt="Make" /><br/>
+        <small><strong>Make Advanced</strong></small>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
