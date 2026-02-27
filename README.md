@@ -56,38 +56,68 @@ When tools don't exist, I build them. I'm pursuing an **MSc in Data Science & AI
 
 ---
 
-## Tech Stack
+## Tech Stack & Learning
 
 <table>
 <tr>
-  <td align="center" width="20%">
-    <strong>Analytics & Tracking</strong><br/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/google/google-original.svg" width="40" height="40" alt="GA4" /><br/>
-    <small>GA4</small>
+  <td width="50%">
+    <h3>Current Stack</h3>
+    <table>
+      <tr>
+        <td align="center" width="25%">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/google/google-original.svg" width="35" height="35" alt="GA4" /><br/>
+          <small>GA4</small>
+        </td>
+        <td align="center" width="25%">
+          <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="35" height="35" alt="BigQuery" /><br/>
+          <small>BigQuery</small>
+        </td>
+        <td align="center" width="25%">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="35" height="35" alt="JavaScript" /><br/>
+          <small>JavaScript</small>
+        </td>
+        <td align="center" width="25%">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="35" height="35" alt="Python" /><br/>
+          <small>Python</small>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="35" height="35" alt="React" /><br/>
+          <small>React</small>
+        </td>
+        <td align="center">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="35" height="35" alt="MySQL" /><br/>
+          <small>MySQL</small>
+        </td>
+        <td align="center">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="35" height="35" alt="Docker" /><br/>
+          <small>Docker</small>
+        </td>
+        <td align="center">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="35" height="35" alt="Git" /><br/>
+          <small>Git</small>
+        </td>
+      </tr>
+    </table>
   </td>
-  <td align="center" width="20%">
-    <strong>Databases & Data</strong><br/>
-    <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="40" height="40" alt="BigQuery" />
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="40" height="40" alt="MySQL" /><br/>
-    <small>BigQuery · MySQL</small>
-  </td>
-  <td align="center" width="20%">
-    <strong>Web Development</strong><br/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript" />
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="40" height="40" alt="React" /><br/>
-    <small>JavaScript · React</small>
-  </td>
-  <td align="center" width="20%">
-    <strong>Backend & Scripting</strong><br/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" height="40" alt="Python" />
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="Node.js" /><br/>
-    <small>Python · Node.js</small>
-  </td>
-  <td align="center" width="20%">
-    <strong>Tools & Platforms</strong><br/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="40" height="40" alt="Docker" />
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40" height="40" alt="Git" /><br/>
-    <small>Docker · Git</small>
+  <td width="50%">
+    <h3>In Progress (MSc Program)</h3>
+    <p><small><strong>Complutense University of Madrid</strong></small></p>
+
+    - Linux & Git Fundamentals
+    - SQL & NoSQL Databases
+    - Business Intelligence (Tableau)
+    - Python Programming
+    - Statistics & Data Analysis
+    - Data Mining & Predictive Modeling
+    - Machine Learning
+    - Advanced Data Visualization
+    - Deep Learning & AI
+    - Apache Spark
+    - Big Data Technologies
+    - Model Productionization
+    - Applied Data Science
   </td>
 </tr>
 </table>
