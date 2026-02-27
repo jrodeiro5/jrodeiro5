@@ -152,9 +152,9 @@ When tools don't exist, I build them—including **OmniZenit** (GA4/tracking val
 
 <div align="center">
 
-![Javier's GitHub stats](https://github-readme-stats.vercel.app/api?username=jrodeiro5&show_icons=true&theme=dark&bg_color=000000&title_color=ffffff&text_color=ffffff&icon_color=ffffff&hide_border=true&count_private=true)
+[![GitHub stats](https://github-readme-stats.vercel.app/api?username=jrodeiro5&show_icons=true&theme=dark&bg_color=000000&title_color=ffffff&text_color=ffffff&icon_color=ffffff&hide_border=true&count_private=true)](https://github.com/jrodeiro5)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jrodeiro5&layout=compact&theme=dark&bg_color=000000&title_color=ffffff&text_color=ffffff&hide_border=true)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=jrodeiro5&layout=compact&theme=dark&bg_color=000000&title_color=ffffff&text_color=ffffff&hide_border=true)](https://github.com/jrodeiro5)
 
 </div>
 
@@ -208,5 +208,5 @@ I'm always interested in discussing **data analytics, AI automation, and buildin
 ---
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=000000&height=100&section=footer" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=ffffff&height=100&section=footer" />
 </div>
