@@ -30,85 +30,21 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 
 ## Tech Stack
 
-<table>
-<tr>
-  <td width="33%">
-    <h4>Analytics & Tracking</h4>
-    <ul>
-      <li>Google Analytics 4</li>
-      <li>Google Tag Manager</li>
-      <li>Piwik Pro</li>
-      <li>Amplitude, PostHog</li>
-      <li>Google Search Console</li>
-    </ul>
-  </td>
-  <td width="33%">
-    <h4>Data & Databases</h4>
-    <ul>
-      <li>Google BigQuery</li>
-      <li>Supabase (PostgreSQL)</li>
-      <li>Excel</li>
-      <li>SQL & NoSQL</li>
-    </ul>
-  </td>
-  <td width="33%">
-    <h4>Data Visualization & BI</h4>
-    <ul>
-      <li>Looker Studio</li>
-      <li>Tableau</li>
-      <li>Power BI</li>
-      <li>Scimago Graphica</li>
-    </ul>
-  </td>
-</tr>
-<tr>
-  <td width="33%">
-    <h4>Development</h4>
-    <ul>
-      <li>JavaScript (ES6+)</li>
-      <li>TypeScript</li>
-      <li>React & Next.js</li>
-      <li>Node.js</li>
-      <li>Python</li>
-    </ul>
-  </td>
-  <td width="33%">
-    <h4>Automation & Integration</h4>
-    <ul>
-      <li>Google Apps Scripts</li>
-      <li>Make</li>
-      <li>n8n</li>
-      <li>Zapier</li>
-    </ul>
-  </td>
-  <td width="33%">
-    <h4>AI</h4>
-    <ul>
-      <li>Specialized in Google AI and Vercel environments and products</li>
-    </ul>
-  </td>
-</tr>
-<tr>
-  <td width="33%">
-    <h4>CRO & User Experience</h4>
-    <ul>
-      <li>Hotjar</li>
-      <li>Microsoft Clarity</li>
-    </ul>
-  </td>
-  <td width="33%">
-    <h4>Project Management</h4>
-    <ul>
-      <li>Jira</li>
-      <li>Linear</li>
-      <li>Notion</li>
-      <li>Trello</li>
-    </ul>
-  </td>
-  <td width="33%">
-  </td>
-</tr>
-</table>
+### Development Stack
+[![Development](https://skillicons.dev/icons?i=javascript,typescript,react,nextjs,nodejs,python,html,css)](https://skillicons.dev)
+
+### Data & Analytics
+[![Data Stack](https://skillicons.dev/icons?i=googlecloud,postgresql,mysql,git,github,docker,vscode)](https://skillicons.dev)
+
+**Specialized Tools:**
+- Google Analytics 4, Google Tag Manager, Piwik Pro
+- Google BigQuery, Supabase, Looker Studio
+- Tableau, Power BI, Scimago Graphica
+- Make, n8n, Google Apps Scripts, Zapier
+- Jira, Linear, Notion
+- Hotjar, Microsoft Clarity
+
+**AI:** Specialized in Google AI and Vercel environments and products
 
 ---
 
@@ -169,19 +105,19 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
   <table>
     <tr>
       <td align="center" width="25%">
-        <img src="public/scrum_master.jfif" width="50" height="50" alt="CSM" /><br/>
-        <small><strong>Certified Scrum Master</strong></small>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/scrum_master.jfif" width="60" height="60" alt="CSM" /><br/>
+        <small><strong>Certified<br/>Scrum Master</strong></small>
       </td>
       <td align="center" width="25%">
-        <img src="public/product_owner.jfif" width="50" height="50" alt="Product Owner" /><br/>
-        <small><strong>Product Owner</strong></small>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/product_owner.jfif" width="60" height="60" alt="Product Owner" /><br/>
+        <small><strong>Product<br/>Owner</strong></small>
       </td>
       <td align="center" width="25%">
-        <img src="public/kanban_essentials.jfif" width="50" height="50" alt="Kanban" /><br/>
-        <small><strong>Kanban Essentials</strong></small>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/kanban_essentials.jfif" width="60" height="60" alt="Kanban" /><br/>
+        <small><strong>Kanban<br/>Essentials</strong></small>
       </td>
       <td align="center" width="25%">
-        <img src="public/lean.jfif" width="50" height="50" alt="Lean" /><br/>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/lean.jfif" width="60" height="60" alt="Lean" /><br/>
         <small><strong>Lean</strong></small>
       </td>
     </tr>
@@ -194,30 +130,30 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
   <table>
     <tr>
       <td align="center" width="33%">
-        <img src="https://www.vectorlogo.zone/logos/google_analytics/google_analytics-icon.svg" width="40" height="40" alt="GA4" /><br/>
-        <small><strong>Google Analytics 4</strong></small>
+        <img src="https://www.vectorlogo.zone/logos/google_analytics/google_analytics-icon.svg" width="50" height="50" alt="GA4" /><br/>
+        <small><strong>Google<br/>Analytics 4</strong></small>
       </td>
       <td align="center" width="33%">
-        <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="40" height="40" alt="BigQuery" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="50" height="50" alt="BigQuery" /><br/>
         <small><strong>BigQuery</strong></small>
       </td>
       <td align="center" width="33%">
-        <img src="https://seeklogo.com/images/L/looker-studio-logo-C8FED55D23-seeklogo.com.png" width="40" height="40" alt="Looker Studio" /><br/>
-        <small><strong>Looker Studio</strong></small>
+        <img src="https://seeklogo.com/images/L/looker-studio-logo-C8FED55D23-seeklogo.com.png" width="50" height="50" alt="Looker Studio" /><br/>
+        <small><strong>Looker<br/>Studio</strong></small>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://seeklogo.com/images/P/Piwik-Pro-logo-9BA9B2E1C5-seeklogo.com.png" width="40" height="40" alt="Piwik PRO" /><br/>
+        <img src="https://seeklogo.com/images/P/Piwik-Pro-logo-9BA9B2E1C5-seeklogo.com.png" width="50" height="50" alt="Piwik PRO" /><br/>
         <small><strong>Piwik PRO</strong></small>
       </td>
       <td align="center">
-        <img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" width="40" height="40" alt="Tableau" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" width="50" height="50" alt="Tableau" /><br/>
         <small><strong>Tableau BI</strong></small>
       </td>
       <td align="center">
-        <img src="https://www.graphica.app/static/images/logo.png" width="40" height="40" alt="Scimago Graphica" /><br/>
-        <small><strong>Scimago Graphica</strong></small>
+        <img src="https://www.graphica.app/static/images/logo.png" width="50" height="50" alt="Scimago Graphica" /><br/>
+        <small><strong>Scimago<br/>Graphica</strong></small>
       </td>
     </tr>
   </table>
@@ -229,18 +165,17 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
   <table>
     <tr>
       <td align="center" width="50%">
-        <img src="public/make_advanced.png" width="50" height="50" alt="Make" /><br/>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/make_advanced.png" width="60" height="60" alt="Make Advanced" /><br/>
         <small><strong>Make Advanced</strong></small>
       </td>
       <td align="center" width="50%">
-        <img src="public/agile_foundation.jfif" width="50" height="50" alt="Agile Foundation" /><br/>
-        <small><strong>Agile Foundation</strong></small>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/agile_foundation.jfif" width="60" height="60" alt="Agile Foundation" /><br/>
+        <small><strong>Agile<br/>Foundation</strong></small>
       </td>
     </tr>
     <tr>
       <td align="center" colspan="2">
-        <small><strong>Product-Led Growth Micro-Certification (PLGC)™</strong> · Product School</small><br/>
-        <small><strong>AI & Innovation Compact</strong> (Design Thinking)</small>
+        <small><strong>Product-Led Growth (PLGC)™</strong> · Product School | <strong>AI & Innovation Compact</strong> (Design Thinking)</small>
       </td>
     </tr>
   </table>
