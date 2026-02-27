@@ -92,7 +92,7 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/UCM.png" width="60" height="60" alt="UCM" />
+<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/UCM.png" width="80" height="80" alt="UCM" />
 
 **MSc Data Science, Big Data & AI** — [Complutense University of Madrid](https://www.ucm.es/)
 *Oct 2025 - Sep 2026 (In Progress)*
@@ -167,13 +167,13 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
         <small><strong>BigQuery</strong></small>
       </td>
       <td align="center" width="33%">
-        <img src="https://cdn.jsdelivr.net/npm/@tabler/icons/icons/chart-line.svg" width="50" height="50" alt="Looker" /><br/>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/looker.svg" width="50" height="50" alt="Looker" /><br/>
         <small><strong>Looker<br/>Studio</strong></small>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/npm/@tabler/icons/icons/chart-bar.svg" width="50" height="50" alt="Piwik PRO" /><br/>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/piwik.png" width="50" height="50" alt="Piwik PRO" /><br/>
         <small><strong>Piwik PRO</strong></small>
       </td>
       <td align="center">
@@ -181,7 +181,7 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
         <small><strong>Tableau BI</strong></small>
       </td>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/npm/@tabler/icons/icons/chart-dots.svg" width="50" height="50" alt="Scimago" /><br/>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/scimago.jpg" width="50" height="50" alt="Scimago" /><br/>
         <small><strong>Scimago<br/>Graphica</strong></small>
       </td>
     </tr>
