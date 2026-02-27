@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="/failover/css/fonts.css?t=1761036768433" />
+  <link rel="stylesheet" href="/failover/css/styles.css?t=1761036768433" />
+  <script src="/failover/scripts/set-lang.js?t=1761036768433"></script>
+  <script src="/failover/scripts/set-title.js?t=1761036768433"></script>
+  <script>
+    setTitleByLang("INDITEX Access Denied", "INDITEX Acceso Denegado");
+  </script>
+  <script src="/failover/scripts/lang-message.js?t=1761036768433"></script>
+  <script src="/failover/scripts/date-reference.js?t=1761036768433"></script>
+  <script src="/failover/scripts/set-random-img.js?t=1761036768433"></script>
+  <script src="/failover/scripts/go-back.js?t=1761036768433"></script>
+  <script src="/failover/scripts/remove-error-code.js?t=1761036768433"></script>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <div class="container-block">
+      <img class="logo" src="/failover/images/inditex-logo.svg?t=1761036768433" alt="INDITEX - Logo" />
+      <section class="message-content">
+        <div class="message esp" style="display: none" lang="es">
+          <h2 class="title">Acceso denegado</h2>
+          <div>
+            <p class="message-text">Has sido redirigido a esta página. El contenido al que intentas acceder no está permitido para tu IP<br /><br />Por favor para cualquier consulta contacta con tu persona de contacto en INDITEX indicando los siguientes datos:</p>
+            <script>
+              showLangMessage();
+            </script>
+            <div class="reference"><span>Reference ID: 18.6664645f.1772202962.37b41ee3</span><BR><span>Client IP: 91.117.33.143</span>
+              <script>
+                writeReferenceDate();
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="message eng" style="display: none" lang="en">
+          <h2 class="title">Access denied</h2>
+          <div>
+            <p class="message-text">You have been redirected to this site. The content you are trying to access is not allowed to your IP<br /><br />Please, for any query, send an email to your contact person at INDITEX including the following data:</p>
+            <script>
+              showLangMessage();
+            </script>
+            <div class="reference"><span>Reference ID: 18.6664645f.1772202962.37b41ee3</span><BR><span>Client IP: 91.117.33.143</span>
+              <script>
+                writeReferenceDate();
+              </script>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <p class="error-code">403</p>
+
+      <script>
+        removeErrorCode();
+      </script>
+    </div>
+
+    <script>
+      setRandomImage();
+    </script>
+    <img class="container-image" src="/failover/images/default.png?t=1761036768433" alt="Illustrative failover image" />
+  </main>
+</body>
+
+</html>

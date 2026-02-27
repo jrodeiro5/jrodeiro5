@@ -50,12 +50,32 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 
 ## Featured Work
 
-| Project | Description |
-|---------|-------------|
-| **Pull&Bear Analytics Infrastructure** | End-to-end GA4, BigQuery, Looker Studio ecosystem for 56+ global markets. Manage analytics across EMEA, Americas, APAC. Design & maintain 50+ dashboards with automated daily updates. |
-| **OmniZenit Chrome Extension** | GA4 & tracking validation tool for Inditex teams. Real-time validation of implementations. Custom automation for audits. Adopted across organization. |
-| **Addocu** | Documentation tool for Google marketing platforms. Streamline GA4, GTM, and Analytics documentation in clicks. |
-| **AI & Automation Training Program** | 2-month internal program at Ayesa. Designed & delivered comprehensive training on AI automation workflows for data analysts and engineers. |
+<div align="center">
+
+### At Ayesa/Inditex
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/pullandbear-logo.svg" width="100" height="40" alt="Pull&Bear" /><br/><br/>
+      <strong>Pull&Bear Analytics Infrastructure</strong><br/>
+      <small>End-to-end GA4, BigQuery, Looker Studio ecosystem for 56+ global markets. Manage analytics across EMEA, Americas, APAC. Design & maintain 50+ dashboards with automated daily updates.</small>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/inditex-logo.jpg" width="100" height="40" alt="Inditex" /><br/><br/>
+      <strong>OmniZenit Chrome Extension</strong><br/>
+      <small>GA4 & tracking validation tool for Inditex teams. Real-time validation of implementations. Custom automation for audits. Adopted across organization.</small>
+    </td>
+  </tr>
+</table>
+
+### AI & Automation
+
+<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/ayesa-logo.svg" width="120" height="50" alt="Ayesa" /><br/><br/>
+**AI & Automation Training Program** — 2-month internal program at Ayesa
+Designed & delivered comprehensive training on AI automation workflows for data analysts and engineers.
+
+</div>
 
 ---
 
@@ -115,10 +135,24 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 - Applied Data Science
 
 **Other Master's**
-- **Master in Digital Analytics** — KSchool (Nov 2023 - Jun 2024)
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/kschool-logo.png" width="60" height="60" alt="KSchool" />
+
+**Master in Digital Analytics** — [KSchool](https://kschool.com/) (Nov 2023 - Jun 2024)
+
+</div>
 
 **Bachelor's**
-- **Advertising & Public Relations** — San Jorge University (Sep 2018 - Jun 2022)
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/sanjorge-logo.png" width="60" height="60" alt="San Jorge University" />
+
+**Advertising & Public Relations** — [San Jorge University](https://www.usj.es/) (Sep 2018 - Jun 2022)
+
+</div>
 
 ---
 
@@ -222,11 +256,33 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
 
 ## Community & Speaking
 
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/datola-logo.png" width="80" height="40" alt="Datola" /><br/><br/>
+      <strong>Contributor</strong><br/>
+      <small>Author of "Agile Analysis<br/>with AI" series</small>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/addocu-logo.webp" width="80" height="40" alt="Addocu" /><br/><br/>
+      <strong>Founder</strong><br/>
+      <small>Documentation tool for<br/>Google marketing platforms</small>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/firecrawl-logo.svg" width="80" height="40" alt="Firecrawl" /><br/><br/>
+      <strong>Creator Program</strong><br/>
+      <small>Web scraping &<br/>data extraction</small>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+**Additional roles:**
 - **Speaker** — Measure Camp Madrid 2025 · "MCP Servers in Data & Analytics"
-- **Contributor** — Datola · Author of "Agile Analysis with AI" series
-- **Founder** — Addocu · Documentation tool for Google marketing platforms
 - **Trainer** — AI/Automation Program at Ayesa (2-month comprehensive program)
-- **Creator Programs** — Firecrawl & LinkedMash
 
 ---
 
