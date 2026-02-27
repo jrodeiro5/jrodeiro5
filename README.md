@@ -6,6 +6,8 @@
 
 ### 👋 Welcome! I'm Javier
 
+![Wave Hello](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/wave-hello.gif)
+
 **Digital Product & Data Analyst** | **AI Solutions Developer** | **MSc Data Science & AI**
 
 **Madrid - A Coruña, Spain** | [LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) | [Website](https://javierrodeiro.com) | [hello@javierrodeiro.com](mailto:hello@javierrodeiro.com)
@@ -288,6 +290,8 @@ I'm interested in discussing data analytics, product strategy, AI automation, an
 ---
 
 <h3 align="center">💡 Let's build something amazing together! 💡</h3>
+
+![Celebrate](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/celebrate.gif)
 
 ![Let's Connect](https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/footer.gif)
 
