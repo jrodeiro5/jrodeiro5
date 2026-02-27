@@ -1,10 +1,10 @@
-# 👋 Javier Rodeiro
+# 👋 Javier Rodeiro Rodríguez
 
 <div align="center">
 
 ![GitHub Banner](https://capsule-render.vercel.app/api?type=waving&color=000000&height=200&section=header&text=Javier%20Rodeiro&fontSize=90&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Digital%20Product%20%7C%20Data%20Analytics%20%7C%20AI%20Solutions&descAlignY=60&descAlign=center)
 
-**Digital Product & Data Analyst | AI Solutions Developer | Data Science Enthusiast**
+**Digital Product & Data Analyst | AI Solutions Developer | MSc Data Science & AI**
 
 <p>
   <a href="https://linkedin.com/in/javier-rodeiro-rodriguez" target="_blank">
@@ -19,7 +19,7 @@
   <a href="https://medium.com/@jrodeiro.dev" target="_blank">
     <img src="https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" />
   </a>
-  <a href="mailto:hello@javierrodeiro.com">
+  <a href="mailto:javierrodeirorodriguez@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
@@ -34,16 +34,27 @@
 
 ## 🚀 About Me
 
-I build **data products and analytics systems** grounded in clean architecture, rigorous validation, and user-centric design. Currently managing global analytics infrastructure at **Ayesa** (Client: **Inditex/PULL&BEAR**) across 56+ markets.
+I build **data products and analytics systems** grounded in clean data, rigorous validation, and user feedback. Currently managing end-to-end analytics at **Ayesa** (Client: **Inditex/PULL&BEAR**) across 56+ global markets, delivering insights and testing through GA4, BigQuery, and custom tools.
 
-When tools don't exist, I build them—including **OmniZenit** (GA4/tracking validation Chrome extension) and custom automation frameworks now adopted across Inditex. I'm passionate about bridging the gap between **data, product, and technology**.
+Less time on "What happened?" — more time on "What can I solve?" When tools don't exist, I build them. I'm pursuing an **MSc in Data Science & AI** while developing expertise in uncovering patterns through quantitative and qualitative insights, with a focus on **Product-Led Growth** and **Data Storytelling**.
 
 **📊 Currently:**
 - Digital Product & Data Analyst at Ayesa (Inditex/PULL&BEAR)
-- Pursuing MSc Data Science & AI @ Complutense University of Madrid
-- Speaker & Community Contributor (Measure Camp Madrid 2025, Datola)
+- Pursuing MSc Data Science, Big Data & AI @ Complutense University of Madrid
+- Speaker at Measure Camp Madrid 2025
+- Contributor at Datola & Creator Programs (Firecrawl, LinkedMash)
 
-**📍 Based in:** A Coruña & Madrid, Spain
+**📍 Based in:** A Coruña, Spain | Work: Madrid - A Coruña
+
+---
+
+## 🎯 Core Competencies
+
+- **Product Lifecycle Management & Product-Led Growth** – Strategy and execution
+- **Data Analysis & Storytelling** – Insights that drive decisions
+- **Data Visualization & BI** – Making data accessible and actionable
+- **Agile Management** – 4x Certified (Scrum, Kanban, Product Owner, Lean)
+- **AI Solutions Development** – Specialized in Google AI and Vercel environments
 
 ---
 
@@ -54,7 +65,6 @@ When tools don't exist, I build them—including **OmniZenit** (GA4/tracking val
   <td align="center" width="20%">
     <strong>Analytics & Tracking</strong><br/>
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/google/google-original.svg" width="40" height="40" alt="Google" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" width="40" height="40" alt="GA4" />
   </td>
   <td align="center" width="20%">
     <strong>Databases & Data</strong><br/>
@@ -73,24 +83,33 @@ When tools don't exist, I build them—including **OmniZenit** (GA4/tracking val
   </td>
   <td align="center" width="20%">
     <strong>Tools & Platforms</strong><br/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="40" height="40" alt="Docker" />
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40" height="40" alt="Git" />
   </td>
 </tr>
 </table>
 
-### **Languages & Frameworks**
-- **JavaScript/TypeScript** · React · Next.js · Node.js
-- **Python** · FastAPI
-- **SQL** · Google Apps Scripts · n8n
+### **Development**
+- **JavaScript/TypeScript** · React · Next.js · Node.js · Python · SQL
+- Google Apps Scripts · n8n · FastAPI
 
-### **Analytics & BI**
+### **Analytics & Tracking**
 - Google Analytics 4 · Google Tag Manager · Piwik Pro · Amplitude · PostHog
-- Google BigQuery · Looker Studio · Power BI · Tableau
+- Trackingplan · Google Search Console
+
+### **Data & Databases**
+- Google BigQuery · Supabase · MySQL · Excel
+
+### **Visualization & BI**
+- Looker Studio · Power BI · Tableau · Scimago Graphica
+
+### **CRO & User Experience**
+- Hotjar · Microsoft Clarity
 
 ### **Automation & Integration**
 - n8n · Make · Zapier · Google Apps Scripts
-- Notion · Jira · Linear
+
+### **Project Management**
+- Jira · Linear · Trello · Notion
 
 ---
 
@@ -103,8 +122,9 @@ When tools don't exist, I build them—including **OmniZenit** (GA4/tracking val
     <p><strong>End-to-end GA4, BigQuery, Looker Studio ecosystem for 56+ global markets</strong></p>
     <ul>
       <li>Manage analytics for Web & App across EMEA, Americas, APAC</li>
-      <li>Design and maintain 50+ interactive dashboards with automated daily updates</li>
-      <li>Extract & transform GA4 data into executive-level insights</li>
+      <li>Extract, process, transform GA4/BigQuery data into executive-level insights</li>
+      <li>Design & maintain 50+ interactive dashboards with automated daily updates</li>
+      <li>Conduct hypothesis-driven investigations for performance optimization</li>
     </ul>
     <p>
       <img src="https://img.shields.io/badge/Scope-Global-000000?style=flat" />
@@ -117,7 +137,8 @@ When tools don't exist, I build them—including **OmniZenit** (GA4/tracking val
     <ul>
       <li>Real-time validation of Google Analytics 4 implementations</li>
       <li>Custom automation for tracking audits across 56+ markets</li>
-      <li>Adopted across Inditex organization</li>
+      <li>Adopted across Inditex organization for debugging & optimization</li>
+      <li>Improves team efficiency & data quality</li>
     </ul>
     <p>
       <img src="https://img.shields.io/badge/Tech-JavaScript-F7DF1E?style=flat&logo=javascript" />
@@ -129,16 +150,16 @@ When tools don't exist, I build them—including **OmniZenit** (GA4/tracking val
   <td width="50%">
     <h3>📋 Addocu</h3>
     <p><strong>Documentation tool for Google marketing platforms</strong></p>
-    <p>Founder project to streamline GA4, GTM, and Analytics documentation</p>
+    <p>Founder project to streamline GA4, GTM, and Analytics documentation in clicks</p>
     <p>
       <img src="https://img.shields.io/badge/Status-Founder-000000?style=flat" />
-      <img src="https://img.shields.io/badge/Type-Tool-000000?style=flat" />
+      <img src="https://img.shields.io/badge/Link-addocu.com-000000?style=flat" />
     </p>
   </td>
   <td width="50%">
-    <h3>🎓 AI/Automation Training Program</h3>
-    <p><strong>2-month program designed & delivered at Ayesa</strong></p>
-    <p>Trainer for data analysts and engineers on AI automation workflows and modern tools</p>
+    <h3>🎓 AI & Automation Training Program</h3>
+    <p><strong>2-month internal program at Ayesa</strong></p>
+    <p>Designed & delivered comprehensive training on AI automation workflows and modern tools for data analysts and engineers</p>
     <p>
       <img src="https://img.shields.io/badge/Impact-Team%20Enablement-000000?style=flat" />
     </p>
@@ -170,12 +191,19 @@ When tools don't exist, I build them—including **OmniZenit** (GA4/tracking val
 - **MSc Data Science, Big Data & AI** — Complutense University of Madrid (2025–2026, in progress)
 - **Master in Digital Analytics** — KSchool (2023–2024)
 
-### **Certifications**
-- Google Analytics 4 · Google Data Studio Essential
-- Certified ScrumMaster · Product Owner
-- Kanban Essentials · Lean
-- BigQuery Fundamentals · Make Advanced
-- Piwik PRO Analytics Suite
+### **Agile & Product Certifications**
+- Certified ScrumMaster · Product Owner · Kanban Essentials · Lean
+- Product-Led Growth Micro-Certification (PLGC)™ · Product School
+- AI & Innovation Compact (Design Thinking)
+
+### **Analytics & Data Certifications**
+- Google Analytics 4 Certification
+- Query GA4 Data in BigQuery (Simmer)
+- Piwik PRO Analytics Suite | Tag & Consent Manager
+- Google Data Studio Essential
+- Scimago Graphica Certification
+- MIDE Taller Auditoría Técnica en Analítica Digital
+- Make Advanced
 
 ### **Bachelor's**
 - Advertising & Public Relations — San Jorge University (2018–2022)
@@ -184,7 +212,10 @@ When tools don't exist, I build them—including **OmniZenit** (GA4/tracking val
 
 ## 🌍 Languages
 
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/google/google-original.svg" width="20" height="20" /> **Spanish** (native) · **Galician** (native) · **English** (C2 Cambridge) · **French** (working proficiency)
+- **Spanish** (Native or Bilingual)
+- **Galician** (Native or Bilingual)
+- **English** (C2 Proficiency – Cambridge Certificate)
+- **French** (Limited working proficiency)
 
 ---
 
@@ -192,18 +223,19 @@ When tools don't exist, I build them—including **OmniZenit** (GA4/tracking val
 
 - **Speaker** — Measure Camp Madrid 2025 · *"MCP Servers in Data & Analytics"*
 - **Contributor** — Datola · *"Agile Analysis with AI" series author*
+- **Founder** — Addocu · Documentation tool for Google marketing platforms
 - **Trainer** — Designed & delivered AI/automation program at Ayesa
-- **Beta Member** — Firecrawl & LinkedMash Creator Programs
+- **Creator Program Member** — Firecrawl & LinkedMash
 
 ---
 
 ## 📫 Let's Connect!
 
-I'm always interested in discussing **data analytics, AI automation, and building tools that solve real problems**. Whether you're exploring new technologies, optimizing analytics infrastructure, or just want to chat about data—let's connect!
+I'm always interested in discussing **data analytics, product strategy, AI automation, and building tools that solve real problems**. Whether you're exploring new technologies, optimizing analytics infrastructure, or just want to chat about data—let's connect!
 
 <div align="center">
 
-**✉️ hello@javierrodeiro.com**
+**✉️ javierrodeirorodriguez@gmail.com**
 
 <a href="https://linkedin.com/in/javier-rodeiro-rodriguez">LinkedIn</a> · <a href="https://javierrodeiro.com">Website</a> · <a href="https://dev.to/jrodeiro5">Dev.to</a> · <a href="https://medium.com/@jrodeiro.dev">Medium</a>
 
