@@ -67,55 +67,55 @@ When tools don't exist, I build them. I'm pursuing an **MSc in Data Science & AI
     <table>
       <tr>
         <td align="center" width="25%">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googleanalytics.svg" width="35" height="35" alt="GA4" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/googlecloud/googlecloud-original.svg" width="35" height="35" alt="GA4" /><br/>
           <small>GA4</small>
         </td>
         <td align="center" width="25%">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlebigquery.svg" width="35" height="35" alt="BigQuery" /><br/>
+          <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="35" height="35" alt="BigQuery" /><br/>
           <small>BigQuery</small>
         </td>
         <td align="center" width="25%">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/javascript.svg" width="35" height="35" alt="JavaScript" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" width="35" height="35" alt="JavaScript" /><br/>
           <small>JavaScript</small>
         </td>
         <td align="center" width="25%">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/python.svg" width="35" height="35" alt="Python" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/python/python-original.svg" width="35" height="35" alt="Python" /><br/>
           <small>Python</small>
         </td>
       </tr>
       <tr>
         <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/react.svg" width="35" height="35" alt="React" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/react/react-original.svg" width="35" height="35" alt="React" /><br/>
           <small>React</small>
         </td>
         <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/nextdotjs.svg" width="35" height="35" alt="Next.js" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/nextjs/nextjs-original.svg" width="35" height="35" alt="Next.js" /><br/>
           <small>Next.js</small>
         </td>
         <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/docker.svg" width="35" height="35" alt="Docker" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/docker/docker-original.svg" width="35" height="35" alt="Docker" /><br/>
           <small>Docker</small>
         </td>
         <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/git.svg" width="35" height="35" alt="Git" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/git/git-original.svg" width="35" height="35" alt="Git" /><br/>
           <small>Git</small>
         </td>
       </tr>
       <tr>
         <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/typescript.svg" width="35" height="35" alt="TypeScript" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/typescript/typescript-original.svg" width="35" height="35" alt="TypeScript" /><br/>
           <small>TypeScript</small>
         </td>
         <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/supabase.svg" width="35" height="35" alt="Supabase" /><br/>
+          <img src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg" width="35" height="35" alt="Supabase" /><br/>
           <small>Supabase</small>
         </td>
         <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/looker.svg" width="35" height="35" alt="Looker" /><br/>
+          <img src="https://www.vectorlogo.zone/logos/looker/looker-icon.svg" width="35" height="35" alt="Looker" /><br/>
           <small>Looker</small>
         </td>
         <td align="center">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/nodejs.svg" width="35" height="35" alt="Node.js" /><br/>
+          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/nodejs/nodejs-original.svg" width="35" height="35" alt="Node.js" /><br/>
           <small>Node.js</small>
         </td>
       </tr>
@@ -196,43 +196,43 @@ Streamline GA4, GTM, and Analytics documentation in clicks.
   <table>
     <tr>
       <td align="center" width="33%">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/scrum.svg" width="40" height="40" alt="Scrum Master" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/scrumalliance/scrumalliance-icon.svg" width="40" height="40" alt="Scrum Master" /><br/>
         <small><strong>Certified Scrum Master</strong></small>
       </td>
       <td align="center" width="33%">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googleanalytics.svg" width="40" height="40" alt="GA4" /><br/>
+        <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/googlecloud/googlecloud-original.svg" width="40" height="40" alt="GA4" /><br/>
         <small><strong>Google Analytics 4</strong></small>
       </td>
       <td align="center" width="33%">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlebigquery.svg" width="40" height="40" alt="BigQuery" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" width="40" height="40" alt="BigQuery" /><br/>
         <small><strong>BigQuery</strong></small>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/make.svg" width="40" height="40" alt="Make" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/make/make-icon.svg" width="40" height="40" alt="Make" /><br/>
         <small><strong>Make Advanced</strong></small>
       </td>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/jira.svg" width="40" height="40" alt="Jira" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/atlassian_jira/atlassian_jira-icon.svg" width="40" height="40" alt="Jira" /><br/>
         <small><strong>Jira</strong></small>
       </td>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/notion.svg" width="40" height="40" alt="Notion" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/notion/notion-icon.svg" width="40" height="40" alt="Notion" /><br/>
         <small><strong>Notion</strong></small>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tableau.svg" width="40" height="40" alt="Tableau" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" width="40" height="40" alt="Tableau" /><br/>
         <small><strong>Tableau BI</strong></small>
       </td>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/looker.svg" width="40" height="40" alt="Looker" /><br/>
+        <img src="https://www.vectorlogo.zone/logos/looker/looker-icon.svg" width="40" height="40" alt="Looker" /><br/>
         <small><strong>Looker Studio</strong></small>
       </td>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/postgresql.svg" width="40" height="40" alt="PostgreSQL" /><br/>
+        <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/postgresql/postgresql-original.svg" width="40" height="40" alt="PostgreSQL" /><br/>
         <small><strong>PostgreSQL</strong></small>
       </td>
     </tr>
