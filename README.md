@@ -2,6 +2,11 @@
 
 Digital Product & Data Analyst | AI Solutions Developer | MSc Data Science & AI
 
+<p>
+  <img src="https://komarev.com/ghpvc/?username=jrodeiro5&label=views&color=000000&style=flat" alt="Profile views" />
+  <img src="https://img.shields.io/github/followers/jrodeiro5?style=flat&color=000000&label=followers" alt="GitHub followers" />
+</p>
+
 ---
 
 ## About
@@ -19,6 +24,16 @@ Currently pursuing an MSc in Data Science & AI at Complutense University of Madr
 - Contributor: Datola
 - Creator Program: Firecrawl & LinkedMash
 - Location: A Coruña, Spain
+
+---
+
+## GitHub Stats
+
+<img src="https://github-readme-stats.vercel.app/api?username=jrodeiro5&show_icons=true&theme=transparent&hide_border=true&count_private=true&title_color=000000&text_color=000000" alt="GitHub Stats" />
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=jrodeiro5&theme=transparent&hide_border=true&stroke=000000&ring=000000&fire=000000" alt="Contribution Streak" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=jrodeiro5&show_icons=true&theme=transparent&hide_border=true&layout=compact&title_color=000000&text_color=000000" alt="Top Languages" />
 
 ---
 
@@ -46,6 +61,31 @@ Key Clients: Caser, Adeslas, DKV, AIG, Sanitas, ASISA, Repsol, R Cable, Euskalte
 - Conduct comprehensive lead generation audits to identify bottlenecks and ensure data quality
 - Extract KPIs from multi-channel campaigns and create interactive dashboards in Looker Studio and Power BI
 - Research, evaluate, and implement AI-powered solutions and Chrome extensions
+
+---
+
+## Tech Stack
+
+### Analytics & Data
+Google Analytics 4 | Google Tag Manager | Piwik Pro | Amplitude | PostHog | Trackingplan | Google Search Console
+
+### Data & Databases
+Google BigQuery | Excel | MySQL | Supabase
+
+### Visualization & BI
+Looker Studio | Power BI | Tableau | Scimago Graphica
+
+### Development
+JavaScript (ES6+) | TypeScript | React | Next.js | Node.js | Python
+
+### Automation
+Google Apps Scripts | n8n | Make
+
+### CRO & UX
+Hotjar | Microsoft Clarity
+
+### Tools
+Jira | Linear | Trello | Notion
 
 ---
 
@@ -78,31 +118,6 @@ Key Clients: Caser, Adeslas, DKV, AIG, Sanitas, ASISA, Repsol, R Cable, Euskalte
 
 ---
 
-## Tech Stack
-
-**Analytics**
-Google Analytics 4, Google Tag Manager, Piwik Pro, Amplitude, PostHog, Trackingplan, Google Search Console
-
-**Data & Databases**
-Google BigQuery, Excel, MySQL, Supabase
-
-**Visualization & BI**
-Looker Studio, Power BI, Tableau, Scimago Graphica
-
-**Development**
-JavaScript (ES6+), TypeScript, React, Next.js, Node.js, Python
-
-**Automation**
-Google Apps Scripts, n8n, Make
-
-**CRO & UX**
-Hotjar, Microsoft Clarity
-
-**Project Management**
-Jira, Linear, Trello, Notion
-
----
-
 ## Community & Contributions
 
 - Speaker at Measure Camp Madrid 2025: "MCP Servers in Data & Analytics"
@@ -110,6 +125,14 @@ Jira, Linear, Trello, Notion
 - Founder of Addocu: Tool to document Google marketing platforms
 - Trainer at Ayesa: Designed and delivered a two-month internal program on AI and automation for data analysts and engineers
 - Creator Program Member: Firecrawl and LinkedMash
+
+---
+
+## Blog Posts
+
+<!-- BLOG-POST-LIST:START -->
+Check back soon for new articles on analytics, AI automation, and data-driven product strategy
+<!-- BLOG-POST-LIST:END -->
 
 ---
 
@@ -123,7 +146,7 @@ Spanish (native) | Galician (native) | English (C2 – Cambridge) | French (work
 
 hello@javierrodeiro.com
 
-[LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) | [Website](https://javierrodeiro.com) | [GitHub](https://github.com/jrodeiro5)
+[LinkedIn](https://linkedin.com/in/javier-rodeiro-rodriguez) | [Website](https://javierrodeiro.com) | [Dev.to](https://dev.to/jrodeiro5) | [Medium](https://medium.com/@jrodeiro.dev) | [GitHub](https://github.com/jrodeiro5)
 
 ---
 
