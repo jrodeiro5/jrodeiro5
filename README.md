@@ -169,19 +169,19 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
   <table>
     <tr>
       <td align="center" width="25%">
-        <img src="https://www.vectorlogo.zone/logos/scrumalliance/scrumalliance-icon.svg" width="40" height="40" alt="CSM" /><br/>
+        <img src="public/scrum_master.jfif" width="50" height="50" alt="CSM" /><br/>
         <small><strong>Certified Scrum Master</strong></small>
       </td>
       <td align="center" width="25%">
-        <img src="https://www.vectorlogo.zone/logos/scrumalliance/scrumalliance-icon.svg" width="40" height="40" alt="Product Owner" /><br/>
+        <img src="public/product_owner.jfif" width="50" height="50" alt="Product Owner" /><br/>
         <small><strong>Product Owner</strong></small>
       </td>
       <td align="center" width="25%">
-        <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/docker/docker-original.svg" width="40" height="40" alt="Kanban" /><br/>
+        <img src="public/kanban_essentials.jfif" width="50" height="50" alt="Kanban" /><br/>
         <small><strong>Kanban Essentials</strong></small>
       </td>
       <td align="center" width="25%">
-        <img src="https://www.vectorlogo.zone/logos/devpost/devpost-icon.svg" width="40" height="40" alt="Lean" /><br/>
+        <img src="public/lean.jfif" width="50" height="50" alt="Lean" /><br/>
         <small><strong>Lean</strong></small>
       </td>
     </tr>
@@ -229,13 +229,18 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
   <table>
     <tr>
       <td align="center" width="50%">
-        <img src="https://uploads-ssl.webflow.com/5d4b5d8e9a2b1f3f3f3f3f3f/logo.png" width="40" height="40" alt="Product School" /><br/>
-        <small><strong>Product-Led Growth PLGC™</strong></small><br/>
-        <small>Product School</small>
+        <img src="public/make_advanced.png" width="50" height="50" alt="Make" /><br/>
+        <small><strong>Make Advanced</strong></small>
       </td>
       <td align="center" width="50%">
-        <img src="https://www.vectorlogo.zone/logos/make/make-icon.svg" width="40" height="40" alt="Make" /><br/>
-        <small><strong>Make Advanced</strong></small>
+        <img src="public/agile_foundation.jfif" width="50" height="50" alt="Agile Foundation" /><br/>
+        <small><strong>Agile Foundation</strong></small>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2">
+        <small><strong>Product-Led Growth Micro-Certification (PLGC)™</strong> · Product School</small><br/>
+        <small><strong>AI & Innovation Compact</strong> (Design Thinking)</small>
       </td>
     </tr>
   </table>
