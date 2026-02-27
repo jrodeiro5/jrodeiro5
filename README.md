@@ -197,7 +197,7 @@ Designed & delivered comprehensive training on AI automation workflows for data 
         <small><strong>Piwik PRO</strong></small>
       </td>
       <td align="center">
-        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/adobe-analytics.svg" width="50" height="50" alt="Adobe Analytics" /><br/>
+        <img src="https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/public/Adobe-Analytics.webp" width="50" height="50" alt="Adobe Analytics" /><br/>
         <small><strong>Adobe<br/>Analytics</strong></small>
       </td>
       <td align="center">
