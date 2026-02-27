@@ -152,9 +152,9 @@ When tools don't exist, I build them—including **OmniZenit** (GA4/tracking val
 
 <div align="center">
 
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=jrodeiro5&show_icons=true&theme=dark&bg_color=000000&title_color=ffffff&text_color=ffffff&icon_color=ffffff&hide_border=true&count_private=true)](https://github.com/jrodeiro5)
+![GitHub Summary Cards](https://github-profile-summary-cards.vercel.app/api/repos/jrodeiro5?theme=github_dark)
 
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=jrodeiro5&layout=compact&theme=dark&bg_color=000000&title_color=ffffff&text_color=ffffff&hide_border=true)](https://github.com/jrodeiro5)
+![GitHub Summary Cards](https://github-profile-summary-cards.vercel.app/api/profile-detail/jrodeiro5?theme=github_dark)
 
 </div>
 
