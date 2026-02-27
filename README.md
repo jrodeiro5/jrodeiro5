@@ -156,7 +156,14 @@ Less time on "What happened?" — more time on "What can I solve?" When tools do
 
 <div align="center">
 
-[![Addocu - Documentation tool for Google marketing platforms](https://github-readme-stats.vercel.app/api/pin/?username=Addocu&repo=addocu&theme=dark&bg_color=000000&title_color=ffffff&text_color=ffffff&border_color=333333)](https://github.com/Addocu/addocu)
+### **Addocu**
+*Documentation tool for Google marketing platforms*
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Addocu%2Faddocu-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Addocu/addocu)
+[![Stars](https://img.shields.io/github/stars/Addocu/addocu?style=flat-square&color=FDB750&label=Stars)](https://github.com/Addocu/addocu)
+[![License](https://img.shields.io/github/license/Addocu/addocu?style=flat-square&color=green)](https://github.com/Addocu/addocu)
+
+Streamline GA4, GTM, and Analytics documentation in clicks. A tool built to solve a real problem in the analytics workflow.
 
 </div>
 
