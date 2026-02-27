@@ -167,13 +167,13 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
         <small><strong>BigQuery</strong></small>
       </td>
       <td align="center" width="33%">
-        <img src="https://seeklogo.com/images/L/looker-studio-logo-C8FED55D23-seeklogo.com.png" width="50" height="50" alt="Looker Studio" /><br/>
+        <img src="https://cdn.jsdelivr.net/npm/@tabler/icons/icons/chart-line.svg" width="50" height="50" alt="Looker" /><br/>
         <small><strong>Looker<br/>Studio</strong></small>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://seeklogo.com/images/P/Piwik-Pro-logo-9BA9B2E1C5-seeklogo.com.png" width="50" height="50" alt="Piwik PRO" /><br/>
+        <img src="https://cdn.jsdelivr.net/npm/@tabler/icons/icons/chart-bar.svg" width="50" height="50" alt="Piwik PRO" /><br/>
         <small><strong>Piwik PRO</strong></small>
       </td>
       <td align="center">
@@ -181,7 +181,7 @@ I build products and conduct analysis—both grounded in clean data, rigorous va
         <small><strong>Tableau BI</strong></small>
       </td>
       <td align="center">
-        <img src="https://www.graphica.app/static/images/logo.png" width="50" height="50" alt="Scimago Graphica" /><br/>
+        <img src="https://cdn.jsdelivr.net/npm/@tabler/icons/icons/chart-dots.svg" width="50" height="50" alt="Scimago" /><br/>
         <small><strong>Scimago<br/>Graphica</strong></small>
       </td>
     </tr>
