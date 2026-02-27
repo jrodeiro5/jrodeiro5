@@ -74,7 +74,7 @@ Google Apps Scripts | n8n | Make
 ### CRO & UX
 Hotjar | Microsoft Clarity
 
-### Tools
+### PM Tools
 Jira | Linear | Trello | Notion
 
 ---
