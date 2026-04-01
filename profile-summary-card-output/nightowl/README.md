@@ -52,3 +52,13 @@
 ```
 
     
+
+---
+
+![](./4-productive-time.svg)
+
+```
+![](https://raw.githubusercontent.com/jrodeiro5/jrodeiro5/main/profile-summary-card-output/nightowl/4-productive-time.svg)
+```
+
+    
