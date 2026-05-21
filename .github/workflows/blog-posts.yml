@@ -1,0 +1,23 @@
+name: Update Blog Posts
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update Dev.to & Medium posts
+        uses: gautamkrishnar/blog-post-workflow@master
+        with:
+          feed_list: "https://linkedinrss.cns.me/7290366362223284224"
+          max_post_count: 5
+          template: "- [$title]($url) · *$date*"
+          commit_message: "📝 Update latest articles"
