@@ -122,8 +122,7 @@ Designed & delivered comprehensive training on AI automation workflows for data 
 
 *My LinkedIn newsletter on AI, data, and building things that matter.*
 
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- [How I Built an AI-Native Software for my Macro Pad](https://www.linkedin.com/pulse/how-i-built-ai-native-software-my-macro-pad-javier-rodeiro-rodr%C3%ADguez-pfbhe) · *Wed Mar 11 2026 9:13 PM*- [Building a Personal Brand Audit Tool with Firecrawl, Gemini and Lovable](https://www.linkedin.com/pulse/building-personal-brand-audit-tool-firecrawl-gemini-javier-roume) · *Fri Jan 23 2026 6:20 PM*- [You might not care about this: my 2025 ending credits.](https://www.linkedin.com/pulse/you-might-care-my-2025-ending-credits-javier-rodeiro-rodr%C3%ADguez-dr9ie) · *Wed Dec 31 2025 8:15 PM*- [Análisis Ágiles con IA](https://es.linkedin.com/pulse/an%C3%A1lisis-%C3%A1giles-con-ia-javier-rodeiro-rodr%C3%ADguez-p7aic) · *Wed May 07 2025 7:49 AM*- [La parábola del Elefante ahora es la del Dragón.](https://es.linkedin.com/pulse/la-par%C3%A1bola-del-elefante-ahora-es-drag%C3%B3n-javier-rodeiro-rodr%C3%ADguez-hxeec) · *Mon Feb 03 2025 6:30 AM*<!-- BLOG-POST-LIST:END -->
 
 <p align="center">
   <a href="https://www.linkedin.com/newsletters/puppets-scripts-7290366362223284224/">
