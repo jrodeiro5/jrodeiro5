@@ -46,12 +46,12 @@ Completing an MSc in Data Science, Big Data & AI at Complutense University of Ma
 ## GitHub
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=jrodeiro5&show_icons=true&hide_border=true&bg_color=00000000&title_color=fafafa&text_color=a1a1aa&icon_color=fafafa&count_private=true&hide=issues&card_width=440" />
-  <img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=jrodeiro5&show_icons=true&hide_border=true&bg_color=ffffff00&title_color=0a0a0a&text_color=52525b&icon_color=0a0a0a&count_private=true&hide=issues&card_width=440" height="165" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
+  <img alt="GitHub stats" src="assets/stats-light.svg" height="165" />
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=jrodeiro5&layout=compact&hide_border=true&bg_color=00000000&title_color=fafafa&text_color=a1a1aa&langs_count=8&card_width=440" />
-  <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jrodeiro5&layout=compact&hide_border=true&bg_color=ffffff00&title_color=0a0a0a&text_color=52525b&langs_count=8&card_width=440" height="165" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg" />
+  <img alt="Top languages" src="assets/langs-light.svg" height="165" />
 </picture>
 
 ---

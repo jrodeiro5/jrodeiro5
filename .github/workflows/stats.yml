@@ -1,0 +1,48 @@
+name: Update stats SVGs
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/stats.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch stats SVGs
+        run: |
+          mkdir -p assets
+          BASE="https://github-readme-stats.vercel.app/api"
+          USER="jrodeiro5"
+
+          curl -fsSL --retry 5 --retry-delay 10 \
+            "$BASE?username=$USER&show_icons=true&hide_border=true&bg_color=00000000&title_color=fafafa&text_color=a1a1aa&icon_color=fafafa&count_private=true&hide=issues&card_width=440" \
+            -o assets/stats-dark.svg
+
+          curl -fsSL --retry 5 --retry-delay 10 \
+            "$BASE?username=$USER&show_icons=true&hide_border=true&bg_color=ffffff00&title_color=0a0a0a&text_color=52525b&icon_color=0a0a0a&count_private=true&hide=issues&card_width=440" \
+            -o assets/stats-light.svg
+
+          curl -fsSL --retry 5 --retry-delay 10 \
+            "$BASE/top-langs/?username=$USER&layout=compact&hide_border=true&bg_color=00000000&title_color=fafafa&text_color=a1a1aa&langs_count=8&card_width=440" \
+            -o assets/langs-dark.svg
+
+          curl -fsSL --retry 5 --retry-delay 10 \
+            "$BASE/top-langs/?username=$USER&layout=compact&hide_border=true&bg_color=ffffff00&title_color=0a0a0a&text_color=52525b&langs_count=8&card_width=440" \
+            -o assets/langs-light.svg
+
+      - name: Commit changes
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/*.svg
+          git diff --staged --quiet || git commit -m "chore: refresh stats SVGs"
+          git push
