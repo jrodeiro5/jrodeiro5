@@ -27,6 +27,20 @@ Completing an MSc in Data Science, Big Data & AI at Complutense University of Ma
 
 ---
 
+## Lines of work
+
+What I actually spend commits on, grouped by the problem being solved.
+
+**Analytics instrumentation, made inspectable** &mdash; measurement stacks are opaque until someone documents them. [Addocu](https://github.com/Addocu/addocu) dumps a whole GA4/GTM property into a Google Sheet; [Omnibug-AI](https://github.com/jrodeiro5/Omnibug-AI) and the [digital marketing calculator](https://github.com/jrodeiro5/digital_marketing_calculator) attack the same gap from the browser and the spreadsheet side. Talk: [MeasureCamp Madrid 2025](https://github.com/jrodeiro5/measurecamp_madrid_2025).
+
+**Local-first AI tooling** &mdash; useful AI that never leaves the machine. [FindingExcellence PRO](https://github.com/jrodeiro5/FindingExcellence-PRO) is semantic file search running fully on Ollama: FastAPI backend, desktop UI, zero external API calls. Also a [macOS build](https://github.com/jrodeiro5/FindingExcellence_Mac_Version).
+
+**Agent infrastructure** &mdash; MCP servers, LiteLLM routing, and self-hosted agents doing repository operations on my own hardware. Mostly private repos; the pattern is always the same: local models first, cloud only when explicitly asked.
+
+**Hardware that talks to software** &mdash; [ajazz-deck](https://github.com/jrodeiro5/ajazz-deck), a Linux daemon and CLI that maps an AJAZZ AKP153 macro pad's physical buttons to shell commands from a YAML file.
+
+---
+
 ## Stack
 
 **Languages** &nbsp; TypeScript · JavaScript · Python · SQL
@@ -63,7 +77,13 @@ Completing an MSc in Data Science, Big Data & AI at Complutense University of Ma
 - **Datola** &mdash; *Agile Analysis with AI* series
 - **Creator programs** &mdash; Firecrawl · LinkedMash
 
-<!-- BLOG-POST-LIST:START -->- [How I Built an AI-Native Software for my Macro Pad](https://www.linkedin.com/pulse/how-i-built-ai-native-software-my-macro-pad-javier-rodeiro-rodr%C3%ADguez-pfbhe) · *Wed Mar 11 2026 9:13 PM*- [Building a Personal Brand Audit Tool with Firecrawl, Gemini and Lovable](https://www.linkedin.com/pulse/building-personal-brand-audit-tool-firecrawl-gemini-javier-roume) · *Fri Jan 23 2026 6:20 PM*- [You might not care about this: my 2025 ending credits.](https://www.linkedin.com/pulse/you-might-care-my-2025-ending-credits-javier-rodeiro-rodr%C3%ADguez-dr9ie) · *Wed Dec 31 2025 8:15 PM*- [Análisis Ágiles con IA](https://es.linkedin.com/pulse/an%C3%A1lisis-%C3%A1giles-con-ia-javier-rodeiro-rodr%C3%ADguez-p7aic) · *Wed May 07 2025 7:49 AM*- [La parábola del Elefante ahora es la del Dragón.](https://es.linkedin.com/pulse/la-par%C3%A1bola-del-elefante-ahora-es-drag%C3%B3n-javier-rodeiro-rodr%C3%ADguez-hxeec) · *Mon Feb 03 2025 6:30 AM*<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->
+- [How I Built an AI-Native Software for my Macro Pad](https://www.linkedin.com/pulse/how-i-built-ai-native-software-my-macro-pad-javier-rodeiro-rodr%C3%ADguez-pfbhe) · *Wed Mar 11 2026 9:13 PM*
+- [Building a Personal Brand Audit Tool with Firecrawl, Gemini and Lovable](https://www.linkedin.com/pulse/building-personal-brand-audit-tool-firecrawl-gemini-javier-roume) · *Fri Jan 23 2026 6:20 PM*
+- [You might not care about this: my 2025 ending credits.](https://www.linkedin.com/pulse/you-might-care-my-2025-ending-credits-javier-rodeiro-rodr%C3%ADguez-dr9ie) · *Wed Dec 31 2025 8:15 PM*
+- [Análisis Ágiles con IA](https://es.linkedin.com/pulse/an%C3%A1lisis-%C3%A1giles-con-ia-javier-rodeiro-rodr%C3%ADguez-p7aic) · *Wed May 07 2025 7:49 AM*
+- [La parábola del Elefante ahora es la del Dragón.](https://es.linkedin.com/pulse/la-par%C3%A1bola-del-elefante-ahora-es-drag%C3%B3n-javier-rodeiro-rodr%C3%ADguez-hxeec) · *Mon Feb 03 2025 6:30 AM*
+<!-- BLOG-POST-LIST:END -->
 
 ---
 

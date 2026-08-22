@@ -19,5 +19,7 @@ jobs:
         with:
           feed_list: "https://linkedinrss.cns.me/7290366362223284224"
           max_post_count: 5
-          template: "- [$title]($url) · *$date*"
+          # Sin $newline la accion concatena los 5 posts en una sola linea y markdown
+          # los renderiza como un parrafo corrido, no como lista.
+          template: "- [$title]($url) · *$date* $newline"
           commit_message: "📝 Update latest articles"
