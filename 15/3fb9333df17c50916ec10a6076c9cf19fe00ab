@@ -1,0 +1,23 @@
+.github/workflows/blog-posts.yml
+  s_51001271d44717::t_0bef5ad7b59d20 22-24
+.github/workflows/stats.yml
+  s_51001271d44717::t_dd4305f53f9bff 22-25,28-43
+README.md
+  s_51001271d44717::t_37558f8db9ea79 30-43,80-86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "153fb9333df17c50916ec10a6076c9cf19fe00ab",
+  "prompts": {},
+  "sessions": {
+    "s_51001271d44717": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c746dd7b-2518-4809-a88a-2c29aee40a52",
+        "model": "claude-opus-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
