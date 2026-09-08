@@ -36,17 +36,9 @@ browseable Markdown tree.
 almanac/
 |-- README.md
 |-- topics.yaml
-|-- concepts/
-|   `-- sources.md
-|-- architecture/
-|   |-- README.md
-|   `-- indexing.md
-|-- decisions/
-|   `-- local-first.md
-|-- guides/
-|   `-- setup.md
-`-- reference/
-    `-- page-format.md
+|-- architecture/   (empty — placeholder for future standalone pages)
+|-- manual/         (13 bundled docs: how to write and maintain the wiki)
+`-- reference/      (empty — placeholder for future standalone pages)
 ```
 
 `almanac/README.md` plus `almanac/topics.yaml` identify an initialized
