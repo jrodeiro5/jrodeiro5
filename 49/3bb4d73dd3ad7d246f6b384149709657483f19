@@ -1,0 +1,59 @@
+.github/workflows/blog-posts.yml
+  s_82c5c9225a3cad::t_1e5ac9dce5d62f 22-25
+assets/card-findingexcellence-dark.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+DESIGN.md
+  s_82c5c9225a3cad::t_30c73b2a622bbd 2-4,6-7,9-10,13,15,17-19,21,23-27,29-31,33,35-36,38,40,42-43,46
+assets/card-addocu-light.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+assets/hero-dark.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+assets/card-solodshouse-light.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+design/build.py
+  s_82c5c9225a3cad::t_870764b9d558b0 291-292
+  s_82c5c9225a3cad::t_610c663da3cf2c 318-319,321-322,324-325,327-328,336-338,341
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 169-171
+  s_82c5c9225a3cad::t_c98b6f1e265a18 279-285
+  s_82c5c9225a3cad::t_b47fa187f8be24 287,293
+  s_82c5c9225a3cad::t_e4f89be12b453f 1-168,172-278,286,288-290,294-317,320,323,326,329-335,339-340,342-354
+assets/hero-light.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+assets/card-addocu-dark.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+PRODUCT.md
+  s_82c5c9225a3cad::t_7514d8a03f6c43 1-26
+README.md
+  s_82c5c9225a3cad::t_9f522ad248aa7c 1-21,23-27,29-33,35-39,41-44,47-48,51,53-57,59,61-63,65-71,73,75-80,82
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 22,28,34,40
+assets/card-ajazz-deck-dark.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+assets/principles-light.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+assets/card-solodshouse-dark.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+assets/card-ajazz-deck-light.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+assets/card-findingexcellence-light.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+assets/principles-dark.svg
+  s_82c5c9225a3cad::t_648ac8ed0ec6c6 1
+design/fonts/OFL.txt
+  s_82c5c9225a3cad::t_dceb6624cbac36 1-92
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "493bb4d73dd3ad7d246f6b384149709657483f19",
+  "prompts": {},
+  "sessions": {
+    "s_82c5c9225a3cad": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e7888b3f-0220-48a7-8fc2-872352f74f87",
+        "model": "claude-opus-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
