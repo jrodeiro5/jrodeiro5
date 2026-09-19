@@ -27,10 +27,10 @@ typography:
 | `principles` | 880×248 | A tile that morphs FUNNEL ↔ LOOP next to the four principles. The first principle is in text colour, the rest muted. |
 | `focus` | 880×328 | "Now building": four tiles in a 2×2 grid (agents, knowledge, local-first, data). The line glyphs light up in accent one after another. |
 | `toolkit` | 880×n·68 | A ticker with one row per category (analytics / code / ai / data). Each row's band is defined once, repeated with `<use>`, and slid by `animateTransform` at 26 px/s. Rows alternate direction, and the edges fade out. |
-| `credentials` | 880×… | Certification list. An accent check draws itself on each row in turn over a 9s cycle. The issuer is set in mono, right-aligned. |
+| `credentials` | 880×… | Certification list. An accent check draws itself on each row in turn over a 9s cycle. Issuer logos sit right-aligned at 20px, in `muted`. |
 | `activity` | 880×292 | Live stats plus a 53×7 heatmap. Built from the GraphQL `contributionCalendar`. Cell opacity scales with the square root of the day's count. Cells are static; an accent scan column sweeps across them on a 9s loop. |
 
-- **Logos:** `design/logos/`. Simple Icons (CC0, see `LICENSE-simple-icons.md`) plus official marks where they exist (Amplitude, Piwik PRO, Looker Studio, Addocu). They are flattened to a single colour: all fills and styles are stripped, and the viewBox is cropped through `CROP`. A tool with no mark is shown as a label only. A card shows a project logo only when `design/logos/<name>.svg` exists.
+- **Logos:** `design/logos/`. Simple Icons (CC0, see `LICENSE-simple-icons.md`) plus official marks where they exist (Amplitude, Piwik PRO, Looker Studio, Google, Cambridge English, EF SET, Addocu). They are flattened to a single colour: all fills and styles are stripped, and the viewBox is cropped through `CROP`. A tool with no mark is shown as a label only. A card shows a project logo only when `design/logos/<name>.svg` exists.
 
 - **Frame:** a 16px-radius rounded rect filled with `bg` and a 1px `line` stroke. Tiles use a 14px radius, filled with `tile`.
 - **Easing:** `keySplines="0.65 0 0.35 1"` everywhere.

@@ -457,11 +457,11 @@ def ticker(c):
 # --------------------------------------------------------------------------- credentials
 
 CREDENTIALS = [
-    ("Google Analytics Individual Qualification", "Google"),
-    ("Piwik PRO Analytics Suite · Tag Manager · Consent Manager", "Piwik PRO"),
-    ("Adobe Analytics Foundations", "Adobe"),
-    ("Certificate of Proficiency in English (C2)", "Cambridge English"),
-    ("EF SET C2 Proficient", "EF"),
+    ("Google Analytics Individual Qualification", "Google", "google-wordmark"),
+    ("Piwik PRO Analytics Suite · Tag Manager · Consent Manager", "Piwik PRO", "piwikpro"),
+    ("Adobe Analytics Foundations", "Adobe", "adobe"),
+    ("Cambridge C2 Proficiency", "Cambridge English", "cambridgeenglish"),
+    ("EF SET C2 Proficient", "EF", "efset"),
 ]
 PRACTICE = "Scrum Master · Product Owner · Kanban · Lean"
 
@@ -472,7 +472,7 @@ def credentials(c):
     h = top + row_h * (n + 1) + 16
     dur = 9
     b = []
-    for i, (name, issuer) in enumerate(CREDENTIALS + [(PRACTICE, "practice")]):
+    for i, (name, issuer, slug) in enumerate(CREDENTIALS + [(PRACTICE, "practice", None)]):
         y = top + i * row_h
         mid = y + row_h / 2
         if i:
@@ -489,8 +489,12 @@ def credentials(c):
             b.append(f'<path d="M34 {mid} h18 M34 {mid - 6} h18 M34 {mid + 6} h12" stroke="{c["faint"]}" '
                      f'stroke-width="2" stroke-linecap="round"/>')
         b.append(text(76, mid + 7, name, 20, c["muted"] if last else c["text"]))
-        b.append(text(w - 32, mid + 5, issuer, 14, c["faint"], "GM", "end"))
-    flat = "; ".join(f"{a} ({b_})" for a, b_ in CREDENTIALS)
+        if slug:  # issuer mark, right-aligned
+            lw = place(slug, 0, 0, 20, "")[1]
+            b.append(place(slug, w - 32 - lw, mid - 10, 20, c["muted"])[0])
+        else:
+            b.append(text(w - 32, mid + 5, issuer, 14, c["faint"], "GM", "end"))
+    flat = "; ".join(f"{a} ({b_})" for a, b_, _ in CREDENTIALS)
     return svg(w, h, f"Certifications: {flat}. Practice: {PRACTICE}.", "".join(b), c)
 
 

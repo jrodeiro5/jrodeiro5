@@ -66,7 +66,7 @@ At **cinfo** I build AI and analytics solutions on a fully open-source stack. Be
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/credentials-dark.svg" />
-  <img alt="Certifications: Google Analytics Individual Qualification; Piwik PRO Analytics Suite, Tag Manager and Consent Manager; Adobe Analytics Foundations; Cambridge Certificate of Proficiency in English (C2); EF SET C2 Proficient. Practice: Scrum Master, Product Owner, Kanban, Lean." src="assets/credentials-light.svg" width="100%" />
+  <img alt="Certifications: Google Analytics Individual Qualification; Piwik PRO Analytics Suite, Tag Manager and Consent Manager; Adobe Analytics Foundations; Cambridge C2 Proficiency; EF SET C2 Proficient. Practice: Scrum Master, Product Owner, Kanban, Lean." src="assets/credentials-light.svg" width="100%" />
 </picture>
 
 <h3>Activity</h3>
