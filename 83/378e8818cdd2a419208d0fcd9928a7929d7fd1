@@ -1,0 +1,21 @@
+README.md
+  s_ae34bb2dad814b::t_f2b20489d22a95 1-2
+assets/logo.svg
+  s_ae34bb2dad814b::t_ad13a4c20831e7 1-45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "83378e8818cdd2a419208d0fcd9928a7929d7fd1",
+  "prompts": {},
+  "sessions": {
+    "s_ae34bb2dad814b": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f450bf0efffexouhPCFU8L4a9X",
+        "model": "muse-spark-1.3-contributor"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
