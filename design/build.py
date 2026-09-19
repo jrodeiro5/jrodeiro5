@@ -138,10 +138,6 @@ CHECK = [(3.5, 12.5), (9, 18), (20.5, 6.5), (9, 18)]
 BOX = [(3, 7), (12, 2), (21, 7), (21, 17), (12, 22), (3, 17), (3, 7), (12, 12), (21, 7), (12, 12),
        (12, 22), (12, 12)]
 PLANE = [(2.5, 10.5), (21.5, 2.5), (13.5, 21.5), (10.5, 13.5), (21.5, 2.5), (10.5, 13.5)]
-FUNNEL = [(3, 4), (21, 4), (14, 12.5), (14, 20), (10, 22), (10, 12.5)]
-LOOP = [(12 + 10 * math.cos(t) / (1 + math.sin(t) ** 2),
-         12 + 10 * math.sin(t) * math.cos(t) / (1 + math.sin(t) ** 2))
-        for t in (2 * math.pi * i / 72 for i in range(72))]
 
 
 def morph(shapes, scale, ox, oy, dur, hold, stroke, width):
@@ -206,30 +202,6 @@ def hero(c):
                      "validation, and when the tool doesn't exist, I build it.", "".join(b), c)
 
 
-# --------------------------------------------------------------------------- principles
-
-
-def principles(c):
-    w, h = 880, 248
-    b = []
-    tx, ty, ts = 48, 40, 144
-    b.append(f'<rect x="{tx}" y="{ty}" width="{ts}" height="{ts}" rx="14" fill="{c["tile"]}" stroke="{c["line"]}"/>')
-    b.append(morph([FUNNEL, LOOP], 4, tx + 24, ty + 24, 7, 0.7, c["accent"], 4.5))
-    for i, word in enumerate(["funnel", "loop"]):
-        on, off = (c["faint"], "transparent")
-        b.append(f'<text x="{tx + ts / 2}" y="{ty + ts + 30}" class="GM" font-size="13" text-anchor="middle" '
-                 f'fill="{on if i == 0 else off}">{word}'
-                 f'<animate attributeName="fill" dur="7s" repeatCount="indefinite" calcMode="discrete" '
-                 f'values="{on if i == 0 else off};{off if i == 0 else on};{on if i == 0 else off}" '
-                 f'keyTimes="0;0.5;1"/></text>')
-    lines = ["Loops over funnels.", "Get feedback early, deliver often.",
-             "Retention is the foundation.", "Quality is a feature."]
-    for i, s in enumerate(lines):
-        b.append(text(248, 76 + i * 42, s, 24, c["text"] if i == 0 else c["muted"], "G", track=-0.01))
-    return svg(w, h, "Principles: loops over funnels; get feedback early, deliver often; "
-                     "retention is the foundation; quality is a feature.", "".join(b), c)
-
-
 # --------------------------------------------------------------------------- project cards
 
 
@@ -244,7 +216,7 @@ def pulse(on, off, t0, t1, dur, attr="fill"):
 
 def sheet(c, x, y):
     """Addocu: an audit sheet documenting itself row by row."""
-    b, dur = [], 6
+    b, dur = [], 9
     cols = [(0, 22), (28, 34), (68, 36)]
     for r in range(5):
         ry = y + 26 + r * 21
@@ -261,7 +233,7 @@ def sheet(c, x, y):
 
 def lakehouse(c, x, y):
     """SoloDShouse: one record falling through raw → clean → gold layers."""
-    b, dur = [], 3.2
+    b, dur = [], 6
     b.append(f'<line x1="{x + 76}" y1="{y + 22}" x2="{x + 76}" y2="{y + 132}" stroke="{c["line"]}" stroke-width="2"/>')
     for i, ly in enumerate([42, 71, 100]):
         t = (ly + 9 - 22) / 110 * 0.7
@@ -280,7 +252,7 @@ def lakehouse(c, x, y):
 
 def search(c, x, y):
     """FindingExcellence: a lens hopping across local files; the file it lands on lights up."""
-    b, dur = [], 7.2
+    b, dur = [], 10
     stops = [(1, 0), (3, 1), (0, 2), (2, 1)]
     cell = lambda i, j: (x + 24 + i * 28, y + 34 + j * 30)
     k = len(stops)
@@ -314,7 +286,7 @@ def search(c, x, y):
 
 def macropad(c, x, y):
     """ajazz-deck: the AKP153's 15 keys firing their mapped commands."""
-    b, dur = [], 6
+    b, dur = [], 9
     seq = [7, 2, 11, 4, 13, 0, 9]
     for r in range(3):
         for col in range(5):
@@ -445,7 +417,7 @@ def ticker(c):
         a, z = (0, -period) if r % 2 == 0 else (-period, 0)
         b.append(f'<g clip-path="url(#vp)"><g transform="translate({vx + 16} 0)"><g>{tiles}'
                  f'<animateTransform attributeName="transform" type="translate" from="{a} 0" to="{z} 0" '
-                 f'dur="{period / 26:.1f}s" repeatCount="indefinite"/></g></g></g>')
+                 f'dur="{period / 12:.1f}s" repeatCount="indefinite"/></g></g></g>')
     b.append(f'<rect x="{vx}" y="1" width="56" height="{h - 2}" fill="url(#fl)"/>')
     b.append(f'<rect x="{vx + vw - 72}" y="1" width="72" height="{h - 2}" fill="url(#fr)"/>')
     b += [f'<line x1="24" y1="{pad + r * row_h}" x2="{w - 24}" y2="{pad + r * row_h}" stroke="{c["line"]}"/>'
@@ -479,12 +451,12 @@ def credentials(c):
             b.append(f'<line x1="24" y1="{y}" x2="{w - 24}" y2="{y}" stroke="{c["line"]}"/>')
         last = i == n
         if not last:
-            # check draws itself in turn, holds, clears at the end of the cycle
-            t0 = 0.04 + i * 0.07
+            # checks draw once, in reading order, then hold (base offset 0 keeps them visible if SMIL never runs)
+            t0 = (0.4 + i * 0.25) / dur
             b.append(f'<path d="M{34} {mid} l6 6 l12 -12" fill="none" stroke="{c["accent"]}" stroke-width="2.5" '
                      f'stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="26" stroke-dashoffset="0">'
-                     f'<animate attributeName="stroke-dashoffset" dur="{dur}s" repeatCount="indefinite" '
-                     f'values="26;26;0;0;26" keyTimes="0;{t0:.2f};{t0 + 0.06:.2f};0.9;1"/></path>')
+                     f'<animate attributeName="stroke-dashoffset" dur="{dur}s" fill="freeze" '
+                     f'values="26;26;0;0" keyTimes="0;{t0:.3f};{t0 + 0.4 / dur:.3f};1"/></path>')
         else:
             b.append(f'<path d="M34 {mid} h18 M34 {mid - 6} h18 M34 {mid + 6} h12" stroke="{c["faint"]}" '
                      f'stroke-width="2" stroke-linecap="round"/>')
@@ -517,15 +489,13 @@ FOCUS = [
 
 def focus(c):
     w, h = 880, 328
-    hold = 0.8
     b = []
     for i, (shape, title, desc) in enumerate(FOCUS):
         col, row = i % 2, i // 2
         x, y = 24 + col * 420, 24 + row * 144
         b.append(f'<rect x="{x}" y="{y}" width="408" height="132" rx="12" fill="{c["tile"]}" stroke="{c["line"]}"/>')
         b.append(f'<path d="{shape}" transform="translate({x + 24} {y + 28}) scale(2)" fill="none" '
-                 f'stroke="{c["faint"]}" stroke-width="1.25" stroke-linejoin="round" '
-                 f'stroke-linecap="round">{active(i, 4, hold, c["accent"], c["faint"], "stroke")}</path>')
+                 f'stroke="{c["muted"]}" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"/>')
         b.append(text(x + 92, y + 48, title, 22, c["text"], "GS", track=-0.02))
         for k, line in enumerate(desc):
             b.append(text(x + 92, y + 80 + k * 24, line, 17, c["muted"]))
@@ -591,16 +561,79 @@ def activity(c, total, weeks):
             else:
                 b.append(f'<rect x="{cx:.1f}" y="{y0 + j * (cell + gap)}" width="{cell}" height="{cell}" rx="3" '
                          f'fill="{c["cell"]}"/>')
-    # sweep: cells stay static (visible in any renderer), a scan column passes over them
+    # sweep: cells stay static (visible in any renderer), one scan pass on arrival, then gone
     x_end = x0 + (len(weeks) - 1) * (cell + gap)
     b.append(f'<rect x="{x0 - 2}" y="{y0 - 2}" width="{cell + 4}" height="{7 * (cell + gap) - gap + 4}" rx="4" '
-             f'fill="none" stroke="{c["accent"]}" stroke-width="1.5" opacity=".7">'
-             f'<animate attributeName="x" values="{x0 - 2};{x_end - 2}" dur="9s" repeatCount="indefinite" '
-             f'calcMode="spline" keySplines="0.65 0 0.35 1"/></rect>')
+             f'fill="none" stroke="{c["accent"]}" stroke-width="1.5" opacity="0">'
+             f'<animate attributeName="x" values="{x0 - 2};{x_end - 2}" dur="4s" fill="freeze" '
+             f'calcMode="spline" keyTimes="0;1" keySplines="0.65 0 0.35 1"/>'
+             f'<animate attributeName="opacity" values="0;.7;.7;0" keyTimes="0;.08;.9;1" dur="4.4s" fill="freeze"/>'
+             f'</rect>')
     today = days[-1][0]
     b.append(text(w - 40, 270, f"last 12 months · updated {today}", 12, c["faint"], "GM", "end"))
     return svg(w, h, f"GitHub activity, last 12 months: {total:,} contributions, {active_days} active days, "
                      f"longest streak {longest} days, current streak {cur} days.", "".join(b), c)
+
+
+# --------------------------------------------------------------------------- signature
+# Skeleton: EMS Allure (OFL, single-stroke script from the Hershey/EggBot family), smoothed with
+# Catmull-Rom. The broad nib is faked by stacking the stroke along a 45° vector: thick on strokes
+# that cross the nib, hairline on strokes that run along it.
+
+def allure():
+    src = (FONTS / "EMSAllure.svg").read_text()
+    return {m[1]: (float(m[2]), m[3] or "") for m in
+            re.finditer(r'<glyph unicode="(.)"[^>]*?horiz-adv-x="([\d.]+)"(?:[^>]*?d="([^"]*)")?', src)}
+
+
+def glyph_strokes(d):
+    out, toks, i = [], re.findall(r"[MLC]|-?[\d.]+", d), 0
+    while i < len(toks):
+        t = toks[i]
+        if t == "M":
+            out.append([(float(toks[i + 1]), float(toks[i + 2]))]); i += 3
+        elif t == "L":
+            out[-1].append((float(toks[i + 1]), float(toks[i + 2]))); i += 3
+        elif t == "C":  # endpoint only; the spline below re-smooths it
+            out[-1].append((float(toks[i + 5]), float(toks[i + 6]))); i += 7
+        else:
+            out[-1].append((float(toks[i]), float(toks[i + 1]))); i += 2
+    return out
+
+
+def spline(pts):
+    d = f"M{pts[0][0]:.1f} {pts[0][1]:.1f}"
+    if len(pts) < 3:
+        return d + "".join(f" L{x:.1f} {y:.1f}" for x, y in pts[1:])
+    p = [pts[0]] + pts + [pts[-1]]
+    for i in range(1, len(p) - 2):
+        p0, p1, p2, p3 = p[i - 1], p[i], p[i + 1], p[i + 2]
+        d += (f" C{p1[0] + (p2[0] - p0[0]) / 6:.1f} {p1[1] + (p2[1] - p0[1]) / 6:.1f} "
+              f"{p2[0] - (p3[0] - p1[0]) / 6:.1f} {p2[1] - (p3[1] - p1[1]) / 6:.1f} {p2[0]:.1f} {p2[1]:.1f}")
+    return d
+
+
+def signature(c, name="Javier Rodeiro"):
+    h, size, x0, base, slant = 150, 72, 20, 88, 0.18
+    font, k, x, ds = allure(), size / 1000, 0.0, []
+    for ch in name:
+        adv, d = font[ch]
+        ds += [spline([(x0 + (x + px + py * slant) * k, base - py * k) for px, py in st]) for st in glyph_strokes(d)]
+        x += adv + 30
+    xe = x0 + x * k
+    w = round(xe + 40)
+    ds.append(f"M{xe - 24:.1f} {base - 4} C{xe + 8:.1f} {base - 10} {xe - 30:.1f} {base + 26} "
+              f"{xe * 0.55:.1f} {base + 20} S{x0 + 40} {base + 18} {x0 + 14} {base + 27}")  # closing swash
+    d = " ".join(ds)
+    # one pass, eased like a hand, then the ink stays; base offset 0 shows it whole if SMIL never runs
+    nib = (f'<path id="ink" d="{d}" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0">'
+           f'<animate attributeName="stroke-dashoffset" values="1000;1000;0" keyTimes="0;.1;1" dur="4.5s" '
+           f'calcMode="spline" keySplines="0 0 1 1;0.45 0 0.3 1" fill="freeze"/></path>' +
+           "".join(f'<use href="#ink" x="{i * 0.45:.2f}" y="{-i * 0.45:.2f}"/>' for i in range(1, 7)))
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" '
+            f'aria-label="Signature: {name}"><title>Signature: {name}</title>'
+            f'<g fill="none" stroke="{c["text"]}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">'
+            f'{nib}</g></svg>')
 
 
 # --------------------------------------------------------------------------- write
@@ -609,8 +642,9 @@ if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     cal = fetch_calendar()
     for theme, c in THEMES.items():
-        files = {"hero": hero(c), "principles": principles(c), "toolkit": ticker(c),
-                 "credentials": credentials(c), "focus": focus(c), "activity": activity(c, *cal)}
+        files = {"hero": hero(c), "toolkit": ticker(c),
+                 "credentials": credentials(c), "focus": focus(c), "activity": activity(c, *cal),
+                 "signature": signature(c)}
         for p in PROJECTS:
             files[f"card-{p[0]}"] = card(c, *p)
         for name, content in files.items():

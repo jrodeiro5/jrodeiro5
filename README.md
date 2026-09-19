@@ -48,13 +48,6 @@ At **cinfo** I build AI and analytics solutions on a fully open-source stack. Be
   <img alt="Now building. Agents & MCP: MCP servers that give models real tools. Knowledge systems: agent memory, RAG and search over what I read. Local-first AI: models, speech and search on my own machine. Data platforms: lakehouses and pipelines with DuckDB and Dagster." src="assets/focus-light.svg" width="100%" />
 </picture>
 
-<h3>How I work</h3>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/principles-dark.svg" />
-  <img alt="Principles: loops over funnels; get feedback early, deliver often; retention is the foundation; quality is a feature." src="assets/principles-light.svg" width="100%" />
-</picture>
-
 <h3>Toolkit</h3>
 
 <picture>
@@ -100,3 +93,8 @@ At **cinfo** I build AI and analytics solutions on a fully open-source stack. Be
 **BA Advertising & Public Relations** — San Jorge University · 2018–2022
 
 <sub>Spanish and Galician (native) · English (C2) · French (working). Based in A Coruña.</sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/signature-dark.svg" />
+  <img alt="Signature: Javier Rodeiro" src="assets/signature-light.svg" width="340" />
+</picture>

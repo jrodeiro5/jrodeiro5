@@ -15,6 +15,7 @@ typography:
 ## Principles
 
 - **Neutral surfaces with one accent.** Everything is greyscale except the moving element, so the eye follows the motion.
+- **Subtle, then still.** Only the hero and the project diagrams loop, slowly. Everything else plays once on arrival (`fill="freeze"`) and rests. Every animated element has a visible static base, so a renderer that never runs SMIL still shows the finished state.
 - **The motion is the content.** Each animation shows what a project does: rows filling, data falling through lakehouse layers, a magnifier searching files, keys lighting up. Nothing is only decoration.
 - **Quiet type.** Geist SemiBold with tight tracking (-0.025 to -0.03) for titles, Regular for body, and Mono for metadata and labels.
 
@@ -24,11 +25,11 @@ typography:
 |---|---|---|
 | `hero` | 880×300 | Name, role and two-line thesis. The step rail (measure / validate / build / ship) is synced to a morph tile: BARS → CHECK → BOX → PLANE, 10s cycle. |
 | `card-*` | 880×200 | A 152px diagram tile, title 32px, a one-line description at 21px, a mono meta line at 15px, and an ↗ arrow. |
-| `principles` | 880×248 | A tile that morphs FUNNEL ↔ LOOP next to the four principles. The first principle is in text colour, the rest muted. |
-| `focus` | 880×328 | "Now building": four tiles in a 2×2 grid (agents, knowledge, local-first, data). The line glyphs light up in accent one after another. |
-| `toolkit` | 880×n·68 | A ticker with one row per category (analytics / code / ai / data). Each row's band is defined once, repeated with `<use>`, and slid by `animateTransform` at 26 px/s. Rows alternate direction, and the edges fade out. |
-| `credentials` | 880×… | Certification list. An accent check draws itself on each row in turn over a 9s cycle. Issuer logos sit right-aligned at 20px, in `muted`. |
-| `activity` | 880×292 | Live stats plus a 53×7 heatmap. Built from the GraphQL `contributionCalendar`. Cell opacity scales with the square root of the day's count. Cells are static; an accent scan column sweeps across them on a 9s loop. |
+| `focus` | 880×328 | "Now building": four tiles in a 2×2 grid (agents, knowledge, local-first, data). Static `muted` line glyphs. |
+| `toolkit` | 880×n·68 | A ticker with one row per category (analytics / code / ai / data). Each row's band is defined once, repeated with `<use>`, and slid by `animateTransform` at 12 px/s. Rows alternate direction, and the edges fade out. |
+| `credentials` | 880×… | Certification list. Accent checks draw once, in reading order, 250ms apart. Issuer logos sit right-aligned at 20px, in `muted`. |
+| `signature` | w×150 | "Javier Rodeiro" in EMS Allure (OFL single-stroke script, `design/fonts/EMSAllure.svg`) smoothed with Catmull-Rom, plus a closing swash. A broad nib is faked by stacking the stroke 7× along 45° with `<use>`. Drawn once with `stroke-dashoffset` over 4.5s; transparent background. |
+| `activity` | 880×292 | Live stats plus a 53×7 heatmap. Built from the GraphQL `contributionCalendar`. Cell opacity scales with the square root of the day's count. Cells are static; an accent scan column sweeps across them once, then fades. |
 
 - **Logos:** `design/logos/`. Simple Icons (CC0, see `LICENSE-simple-icons.md`) plus official marks where they exist (Amplitude, Piwik PRO, Looker Studio, Google, Cambridge English, EF SET, Addocu). They are flattened to a single colour: all fills and styles are stripped, and the viewBox is cropped through `CROP`. A tool with no mark is shown as a label only. A card shows a project logo only when `design/logos/<name>.svg` exists.
 
