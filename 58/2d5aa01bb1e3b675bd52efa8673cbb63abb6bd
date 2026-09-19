@@ -1,0 +1,74 @@
+assets/focus-light.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/activity-light.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/focus-dark.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+design/fonts/EMSAllure.svg
+  s_82c5c9225a3cad::t_7af417721d1241 1-216
+assets/credentials-light.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+  s_82c5c9225a3cad::t_65c077bb572a65 8,15,17
+assets/card-findingexcellence-dark.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/card-ajazz-deck-dark.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/card-solodshouse-light.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+DESIGN.md
+  s_82c5c9225a3cad::t_bef6feefba4fa0 18,28-32
+assets/card-solodshouse-dark.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/card-addocu-dark.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/hero-light.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/signature-light.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/hero-dark.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/toolkit-dark.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+  s_82c5c9225a3cad::t_65c077bb572a65 8
+assets/activity-dark.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/card-findingexcellence-light.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+README.md
+  s_82c5c9225a3cad::t_6a8c0a292a2976 99
+  s_82c5c9225a3cad::t_b2893631d855da 96-98,100
+assets/toolkit-light.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+  s_82c5c9225a3cad::t_65c077bb572a65 8
+assets/card-addocu-light.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/card-ajazz-deck-light.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/signature-dark.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+assets/credentials-dark.svg
+  s_82c5c9225a3cad::t_6a8c0a292a2976 1
+  s_82c5c9225a3cad::t_65c077bb572a65 8,15,17
+design/build.py
+  s_82c5c9225a3cad::t_f39e9a2a070f05 629-632
+  s_82c5c9225a3cad::t_6a8c0a292a2976 617,622,624
+  s_82c5c9225a3cad::t_65c077bb572a65 578-616,618-621,623,625-628,633-638,646-647
+  s_82c5c9225a3cad::t_7af417721d1241 219,236,255,289,420,454-455,458-459,498,564,567-571
+  s_82c5c9225a3cad::t_81873763b118d6 645
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "582d5aa01bb1e3b675bd52efa8673cbb63abb6bd",
+  "prompts": {},
+  "sessions": {
+    "s_82c5c9225a3cad": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e7888b3f-0220-48a7-8fc2-872352f74f87",
+        "model": "claude-opus-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
