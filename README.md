@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/logo.svg" alt="jrodeiro5" height="96"></p>
+
 <a href="https://javierrodeiro.com">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg" />
