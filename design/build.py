@@ -5,7 +5,11 @@ Run:  uv run --with fonttools --with brotli design/build.py
 
 import base64
 import io
+import json
 import math
+import re
+import subprocess
+from datetime import date
 from pathlib import Path
 
 from fontTools import subset
@@ -14,6 +18,8 @@ from fontTools.ttLib import TTFont
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT.parent / "assets"
 FONTS = ROOT / "fonts"
+LOGOS = ROOT / "logos"
+USER = "jrodeiro5"
 
 THEMES = {
     "dark": dict(bg="#0B0B0C", tile="#141416", line="#232326", cell="#1C1C1F",
@@ -53,6 +59,18 @@ FONT_CSS = {k: f"@font-face{{font-family:{k};src:url(data:font/woff2;base64,{wof
 STACK = {"G": "G,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif",
          "GS": "GS,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif",
          "GM": "GM,ui-monospace,'SF Mono',Menlo,Consolas,monospace"}
+
+
+_ADV = {}
+
+
+def width(s, size, face="G"):
+    """Advance width of `s` in px, from the font's own metrics (for laying out rows of text)."""
+    if face not in _ADV:
+        f = TTFont(FONTS / FACES[face][0])
+        cmap, hmtx, upm = f.getBestCmap(), f["hmtx"], f["head"].unitsPerEm
+        _ADV[face] = ({ch: hmtx[cmap[ord(ch)]][0] / upm for ch in CHARS if ord(ch) in cmap})
+    return sum(_ADV[face].get(ch, 0.6) for ch in s) * size
 
 
 def esc(s: str) -> str:
@@ -333,7 +351,8 @@ def card(c, name, title, draw, desc, meta):
     w, h = 880, 200
     b = [f'<rect x="24" y="24" width="152" height="152" rx="12" fill="{c["tile"]}" stroke="{c["line"]}"/>',
          draw(c, 24, 24),
-         text(208, 82, title, 32, c["text"], "GS", track=-0.025),
+         *([place(name, 208, 54, 34, c["text"])[0]] if (LOGOS / f"{name}.svg").exists() else []),
+         text(208 + (44 if (LOGOS / f"{name}.svg").exists() else 0), 82, title, 32, c["text"], "GS", track=-0.025),
          text(208, 122, desc, 21, c["muted"]),
          text(208, 164, meta, 15, c["faint"], "GM"),
          f'<path d="{ARROW}" transform="translate(836 36)" fill="none" stroke="{c["faint"]}" '
@@ -341,12 +360,253 @@ def card(c, name, title, draw, desc, meta):
     return svg(w, h, f"{title} — {desc}", "".join(b), c)
 
 
+# --------------------------------------------------------------------------- logos
+# Simple Icons (CC0) plus official marks pulled from each vendor's site. Every logo is
+# flattened to one colour so the wall reads as a single system, not a sticker sheet.
+
+CROP = {"amplitude": "0 0 32 32", "addocu": "26 22 72 72"}
+DB = ('<g><ellipse cx="12" cy="5" rx="8" ry="3"/>'
+      '<path d="M4 8v4c0 1.7 3.6 3 8 3s8-1.3 8-3V8c0 1.7-3.6 3-8 3S4 9.7 4 8z"/>'
+      '<path d="M4 14v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4c0 1.7-3.6 3-8 3s-8-1.3-8-3z"/></g>')
+
+
+def logo(slug):
+    """(viewBox, inner markup) with every fill stripped, so the caller's fill wins."""
+    if slug == "sql":
+        return "0 0 24 24", DB
+    raw = (LOGOS / f"{slug}.svg").read_text()
+    head = re.search(r"<svg\b[^>]*>", raw).group(0)
+    vb = CROP.get(slug) or (re.search(r'viewBox="([^"]+)"', head) or
+                            re.search(r'width="([\d.]+)', head)).group(1)
+    if " " not in vb:  # width/height only
+        vb = f"0 0 {vb} {re.search(r'height=.([\d.]+)', head).group(1)}"
+    body = raw[raw.index(head) + len(head):raw.rindex("</svg>")]
+    body = re.sub(r"<(metadata|title|defs|sodipodi:namedview)\b[^>]*/>", "", body)
+    body = re.sub(r"<(metadata|title|defs|sodipodi:namedview)\b.*?</\1>", "", body, flags=re.S)
+    body = re.sub(r'\s(inkscape|sodipodi):[\w-]+="[^"]*"', "", body)
+    body = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+    body = re.sub(r'\s(fill|style|class|id|opacity|fill-opacity)="(?!none)[^"]*"', "", body)
+    return vb, body
+
+
+def place(slug, x, y, size, fill):
+    vb = logo(slug)[0].split()
+    vw, vh = float(vb[2]), float(vb[3])
+    w = size * vw / vh
+    return (f'<svg x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{size}" viewBox="{" ".join(vb)}" fill="{fill}">'
+            f"{logo(slug)[1]}</svg>"), w
+
+
+# --------------------------------------------------------------------------- toolkit ticker
+
+TOOLKIT = [
+    ("analytics", [("googleanalytics", "GA4"), ("googletagmanager", "GTM"), ("googlebigquery", "BigQuery"),
+                   ("piwikpro", None), ("adobe", "Adobe Analytics"), ("amplitude", "Amplitude"),
+                   ("posthog", "PostHog"), (None, "Clarity")]),
+    ("code", [("python", "Python"), ("typescript", "TypeScript"), ("sql", "SQL"), ("go", "Go"),
+              ("fastapi", "FastAPI"), ("nextdotjs", "Next.js"), ("nodedotjs", "Node.js"),
+              ("googleappsscript", "Apps Script")]),
+    ("ai", [("modelcontextprotocol", "MCP servers"), ("langgraph", "LangGraph"), ("ollama", "Ollama"),
+            ("claude", "Claude"), ("googlecloud", "Vertex AI"), (None, "LiteLLM")]),
+    ("data", [("duckdb", "DuckDB"), (None, "Iceberg"), ("mlflow", "MLflow"), (None, "Dagster"),
+              ("postgresql", "PostgreSQL"), ("supabase", "Supabase"), ("lookerstudio", "Looker Studio"),
+              ("powerbi", "Power BI"), ("tableau", "Tableau"), (None, "marimo")]),
+]
+
+
+def ticker(c):
+    w, row_h, pad = 880, 68, 8
+    h = pad * 2 + row_h * len(TOOLKIT)
+    vx, vw = 168, 880 - 168 - 24
+    b = [f'<defs><clipPath id="vp"><rect x="{vx}" y="0" width="{vw}" height="{h}"/></clipPath>'
+         f'<linearGradient id="fl"><stop offset="0" stop-color="{c["bg"]}"/>'
+         f'<stop offset="1" stop-color="{c["bg"]}" stop-opacity="0"/></linearGradient>'
+         f'<linearGradient id="fr"><stop offset="0" stop-color="{c["bg"]}" stop-opacity="0"/>'
+         f'<stop offset="1" stop-color="{c["bg"]}"/></linearGradient></defs>']
+    for r, (label, items) in enumerate(TOOLKIT):
+        top = pad + r * row_h
+        mid = top + row_h / 2
+        b.append(text(32, mid + 5, label, 14, c["faint"], "GM"))
+        # one period of the band
+        x, band = 0.0, []
+        for slug, name in items:
+            if slug:
+                g, lw = place(slug, x, mid - 11 if name else mid - 9, 22 if name else 18, c["text"])
+                band.append(g)
+                x += lw + (10 if name else 0)
+            if name:
+                band.append(text(round(x, 1), mid + 6, name, 17, c["muted"]))
+                x += width(name, 17)
+            x += 44
+        period = round(x)
+        reps = math.ceil(vw / period) + 1
+        tiles = f'<g id="band{r}">{"".join(band)}</g>' + "".join(
+            f'<use href="#band{r}" x="{k * period}"/>' for k in range(1, reps))
+        a, z = (0, -period) if r % 2 == 0 else (-period, 0)
+        b.append(f'<g clip-path="url(#vp)"><g transform="translate({vx + 16} 0)"><g>{tiles}'
+                 f'<animateTransform attributeName="transform" type="translate" from="{a} 0" to="{z} 0" '
+                 f'dur="{period / 26:.1f}s" repeatCount="indefinite"/></g></g></g>')
+    b.append(f'<rect x="{vx}" y="1" width="56" height="{h - 2}" fill="url(#fl)"/>')
+    b.append(f'<rect x="{vx + vw - 72}" y="1" width="72" height="{h - 2}" fill="url(#fr)"/>')
+    b += [f'<line x1="24" y1="{pad + r * row_h}" x2="{w - 24}" y2="{pad + r * row_h}" stroke="{c["line"]}"/>'
+          for r in range(1, len(TOOLKIT))]
+    flat = ", ".join(f"{lab}: " + ", ".join(n or "Piwik PRO" for _, n in items) for lab, items in TOOLKIT)
+    return svg(w, h, f"Toolkit — {flat}.", "".join(b), c)
+
+
+# --------------------------------------------------------------------------- credentials
+
+CREDENTIALS = [
+    ("Google Analytics Individual Qualification", "Google"),
+    ("Piwik PRO Analytics Suite · Tag Manager · Consent Manager", "Piwik PRO"),
+    ("Adobe Analytics Foundations", "Adobe"),
+    ("Certificate of Proficiency in English (C2)", "Cambridge English"),
+    ("EF SET C2 Proficient", "EF"),
+]
+PRACTICE = "Scrum Master · Product Owner · Kanban · Lean"
+
+
+def credentials(c):
+    w, row_h, top = 880, 54, 20
+    n = len(CREDENTIALS)
+    h = top + row_h * (n + 1) + 16
+    dur = 9
+    b = []
+    for i, (name, issuer) in enumerate(CREDENTIALS + [(PRACTICE, "practice")]):
+        y = top + i * row_h
+        mid = y + row_h / 2
+        if i:
+            b.append(f'<line x1="24" y1="{y}" x2="{w - 24}" y2="{y}" stroke="{c["line"]}"/>')
+        last = i == n
+        if not last:
+            # check draws itself in turn, holds, clears at the end of the cycle
+            t0 = 0.04 + i * 0.07
+            b.append(f'<path d="M{34} {mid} l6 6 l12 -12" fill="none" stroke="{c["accent"]}" stroke-width="2.5" '
+                     f'stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="26" stroke-dashoffset="0">'
+                     f'<animate attributeName="stroke-dashoffset" dur="{dur}s" repeatCount="indefinite" '
+                     f'values="26;26;0;0;26" keyTimes="0;{t0:.2f};{t0 + 0.06:.2f};0.9;1"/></path>')
+        else:
+            b.append(f'<path d="M34 {mid} h18 M34 {mid - 6} h18 M34 {mid + 6} h12" stroke="{c["faint"]}" '
+                     f'stroke-width="2" stroke-linecap="round"/>')
+        b.append(text(76, mid + 7, name, 20, c["muted"] if last else c["text"]))
+        b.append(text(w - 32, mid + 5, issuer, 14, c["faint"], "GM", "end"))
+    flat = "; ".join(f"{a} ({b_})" for a, b_ in CREDENTIALS)
+    return svg(w, h, f"Certifications: {flat}. Practice: {PRACTICE}.", "".join(b), c)
+
+
+# --------------------------------------------------------------------------- focus areas
+# Themes across public and private repos; described, never named.
+
+DOT = "m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"
+AGENT = f"M12 6v4M12 10l-6 8M12 10l6 8M12 4{DOT}M6 20{DOT}M18 20{DOT}"
+VAULT = "M4 5c3-1 6-1 8 1c2-2 5-2 8-1v14c-3-1-6-1-8 1c-2-2-5-2-8-1zM12 6v14"
+CHIP = "M7 7h10v10H7zM10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"
+PIPE = "M12 3L3 8l9 5 9-5zM3 12l9 5 9-5M3 16l9 5 9-5"
+
+FOCUS = [
+    (AGENT, "Agents & MCP", ("MCP servers that give models", "real tools: GTM, docs, media.")),
+    (VAULT, "Knowledge systems", ("Agent memory, RAG and search", "over everything I save and read.")),
+    (CHIP, "Local-first AI", ("Models, speech and file search", "running on my own machine.")),
+    (PIPE, "Data platforms", ("Lakehouses and pipelines with", "DuckDB, Dagster and MLflow.")),
+]
+
+
+def focus(c):
+    w, h = 880, 328
+    hold = 0.8
+    b = []
+    for i, (shape, title, desc) in enumerate(FOCUS):
+        col, row = i % 2, i // 2
+        x, y = 24 + col * 420, 24 + row * 144
+        b.append(f'<rect x="{x}" y="{y}" width="408" height="132" rx="12" fill="{c["tile"]}" stroke="{c["line"]}"/>')
+        b.append(f'<path d="{shape}" transform="translate({x + 24} {y + 28}) scale(2)" fill="none" '
+                 f'stroke="{c["faint"]}" stroke-width="1.25" stroke-linejoin="round" '
+                 f'stroke-linecap="round">{active(i, 4, hold, c["accent"], c["faint"], "stroke")}</path>')
+        b.append(text(x + 92, y + 48, title, 22, c["text"], "GS", track=-0.02))
+        for k, line in enumerate(desc):
+            b.append(text(x + 92, y + 80 + k * 24, line, 17, c["muted"]))
+    flat = "; ".join(f"{t}: {' '.join(d)}" for _, t, d in FOCUS)
+    return svg(w, h, f"Now building — {flat}", "".join(b), c)
+
+
+# --------------------------------------------------------------------------- activity (live)
+
+Q = """query($u:String!){user(login:$u){contributionsCollection{contributionCalendar{
+totalContributions weeks{contributionDays{contributionCount date}}}}}}"""
+
+
+def fetch_calendar():
+    out = subprocess.run(["gh", "api", "graphql", "-f", f"query={Q}", "-F", f"u={USER}"],
+                         check=True, capture_output=True, text=True).stdout
+    cal = json.loads(out)["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+    return cal["totalContributions"], [[(d["date"], d["contributionCount"]) for d in wk["contributionDays"]]
+                                       for wk in cal["weeks"]]
+
+
+def streaks(days):
+    counts = [n for _, n in days]
+    longest = run = 0
+    for n in counts:
+        run = run + 1 if n else 0
+        longest = max(longest, run)
+    cur = 0
+    for n in reversed(counts[:-1] if counts and counts[-1] == 0 else counts):  # today may still be empty
+        if not n:
+            break
+        cur += 1
+    return cur, longest, sum(1 for n in counts if n)
+
+
+def activity(c, total, weeks):
+    w, h = 880, 292
+    days = [d for wk in weeks for d in wk]
+    cur, longest, active_days = streaks(days)
+    peak = max(n for _, n in days) or 1
+    stats = [(f"{total:,}", "contributions"), (f"{active_days}", "active days"),
+             (f"{longest}", "longest streak"), (f"{cur}", "current streak")]
+    b = []
+    for i, (v, lab) in enumerate(stats):
+        x = 40 + i * 200
+        b.append(text(x, 72, v, 36, c["text"], "GS", track=-0.03))
+        b.append(text(x, 98, lab, 14, c["faint"], "GM"))
+    cell, gap = 12, 3
+    x0, y0 = 40 + (800 - len(weeks) * (cell + gap) + gap) / 2, 140
+    last_month = None
+    for i, wk in enumerate(weeks):
+        cx = x0 + i * (cell + gap)
+        month = wk[0][0][:7]
+        if month != last_month and (i or wk[0][0][8:] < "20"):  # skip a sliver of month at the left edge
+            b.append(text(cx, y0 - 12, date.fromisoformat(wk[0][0]).strftime("%b"), 12, c["faint"], "GM"))
+        last_month = month
+        for d, n in wk:
+            j = date.fromisoformat(d).isoweekday() % 7
+            if n:
+                lvl = 0.25 + 0.75 * min(1, math.sqrt(n / peak) * 1.3)
+                b.append(f'<rect x="{cx:.1f}" y="{y0 + j * (cell + gap)}" width="{cell}" height="{cell}" rx="3" '
+                         f'fill="{c["accent"]}" fill-opacity="{lvl:.2f}"/>')
+            else:
+                b.append(f'<rect x="{cx:.1f}" y="{y0 + j * (cell + gap)}" width="{cell}" height="{cell}" rx="3" '
+                         f'fill="{c["cell"]}"/>')
+    # sweep: cells stay static (visible in any renderer), a scan column passes over them
+    x_end = x0 + (len(weeks) - 1) * (cell + gap)
+    b.append(f'<rect x="{x0 - 2}" y="{y0 - 2}" width="{cell + 4}" height="{7 * (cell + gap) - gap + 4}" rx="4" '
+             f'fill="none" stroke="{c["accent"]}" stroke-width="1.5" opacity=".7">'
+             f'<animate attributeName="x" values="{x0 - 2};{x_end - 2}" dur="9s" repeatCount="indefinite" '
+             f'calcMode="spline" keySplines="0.65 0 0.35 1"/></rect>')
+    today = days[-1][0]
+    b.append(text(w - 40, 270, f"last 12 months · updated {today}", 12, c["faint"], "GM", "end"))
+    return svg(w, h, f"GitHub activity, last 12 months: {total:,} contributions, {active_days} active days, "
+                     f"longest streak {longest} days, current streak {cur} days.", "".join(b), c)
+
+
 # --------------------------------------------------------------------------- write
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
+    cal = fetch_calendar()
     for theme, c in THEMES.items():
-        files = {"hero": hero(c), "principles": principles(c)}
+        files = {"hero": hero(c), "principles": principles(c), "toolkit": ticker(c),
+                 "credentials": credentials(c), "focus": focus(c), "activity": activity(c, *cal)}
         for p in PROJECTS:
             files[f"card-{p[0]}"] = card(c, *p)
         for name, content in files.items():

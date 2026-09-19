@@ -41,6 +41,13 @@ At **cinfo** I build AI and analytics solutions on a fully open-source stack. Be
   </picture>
 </a>
 
+<h3>Now building</h3>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/focus-dark.svg" />
+  <img alt="Now building. Agents & MCP: MCP servers that give models real tools. Knowledge systems: agent memory, RAG and search over what I read. Local-first AI: models, speech and search on my own machine. Data platforms: lakehouses and pipelines with DuckDB and Dagster." src="assets/focus-light.svg" width="100%" />
+</picture>
+
 <h3>How I work</h3>
 
 <picture>
@@ -50,11 +57,24 @@ At **cinfo** I build AI and analytics solutions on a fully open-source stack. Be
 
 <h3>Toolkit</h3>
 
-**Measure** &nbsp; `GA4` `GTM` `BigQuery` `Piwik PRO` `Adobe Analytics` `Amplitude` `PostHog` `Clarity`<br>
-**Build** &nbsp; `Python` `TypeScript` `SQL` `FastAPI` `Next.js` `Node.js` `Apps Script`<br>
-**AI** &nbsp; `MCP servers` `LangGraph` `Ollama` `Vertex AI` `Claude` `LiteLLM`<br>
-**Data** &nbsp; `Iceberg` `MLflow` `PostgreSQL` `Supabase` `Looker Studio` `Power BI` `Tableau`<br>
-**Process** &nbsp; `Scrum Master` `Product Owner` `Kanban` `Lean`
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/toolkit-dark.svg" />
+  <img alt="Toolkit. Analytics: GA4, GTM, BigQuery, Piwik PRO, Adobe Analytics, Amplitude, PostHog, Clarity. Code: Python, TypeScript, SQL, Go, FastAPI, Next.js, Node.js, Apps Script. AI: MCP servers, LangGraph, Ollama, Claude, Vertex AI, LiteLLM. Data: DuckDB, Iceberg, MLflow, Dagster, PostgreSQL, Supabase, Looker Studio, Power BI, Tableau, marimo." src="assets/toolkit-light.svg" width="100%" />
+</picture>
+
+<h3>Certifications</h3>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/credentials-dark.svg" />
+  <img alt="Certifications: Google Analytics Individual Qualification; Piwik PRO Analytics Suite, Tag Manager and Consent Manager; Adobe Analytics Foundations; Cambridge Certificate of Proficiency in English (C2); EF SET C2 Proficient. Practice: Scrum Master, Product Owner, Kanban, Lean." src="assets/credentials-light.svg" width="100%" />
+</picture>
+
+<h3>Activity</h3>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
+  <img alt="GitHub contribution activity over the last 12 months, updated daily." src="assets/activity-light.svg" width="100%" />
+</picture>
 
 <h3>Writing &amp; talks</h3>
 
