@@ -1,0 +1,72 @@
+assets/hero-dark.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+assets/toolkit-dark.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+assets/focus-light.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+assets/credentials-dark.svg
+  s_82c5c9225a3cad::t_02fe6714231c63 2-14,16
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1,15,17
+assets/toolkit-light.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+design/logos/efset.svg
+  s_82c5c9225a3cad::t_00f569d07bf770 1
+assets/card-solodshouse-light.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+design/logos/google-wordmark.svg
+  s_82c5c9225a3cad::t_7bbf4177b60553 1-8
+assets/card-findingexcellence-dark.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+DESIGN.md
+  s_82c5c9225a3cad::t_9cd2828bfc38d8 30,33
+assets/card-findingexcellence-light.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+assets/principles-light.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+assets/card-ajazz-deck-light.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+assets/activity-light.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+assets/credentials-light.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1,15,17
+  s_82c5c9225a3cad::t_02fe6714231c63 2-14,16
+assets/card-solodshouse-dark.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+assets/focus-dark.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+README.md
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 69
+assets/card-addocu-light.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+assets/card-ajazz-deck-dark.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+assets/hero-light.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+design/build.py
+  s_82c5c9225a3cad::t_02fe6714231c63 460-462,464,475,492-497
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 463
+assets/card-addocu-dark.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+design/logos/cambridgeenglish.svg
+  s_82c5c9225a3cad::t_7bbf4177b60553 1-3
+assets/activity-dark.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+assets/principles-dark.svg
+  s_82c5c9225a3cad::t_fe16c489cf8ce0 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fc10d60778f7b57d98823173b9325d23bdf6cf4c",
+  "prompts": {},
+  "sessions": {
+    "s_82c5c9225a3cad": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e7888b3f-0220-48a7-8fc2-872352f74f87",
+        "model": "claude-opus-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
