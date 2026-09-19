@@ -1,178 +1,46 @@
 ---
-name: Signal
-description: Clean, data-driven identity for a developer profile rooted in precision, clarity, and quiet confidence.
-version: "1.0"
+name: Instrument
+description: Sober Linear/Vercel-style profile. Neutral surfaces, one indigo accent, Geist, and morphing line icons that show the work instead of describing it.
+version: "2.0"
 colors:
-  primary: "#0F172A"
-  on-primary: "#F8FAFC"
-  secondary: "#475569"
-  accent: "#6366F1"
-  accent-glow: "#818CF8"
-  surface: "#1E293B"
-  on-surface: "#E2E8F0"
-  muted: "#64748B"
-  border: "#334155"
-  success: "#22C55E"
+  light: { bg: "#FFFFFF", tile: "#FAFAFA", line: "#E6E6E8", cell: "#EFEFF1", text: "#0A0A0B", muted: "#5F5F66", faint: "#707078", accent: "#4F5BD5" }
+  dark:  { bg: "#0B0B0C", tile: "#141416", line: "#232326", cell: "#1C1C1F", text: "#EDEDEF", muted: "#A0A0A8", faint: "#7E7E86", accent: "#8E97FF" }
 typography:
-  h1:
-    fontFamily: Fira Code
-    fontSize: 28px
-    fontWeight: 700
-  h2:
-    fontFamily: Fira Code
-    fontSize: 22px
-    fontWeight: 600
-    letterSpacing: -0.02em
-  body:
-    fontFamily: Inter, system-ui, sans-serif
-    fontSize: 16px
-    lineHeight: 1.6
-  caption:
-    fontFamily: Inter, system-ui, sans-serif
-    fontSize: 12px
-    fontWeight: 500
-    letterSpacing: 0.05em
-  mono:
-    fontFamily: Fira Code, monospace
-    fontSize: 14px
-rounded:
-  sm: 4px
-  md: 8px
-  lg: 12px
-  full: 9999px
-spacing:
-  xs: 4px
-  sm: 8px
-  md: 16px
-  lg: 24px
-  xl: 32px
-  "2xl": 48px
-components:
-  header-wave:
-    backgroundColor: gradient
-    height: 120px
-    typography: h1
-  stat-card:
-    backgroundColor: transparent
-    borderColor: "{colors.border}"
-    rounded: "{rounded.md}"
-  badge-tech:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.on-surface}"
-    rounded: "{rounded.md}"
-  trophy-row:
-    layout: center
-    gap: "{spacing.sm}"
-  section-divider:
-    height: 1px
-    backgroundColor: "{colors.border}"
-  footer-wave:
-    backgroundColor: gradient
-    height: 120px
+  sans: Geist (Regular, SemiBold), OFL, embedded as base64 woff2 subset
+  mono: Geist Mono (Regular), OFL, embedded as base64 woff2 subset
 ---
 
-## Overview
+# Instrument
 
-**Signal** is a visual identity built for technical credibility. It communicates rigor without stiffness — the aesthetic of a well-architected dashboard rendered in dark mode. Deep slate surfaces with an indigo accent that signals intelligence, not decoration.
+## Principles
 
-### Brand & Style
+- **Neutral surfaces with one accent.** Everything is greyscale except the moving element, so the eye follows the motion.
+- **The motion is the content.** Each animation shows what a project does: rows filling, data falling through lakehouse layers, a magnifier searching files, keys lighting up. Nothing is only decoration.
+- **Quiet type.** Geist SemiBold with tight tracking (-0.025 to -0.03) for titles, Regular for body, and Mono for metadata and labels.
 
-- **Precision over flair.** Every element earns its place. No gratuitous animation.
-- **Dark-first.** The surface layer (`#1E293B`) provides depth; the accent (`#6366F1`) provides direction.
-- **Monospace authority.** Fira Code for headings establishes technical competence. Inter for body ensures readability.
-- **Live data, not static decoration.** Widgets are dynamic SVGs that update on every profile view — the profile breathes.
+## Building blocks
 
-## Colors
+| Asset | Size | Content |
+|---|---|---|
+| `hero` | 880×300 | Name, role and two-line thesis. The step rail (measure / validate / build / ship) is synced to a morph tile: BARS → CHECK → BOX → PLANE, 10s cycle. |
+| `card-*` | 880×200 | A 152px diagram tile, title 32px, a one-line description at 21px, a mono meta line at 15px, and an ↗ arrow. |
+| `principles` | 880×248 | A tile that morphs FUNNEL ↔ LOOP next to the four principles. The first principle is in text colour, the rest muted. |
 
-The palette is anchored in cool slates with a single indigo accent. This avoids the rainbow-spectrum chaos common in developer profiles and projects a unified, deliberate identity.
+- **Frame:** a 16px-radius rounded rect filled with `bg` and a 1px `line` stroke. Tiles use a 14px radius, filled with `tile`.
+- **Easing:** `keySplines="0.65 0 0.35 1"` everywhere.
+- **Morphs:** every shape is a closed polyline on a 24-unit grid. Each is resampled to 120 points (keeping its vertices) and normalised to clockwise order from the vertex nearest the top-left, so SMIL `d` interpolation stays clean.
 
-- **Primary (`#0F172A`):** Deep navy for the base — used in stat card backgrounds, section headers.
-- **Accent (`#6366F1`):** Indigo-500. The sole interaction color. Typing SVGs, link highlights, visitor counter, badge borders.
-- **Accent-Glow (`#818CF8`):** Indigo-400. Used where the accent needs to be softer — hover states, secondary highlights.
-- **Surface (`#1E293B`):** Slate-800. Card backgrounds, badge fills, widget containers.
-- **On-Surface (`#E2E8F0`):** Slate-200. Primary text on dark surfaces.
-- **Muted (`#64748B`):** Slate-500. Secondary text, dates, metadata.
-- **Border (`#334155`):** Slate-700. Subtle dividers and card borders.
-- **Success (`#22C55E`):** Reserved for contribution-streak indicators and positive signals.
+## Rendering
 
-## Typography
+- **GitHub limits:** GitHub strips CSS and JS from the README. Each image ships as a `-light` / `-dark` pair switched with `<picture><source media="(prefers-color-scheme: dark)">`. Fonts are embedded because SVGs inside `<img>` can't load external resources.
+- **Mobile ceiling:** SVG text scales with the viewport, so card text is small at 390px. Anything that has to be readable on a phone (links, toolkit, path) stays in Markdown.
 
-Two typefaces, two roles. Fira Code (monospace) for anything that needs technical authority — headings, stats, code. Inter for everything the reader needs to scan quickly — body text, descriptions, labels.
+## Workflow
 
-- **h1:** Fira Code, 28px, weight 700. Profile name and section titles.
-- **h2:** Fira Code, 22px, weight 600, -0.02em letter-spacing. Subsection headers.
-- **body:** Inter, 16px, 1.6 line-height. Professional summary, descriptions.
-- **caption:** Inter, 12px, weight 500, 0.05em letter-spacing. Badges, dates, metadata.
-- **mono:** Fira Code, 14px. Inline code references, stat labels.
+Edit `design/build.py`, then run:
 
-## Layout & Spacing
-
-The README follows a single-column, center-aligned layout with clear horizontal rules between major sections:
-
-```
-[wave header — full width]
-[profile intro — centered]
-[--- divider ---]
-[professional summary — 720px max width]
-[--- divider ---]
-[tech stack badges — centered grid]
-[--- divider ---]
-[2-col stat grid: stats | streak]
-[2-col stat grid: languages | activity graph]
-[trophy row — centered]
-[--- divider ---]
-[featured work]
-[--- divider ---]
-[education & certifications — centered tables]
-[--- divider ---]
-[connect — centered grid]
-[wave footer — full width]
+```sh
+uv run --with fonttools --with brotli design/build.py   # writes assets/*.svg
 ```
 
-- **Max content width:** 720px (matches GitHub's rendered README readability sweet spot)
-- **Section gaps:** 48px (`{spacing.2xl}`)
-- **Card gaps:** 16px (`{spacing.md}`)
-- **Divider:** 1px solid `{colors.border}`
-
-## Shapes
-
-- **Rounded sm (4px):** Tight corners — badges, inline code
-- **Rounded md (8px):** Cards, stat widgets, tables
-- **Rounded lg (12px):** Featured project images
-- **Rounded full (9999px):** Profile avatar, pill badges
-
-## Components
-
-### stat-card
-- Background: transparent (rendered by external SVG widgets)
-- All stat widgets use `hide_border=true` for a borderless, seamless look
-- Theme: `tokyonight` applied consistently across github-readme-stats, streak-stats, activity-graph, and trophy
-
-### badge-tech
-- Style: `for-the-badge` from shields.io
-- Background: color derived from each technology's brand hex
-- Consistent height (28px) for grid alignment
-- Grouped by category: Development, Data & Analytics, AI
-
-### section-divider
-- HTML `<hr>` or three dashes `---`
-- 1px height, `{colors.border}` color
-- 24px vertical margin
-
-### header-wave / footer-wave
-- Capsule Render API with `type=waving`, `color=gradient` (primary → accent)
-- Height: 120px for header, 100px for footer
-- Acts as visual bookends — no content within them
-
-## Do's and Don'ts
-
-- **Do** align ALL stat widgets with the same theme parameter (`theme=tokyonight`)
-- **Do** use `hide_border=true` on every stat widget for seamless integration
-- **Do** wrap widget pairs in `<p align="center">` for 2-column grid layout
-- **Do** keep donation/sponsor CTAs to a single line at the bottom
-- **Do** use `<!-- comments -->` as anchors for GitHub Actions content injection
-- **Don't** mix widget themes — inconsistency looks sloppy
-- **Don't** use more than 4 stat widgets in a single row — wrap at 2 columns
-- **Don't** embed heavy GIFs that slow down profile load time
-- **Don't** hide contact information at the bottom without a top-level link
-- **Don't** use animated elements that distract from content scanning
+Don't hand-edit files in `assets/`; they are generated.

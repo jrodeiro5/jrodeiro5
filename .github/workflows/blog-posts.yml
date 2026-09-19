@@ -19,7 +19,8 @@ jobs:
         with:
           feed_list: "https://linkedinrss.cns.me/7290366362223284224"
           max_post_count: 5
-          # Sin $newline la accion concatena los 5 posts en una sola linea y markdown
-          # los renderiza como un parrafo corrido, no como lista.
-          template: "- [$title]($url) · *$date* $newline"
+          # $newline delante: cada post en su propia linea, incluido el primero
+          # (con $newline detras, el primero quedaba pegado al marcador START).
+          template: "$newline- [$title]($url) · *$date*"
+          date_format: "mmm yyyy"
           commit_message: "📝 Update latest articles"

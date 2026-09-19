@@ -1,115 +1,82 @@
-# Javier Rodeiro Rodríguez
+<a href="https://javierrodeiro.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg" />
+    <img alt="Javier Rodeiro — AI &amp; Analytics Developer at cinfo. Clean data, rigorous validation, and when the tool doesn't exist, I build it." src="assets/hero-light.svg" width="100%" />
+  </picture>
+</a>
 
-Digital Product & Data Analyst · AI Solutions Developer · MSc Data Science & AI
+<p>
+  <a href="https://javierrodeiro.com">javierrodeiro.com</a> &nbsp;·&nbsp;
+  <a href="https://linkedin.com/in/javier-rodeiro-rodriguez">LinkedIn</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/newsletters/puppets-scripts-7290366362223284224/">Puppets &amp; Scripts</a> &nbsp;·&nbsp;
+  <a href="mailto:hello@javierrodeiro.com">hello@javierrodeiro.com</a>
+</p>
 
-Building data products at Ayesa for Inditex / PULL&BEAR across 56+ markets. Based in A Coruña, Spain.
+At **cinfo** I build AI and analytics solutions on a fully open-source stack. Before that I spent two years running web and app analytics for **PULL&BEAR** (Inditex) at Ayesa, where a Chrome extension I wrote for GA4 validation, OmniZenit, became the tool every Inditex brand's digital analytics team uses. I'm finishing an MSc in Big Data, Data Science & AI at Complutense University of Madrid.
 
-<sub><a href="https://javierrodeiro.com">javierrodeiro.com</a> &nbsp;·&nbsp; <a href="https://linkedin.com/in/javier-rodeiro-rodriguez">LinkedIn</a> &nbsp;·&nbsp; <a href="https://dev.to/jrodeiro5">Dev.to</a> &nbsp;·&nbsp; <a href="https://medium.com/@jrodeiro.dev">Medium</a> &nbsp;·&nbsp; <a href="mailto:hello@javierrodeiro.com">hello@javierrodeiro.com</a></sub>
+<h3>Selected work</h3>
 
----
+<a href="https://github.com/Addocu/addocu">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/card-addocu-dark.svg" />
+    <img alt="Addocu — Documents your whole Google marketing stack in seconds. Founder of this open-source Google Sheets add-on for GA4 and GTM." src="assets/card-addocu-light.svg" width="100%" />
+  </picture>
+</a>
+<a href="https://github.com/jrodeiro5/SoloDShouse">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/card-solodshouse-dark.svg" />
+    <img alt="SoloDShouse — MSc thesis: local-first lakehouse and AI agents for AI inference energy and cost analytics, built on SoloLakehouse." src="assets/card-solodshouse-light.svg" width="100%" />
+  </picture>
+</a>
+<a href="https://github.com/jrodeiro5/FindingExcellence-PRO">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/card-findingexcellence-dark.svg" />
+    <img alt="FindingExcellence PRO — File search with local AI. Nothing leaves your machine." src="assets/card-findingexcellence-light.svg" width="100%" />
+  </picture>
+</a>
+<a href="https://github.com/jrodeiro5/ajazz-deck">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/card-ajazz-deck-dark.svg" />
+    <img alt="ajazz-deck — Linux daemon and CLI for the AJAZZ AKP153 macro pad; one YAML file maps every key." src="assets/card-ajazz-deck-light.svg" width="100%" />
+  </picture>
+</a>
 
-## About
-
-I build products and conduct analysis &mdash; both grounded in clean data, rigorous validation, and user feedback. At Ayesa / Inditex I deliver insight through GA4, BigQuery, and custom tooling. When tools don't exist, I build them.
-
-Completing an MSc in Data Science, Big Data & AI at Complutense University of Madrid. Focus: AI-driven analytics tooling and applied research.
-
----
-
-## Selected work
-
-| Project | Context | Scope |
-| --- | --- | --- |
-| **Pull&Bear Analytics** | Ayesa / Inditex | End-to-end GA4 · BigQuery · Looker Studio across 56+ markets. 50+ dashboards, automated daily updates. |
-| **OmniZenit** | Ayesa / Inditex | Internal Chrome extension. Real-time GA4 validation. Adopted across Inditex. |
-| **[Addocu](https://github.com/Addocu/addocu)** | Founder | Documentation tool for Google marketing platforms. GA4, GTM, Analytics docs in clicks. |
-| **AI & Automation Training** | Ayesa | 2-month internal program. AI automation workflows for analysts & engineers. |
-
----
-
-## Lines of work
-
-What I actually spend commits on, grouped by the problem being solved.
-
-**Analytics instrumentation, made inspectable** &mdash; measurement stacks are opaque until someone documents them. [Addocu](https://github.com/Addocu/addocu) dumps a whole GA4/GTM property into a Google Sheet; [Omnibug-AI](https://github.com/jrodeiro5/Omnibug-AI) and the [digital marketing calculator](https://github.com/jrodeiro5/digital_marketing_calculator) attack the same gap from the browser and the spreadsheet side. Talk: [MeasureCamp Madrid 2025](https://github.com/jrodeiro5/measurecamp_madrid_2025).
-
-**Local-first AI tooling** &mdash; useful AI that never leaves the machine. [FindingExcellence PRO](https://github.com/jrodeiro5/FindingExcellence-PRO) is semantic file search running fully on Ollama: FastAPI backend, desktop UI, zero external API calls. Also a [macOS build](https://github.com/jrodeiro5/FindingExcellence_Mac_Version).
-
-**Agent infrastructure** &mdash; MCP servers, LiteLLM routing, and self-hosted agents doing repository operations on my own hardware. Mostly private repos; the pattern is always the same: local models first, cloud only when explicitly asked.
-
-**Hardware that talks to software** &mdash; [ajazz-deck](https://github.com/jrodeiro5/ajazz-deck), a Linux daemon and CLI that maps an AJAZZ AKP153 macro pad's physical buttons to shell commands from a YAML file.
-
----
-
-## Stack
-
-**Languages** &nbsp; TypeScript · JavaScript · Python · SQL
-
-**Frameworks** &nbsp; React · Next.js · Node.js
-
-**Analytics** &nbsp; GA4 · GTM · Piwik PRO · Adobe Analytics · Amplitude · PostHog · Trackingplan
-
-**Data** &nbsp; BigQuery · PostgreSQL · Supabase · Looker Studio · Tableau · Power BI
-
-**AI** &nbsp; Claude · Vercel AI SDK · Vertex AI · Google AI Studio · MCP servers · LiteLLM
-
-**Automation** &nbsp; Make · n8n · Zapier · Google Apps Script
-
----
-
-## GitHub
+<h3>How I work</h3>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
-  <img alt="GitHub stats" src="assets/stats-light.svg" height="165" />
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg" />
-  <img alt="Top languages" src="assets/langs-light.svg" height="165" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/principles-dark.svg" />
+  <img alt="Principles: loops over funnels; get feedback early, deliver often; retention is the foundation; quality is a feature." src="assets/principles-light.svg" width="100%" />
 </picture>
 
----
+<h3>Toolkit</h3>
 
-## Writing & speaking
+**Measure** &nbsp; `GA4` `GTM` `BigQuery` `Piwik PRO` `Adobe Analytics` `Amplitude` `PostHog` `Clarity`<br>
+**Build** &nbsp; `Python` `TypeScript` `SQL` `FastAPI` `Next.js` `Node.js` `Apps Script`<br>
+**AI** &nbsp; `MCP servers` `LangGraph` `Ollama` `Vertex AI` `Claude` `LiteLLM`<br>
+**Data** &nbsp; `Iceberg` `MLflow` `PostgreSQL` `Supabase` `Looker Studio` `Power BI` `Tableau`<br>
+**Process** &nbsp; `Scrum Master` `Product Owner` `Kanban` `Lean`
 
-- **[Puppets & Scripts](https://www.linkedin.com/newsletters/puppets-scripts-7290366362223284224/)** &mdash; LinkedIn newsletter on AI, data, and building things that matter
-- **Measure Camp Madrid 2025** &mdash; *MCP Servers in Data & Analytics*
-- **Datola** &mdash; *Agile Analysis with AI* series
-- **Creator programs** &mdash; Firecrawl · LinkedMash
+<h3>Writing &amp; talks</h3>
 
-<!-- BLOG-POST-LIST:START -->- [How I Built an AI-Native Software for my Macro Pad](https://www.linkedin.com/pulse/how-i-built-ai-native-software-my-macro-pad-javier-rodeiro-rodr%C3%ADguez-pfbhe) · *Wed Mar 11 2026 9:13 PM* 
-- [Building a Personal Brand Audit Tool with Firecrawl, Gemini and Lovable](https://www.linkedin.com/pulse/building-personal-brand-audit-tool-firecrawl-gemini-javier-roume) · *Fri Jan 23 2026 6:20 PM* 
-- [You might not care about this: my 2025 ending credits.](https://www.linkedin.com/pulse/you-might-care-my-2025-ending-credits-javier-rodeiro-rodr%C3%ADguez-dr9ie) · *Wed Dec 31 2025 8:15 PM* 
-- [Análisis Ágiles con IA](https://es.linkedin.com/pulse/an%C3%A1lisis-%C3%A1giles-con-ia-javier-rodeiro-rodr%C3%ADguez-p7aic) · *Wed May 07 2025 7:49 AM* 
-- [La parábola del Elefante ahora es la del Dragón.](https://es.linkedin.com/pulse/la-par%C3%A1bola-del-elefante-ahora-es-drag%C3%B3n-javier-rodeiro-rodr%C3%ADguez-hxeec) · *Mon Feb 03 2025 6:30 AM* 
+**[MeasureCamp Madrid 2025](https://jrodeiro5.github.io/measurecamp_madrid_2025/)** — MCP servers in data & analytics<br>
+**Datola** — *Agile Analysis with AI* series<br>
+**[Puppets & Scripts](https://www.linkedin.com/newsletters/puppets-scripts-7290366362223284224/)** — newsletter on AI, data and building things. Latest:
+
+<!-- BLOG-POST-LIST:START -->
+- [How I Built an AI-Native Software for my Macro Pad](https://www.linkedin.com/pulse/how-i-built-ai-native-software-my-macro-pad-javier-rodeiro-rodr%C3%ADguez-pfbhe) · *Mar 2026*
+- [Building a Personal Brand Audit Tool with Firecrawl, Gemini and Lovable](https://www.linkedin.com/pulse/building-personal-brand-audit-tool-firecrawl-gemini-javier-roume) · *Jan 2026*
+- [You might not care about this: my 2025 ending credits.](https://www.linkedin.com/pulse/you-might-care-my-2025-ending-credits-javier-rodeiro-rodr%C3%ADguez-dr9ie) · *Dec 2025*
+- [Análisis Ágiles con IA](https://es.linkedin.com/pulse/an%C3%A1lisis-%C3%A1giles-con-ia-javier-rodeiro-rodr%C3%ADguez-p7aic) · *May 2025*
+- [La parábola del Elefante ahora es la del Dragón.](https://es.linkedin.com/pulse/la-par%C3%A1bola-del-elefante-ahora-es-drag%C3%B3n-javier-rodeiro-rodr%C3%ADguez-hxeec) · *Feb 2025*
 <!-- BLOG-POST-LIST:END -->
 
----
+<h3>Path</h3>
 
-## Education
+**cinfo** — AI & Analytics Developer · 2026–<br>
+**Ayesa** for PULL&BEAR / Inditex — Digital Data Analyst · 2024–2026<br>
+**Bysidecar** — Data Analyst · 2022–2024<br>
+**MSc Big Data, Data Science & AI** — Complutense University of Madrid · 2025–2026<br>
+**Master in Web Analytics** — KSchool · 2023–2024<br>
+**BA Advertising & Public Relations** — San Jorge University · 2018–2022
 
-| Programme | Institution | Years |
-| --- | --- | --- |
-| **MSc Data Science, Big Data & AI** | Complutense University of Madrid | 2025 &mdash; 2026 |
-| **MSc Digital Analytics** | KSchool | 2023 &mdash; 2024 |
-| **BA Advertising & Public Relations** | San Jorge University | 2018 &mdash; 2022 |
-
----
-
-## Certifications
-
-**Agile & Product** &nbsp; Certified Scrum Master · Product Owner · Kanban Essentials · Lean · Agile Foundation · Product-Led Growth (PLGC)
-
-**Analytics & Data** &nbsp; Google Analytics 4 · BigQuery · Looker Studio · Piwik PRO · Adobe Analytics · Scimago Graphica
-
-**Other** &nbsp; Make Advanced · AI & Innovation Compact (Design Thinking)
-
----
-
-## Languages
-
-Spanish (native) · Galician (native) · English (C2 Cambridge) · French (working)
-
----
-
-<sub>Open to conversations on data analytics, product strategy, AI automation, and tools that solve real problems. &mdash; <a href="mailto:hello@javierrodeiro.com">hello@javierrodeiro.com</a></sub>
+<sub>Spanish and Galician (native) · English (C2) · French (working). Based in A Coruña.</sub>
