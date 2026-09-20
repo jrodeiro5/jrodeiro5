@@ -51,7 +51,7 @@ CERTS = [("snowflake", "", "#29B5E8", "Snowflake University Platform Skills Badg
 # issuer-made badges, cut out by design/cutout.py into assets/certs/<file>-{light,dark}.png
 ISSUED = [("scrum-master", "Scrum Master (Scrum Manager)"), ("product-owner", "Product Owner (Scrum Manager)"),
           ("agile-foundation", "Agile Foundation (Scrum Manager)"), ("kanban", "Kanban Essentials (Scrum Manager)"),
-          ("lean", "Lean (Scrum Manager)"), ("make-advanced", "Make Academy Advanced"),
+          ("lean", "Lean (Scrum Manager)"),
           ("cambridge-c2", "Cambridge C2 Proficiency in English")]
 
 

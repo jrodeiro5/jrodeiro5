@@ -10,7 +10,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
-  <img alt="GitHub activity: 3,320 contributions since April 2024, 87% in private repositories. Languages: Python 45%, TypeScript 18%, Go 11%." src="assets/stats-light.svg" width="100%" />
+  <img alt="GitHub activity: 3,321 contributions since April 2024, 87% in private repositories. Languages: Python 45%, TypeScript 18%, Go 11%." src="assets/stats-light.svg" width="100%" />
 </picture>
 <br>
 <picture>
@@ -35,7 +35,6 @@
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/kanban-dark.png" /><img src="assets/certs/kanban-light.png" height="84" title="Kanban Essentials (Scrum Manager)" alt="Kanban Essentials (Scrum Manager)" /></picture>
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/lean-dark.png" /><img src="assets/certs/lean-light.png" height="84" title="Lean (Scrum Manager)" alt="Lean (Scrum Manager)" /></picture>
 <br>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/make-advanced-dark.png" /><img src="assets/certs/make-advanced-light.png" height="84" title="Make Academy Advanced" alt="Make Academy Advanced" /></picture>
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/cambridge-c2-dark.png" /><img src="assets/certs/cambridge-c2-light.png" height="84" title="Cambridge C2 Proficiency in English" alt="Cambridge C2 Proficiency in English" /></picture>
 </p>
 <br>
