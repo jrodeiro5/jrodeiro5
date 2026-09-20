@@ -10,7 +10,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
-  <img alt="GitHub activity: 3,316 contributions since April 2024, 88% in private repositories. Languages: Python 45%, TypeScript 18%, Go 11%." src="assets/stats-light.svg" width="100%" />
+  <img alt="GitHub activity: 3,318 contributions since April 2024, 87% in private repositories. Languages: Python 45%, TypeScript 18%, Go 11%." src="assets/stats-light.svg" width="100%" />
 </picture>
 <br>
 <picture>
@@ -23,7 +23,18 @@
   <img alt="About: AI &amp; Analytics Developer at cinfo. Before that, two years of web and app analytics for PULL&amp;BEAR (Inditex) at Ayesa, where I built OmniZenit, the official debugger for Inditex's in-house analytics tool. I started as a data analyst at Bysidecar, improving lead conversion for insurance, energy and telecom clients. Research lines: Agents and MCP, Knowledge systems, Local-first AI, Data platforms." src="assets/about-light.svg" width="100%" />
 </picture>
 <br>
+<p align="center"><sub>CERTIFICATIONS</sub><br>
+  <img src="assets/badge-0.svg" width="92" title="Snowflake University Platform Skills Badge" alt="Snowflake University Platform Skills Badge" />
+  <img src="assets/badge-1.svg" width="92" title="Google Analytics Individual Qualification" alt="Google Analytics Individual Qualification" />
+  <img src="assets/badge-2.svg" width="92" title="Adobe Analytics Foundations" alt="Adobe Analytics Foundations" />
+  <img src="assets/badge-3.svg" width="92" title="Query GA4 Data in Google BigQuery (Simmer)" alt="Query GA4 Data in Google BigQuery (Simmer)" />
+  <img src="assets/badge-4.svg" width="92" title="Scrum Master (Scrum Manager)" alt="Scrum Master (Scrum Manager)" />
+  <img src="assets/badge-5.svg" width="92" title="Product Owner (Scrum Manager)" alt="Product Owner (Scrum Manager)" />
+  <img src="assets/badge-6.svg" width="92" title="Six Sigma Green Belt (PMI)" alt="Six Sigma Green Belt (PMI)" />
+  <img src="assets/badge-7.svg" width="92" title="Cambridge C2 Proficiency in English" alt="Cambridge C2 Proficiency in English" />
+</p>
+<br>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/milestones-dark.svg" />
-  <img alt="Milestones: 2026, AI &amp; Analytics Developer at cinfo; 2025, Talk at MeasureCamp Madrid on MCP servers in data and analytics; 2024–26, Digital Data Analyst at Ayesa for PULL&amp;BEAR (Inditex); 2025–26, MSc in Big Data, Data Science and AI, Complutense University; 2023–24, Master in Web Analytics, KSchool; 2022–24, Data Analyst, Call Center CRO at Bysidecar (insurance, energy and telecom clients). Certifications: Snowflake University Platform Skills Badge; Google Analytics Individual Qualification; Adobe Analytics Foundations; Query GA4 Data in Google BigQuery (Simmer); Scrum Master (Scrum Manager); Product Owner (Scrum Manager); Six Sigma Green Belt (PMI); Cambridge C2 Proficiency in English." src="assets/milestones-light.svg" width="100%" />
+  <img alt="Milestones: 2026, AI &amp; Analytics Developer at cinfo; 2025, Talk at MeasureCamp Madrid on MCP servers in data and analytics; 2024–26, Digital Data Analyst at Ayesa for PULL&amp;BEAR (Inditex); 2025–26, MSc in Big Data, Data Science and AI, Complutense University; 2023–24, Master in Web Analytics, KSchool; 2022–24, Data Analyst, Call Center CRO at Bysidecar (insurance, energy and telecom clients)." src="assets/milestones-light.svg" width="100%" />
 </picture>

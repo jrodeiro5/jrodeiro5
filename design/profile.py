@@ -211,9 +211,9 @@ def about_svg(c):
     return frame(y + 2 * 96 + 8, "About and research lines.", "".join(b), c)
 
 
-def badge(x, y, r, slug, mark, col, c, rot):
+def badge(x, y, r, slug, mark, col, rot):
     """Round merit-badge patch: coloured disc, stitched ring, white logo or text mark."""
-    g = [f'<circle r="{r}" fill="{col}" stroke="{c["bg"]}" stroke-width="4"/>',
+    g = [f'<circle r="{r}" fill="{col}"/>',
          f'<circle r="{r - 7}" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="3 3"/>']
     if slug:
         inner, lw = place(slug, 0, 0, 34, "#fff")
@@ -230,12 +230,16 @@ def milestones_svg(c):
         b.append(f'<line x1="32" x2="{W - 32}" y1="{y - 27}" y2="{y - 27}" stroke="{c["line"]}"/>')
         b.append(t(32, y, yr, 15, c["priv"], "M"))
         b.append(t(150, y, what, 17, c["ink"]))
-    cy = 92 + len(MILESTONES) * 44 + 12
-    b.append(t(32, cy, "Certifications", 13, c["muted"], "M"))
-    r, step = 46, 86  # step < 2r: patches overlap like badges on a sash
-    for i, (slug, mark, col, _) in enumerate(CERTS):
-        b.append(badge(32 + r + i * step, cy + 72 + (-10 if i % 2 else 10), r, slug, mark, col, c, 6 if i % 2 else -6))
-    return frame(cy + 150, "Milestones and certifications.", "".join(b), c)
+    cy = 92 + len(MILESTONES) * 44 - 44
+    return frame(cy + 32, "Milestones.", "".join(b), c)
+
+
+def badge_svg(i):
+    """One certification as its own SVG so the README can give it a hover title; alternate tilt and height."""
+    slug, mark, col, _ = CERTS[i]
+    up = i % 2
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="92" height="112" viewBox="0 0 92 112" role="img">'
+            f'{badge(46, 46 + (10 if up else 30) - 10, 42, slug, mark, col, 6 if up else -6)}</svg>')
 
 
 def stacks_svg(c):
@@ -284,12 +288,17 @@ def readme(s):
         "stacks": "Stack. " + " ".join(f"{d}: {', '.join(n for _, n in items)}."
                                        for (d, _), items in zip(DOMAINS, STACKS)),
         "about": f"About: {ABOUT} Research lines: {', '.join(h for h, _ in RESEARCH)}.",
-        "milestones": "Milestones: " + "; ".join(f"{y}, {w}" for y, w in MILESTONES) + ". Certifications: " + "; ".join(k[3] for k in CERTS) + ".",
+        "milestones": "Milestones: " + "; ".join(f"{y}, {w}" for y, w in MILESTONES) + ".",
     }
     pics = "\n<br>\n".join(
         f'<picture>\n  <source media="(prefers-color-scheme: dark)" srcset="assets/{n}-dark.svg" />\n'
         f'  <img alt="{esc(a).replace(chr(34), "&quot;")}" src="assets/{n}-light.svg" width="100%" />\n</picture>'
         for n, a in alts.items())
+    badges = "\n".join(
+        f'  <img src="assets/badge-{i}.svg" width="92" title="{esc(k[3])}" alt="{esc(k[3])}" />' for i, k in enumerate(CERTS))
+    parts = pics.split("\n<br>\n")  # stats, about, milestones, stacks
+    parts.insert(3, f'<p align="center"><sub>CERTIFICATIONS</sub><br>\n{badges}\n</p>')
+    pics = "\n<br>\n".join(parts)
     return f"""<h1 align="center">Javier Rodeiro</h1>
 <p align="center">{esc(HEADLINE)}</p>
 
@@ -310,5 +319,7 @@ if __name__ == "__main__":
         for f, svg in (("stats", stats_svg(s, mode)), ("about", about_svg(mode)),
                        ("milestones", milestones_svg(mode)), ("stacks", stacks_svg(mode))):
             (OUT / f"{f}-{name}.svg").write_text(svg)
+    for i in range(len(CERTS)):
+        (OUT / f"badge-{i}.svg").write_text(badge_svg(i))
     (OUT.parent / "README.md").write_text(readme(s))
     print("ok", s["since"], len(s["years"]), "years")
