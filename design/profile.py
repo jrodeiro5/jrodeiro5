@@ -52,7 +52,7 @@ CERTS = [("snowflake", "", GREEN, "Snowflake University Platform Skills Badge"),
          (None, "SM", INDIGO, "Scrum Master (Scrum Manager)"),
          (None, "PO", INDIGO, "Product Owner (Scrum Manager)"),
          (None, "GB", INDIGO, "Six Sigma Green Belt (PMI)"),
-         ("cambridgeenglish", "", GREY, "Cambridge C2 Proficiency in English")]
+         (None, "C2", GREY, "Cambridge C2 Proficiency in English")]
 
 
 def gq(q, **v):
