@@ -31,8 +31,7 @@ STACKS = [
 ]
 
 ABOUT = ("AI & Analytics Developer at cinfo. Before that, two years of web and app analytics for PULL&BEAR "
-         "(Inditex), where I built OmniZenit, the GA4 validation extension that every Inditex brand's "
-         "analytics team uses.")
+         "(Inditex), where I built OmniZenit, the official debugger for Inditex's in-house analytics tool.")
 RESEARCH = [("Agents and MCP", "MCP servers that give models real tools: GTM, documentation, media."),
             ("Knowledge systems", "Agent memory, RAG and search over what I save and read."),
             ("Local-first AI", "Models, speech and file search running on my own machine."),
