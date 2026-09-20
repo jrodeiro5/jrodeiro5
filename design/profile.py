@@ -48,11 +48,12 @@ ORANGE, INDIGO, GREEN, GREY = "#C2510E", "#3B3BD8", "#0B7F58", "#5B6B62"
 CERTS = [("snowflake", "", GREEN, "Snowflake University Platform Skills Badge"),
          ("googleanalytics", "", ORANGE, "Google Analytics Individual Qualification"),
          ("adobe", "", ORANGE, "Adobe Analytics Foundations"),
-         ("googlebigquery", "", GREEN, "Query GA4 Data in Google BigQuery (Simmer)"),
-         (None, "SM", INDIGO, "Scrum Master (Scrum Manager)"),
-         (None, "PO", INDIGO, "Product Owner (Scrum Manager)"),
-         (None, "GB", INDIGO, "Six Sigma Green Belt (PMI)"),
-         (None, "C2", GREY, "Cambridge C2 Proficiency in English")]
+         ("googlebigquery", "", GREEN, "Query GA4 Data in Google BigQuery (Simmer)")]
+# issuer-made badges, cut out by design/cutout.py into assets/certs/<file>-{light,dark}.png
+ISSUED = [("scrum-master", "Scrum Master (Scrum Manager)"), ("product-owner", "Product Owner (Scrum Manager)"),
+          ("agile-foundation", "Agile Foundation (Scrum Manager)"), ("kanban", "Kanban Essentials (Scrum Manager)"),
+          ("lean", "Lean (Scrum Manager)"), ("make-advanced", "Make Academy Advanced"),
+          ("cambridge-c2", "Cambridge C2 Proficiency in English")]
 
 
 def gq(q, **v):
@@ -294,8 +295,11 @@ def readme(s):
         f'<picture>\n  <source media="(prefers-color-scheme: dark)" srcset="assets/{n}-dark.svg" />\n'
         f'  <img alt="{esc(a).replace(chr(34), "&quot;")}" src="assets/{n}-light.svg" width="100%" />\n</picture>'
         for n, a in alts.items())
-    badges = "\n".join(
-        f'  <img src="assets/badge-{i}.svg" width="92" title="{esc(k[3])}" alt="{esc(k[3])}" />' for i, k in enumerate(CERTS))
+    names = [k[3] for k in CERTS] + [n for _, n in ISSUED]
+    badges = "\n".join(f'  <img src="assets/badge-{i}.svg" height="112" title="{esc(n)}" alt="{esc(n)}" />'
+                        for i, n in enumerate(names[:len(CERTS)])) + "\n" + "\n".join(
+        f'  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/{f}-dark.png" />'
+        f'<img src="assets/certs/{f}-light.png" height="84" title="{esc(n)}" alt="{esc(n)}" /></picture>' for f, n in ISSUED)
     parts = pics.split("\n<br>\n")  # stats, about, milestones, stacks
     parts.insert(3, f'<p align="center"><sub>CERTIFICATIONS</sub><br>\n{badges}\n</p>')
     pics = "\n<br>\n".join(parts)
