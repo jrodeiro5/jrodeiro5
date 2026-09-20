@@ -59,13 +59,15 @@ def stats():
                f=f"{y}-01-01T00:00:00Z", t=f"{y}-12-31T23:59:59Z")["viewer"]["contributionsCollection"]
         years[y] = dict(total=c["contributionCalendar"]["totalContributions"], private=c["restrictedContributionsCount"],
                         commits=c["totalCommitContributions"], prs=c["totalPullRequestContributions"])
-    langs, after, repos, private = collections.Counter(), None, 0, 0
+    langs, after, repos, private, stars, forks, names = collections.Counter(), None, 0, 0, 0, 0, []
     while True:
         r = gq("query($a:String){viewer{repositories(first:100,after:$a,ownerAffiliations:OWNER,isFork:false){pageInfo"
-               "{hasNextPage endCursor} nodes{isPrivate languages(first:8,orderBy:{field:SIZE,direction:DESC})"
+               "{hasNextPage endCursor} nodes{name isPrivate stargazerCount forkCount languages(first:8,orderBy:{field:SIZE,direction:DESC})"
                "{edges{size node{name}}}}}}}", **({"a": after} if after else {}))["viewer"]["repositories"]
         for n in r["nodes"]:
             repos, private = repos + 1, private + n["isPrivate"]
+            stars, forks = stars + n["stargazerCount"], forks + n["forkCount"]
+            names.append(n["name"])
             for e in n["languages"]["edges"]:
                 langs[e["node"]["name"]] += e["size"]
         if not r["pageInfo"]["hasNextPage"]:
@@ -76,8 +78,35 @@ def stats():
     top = [(k, 100 * v / tot) for k, v in langs.most_common(6)]
     top.append(("Other", 100 - sum(p for _, p in top)))
     since = min(years) if years else 0
-    return dict(years=years, langs=top, repos=repos, private=private, since=since,
-                start=u["createdAt"][:7])
+    v = gq("{viewer{id login repositoriesContributedTo(first:1,contributionTypes:[COMMIT,PULL_REQUEST]){totalCount}}}")["viewer"]
+    add, dele = lines(v["login"], v["id"], names)
+    return dict(years=years, langs=top, repos=repos, private=private, since=since, start=u["createdAt"][:7],
+                stars=stars, forks=forks, contributed=v["repositoriesContributedTo"]["totalCount"], added=add, deleted=dele)
+
+
+def lines(login, uid, names):
+    """Lines added/deleted by me on each owned repo's default branch (GraphQL commit history, paged)."""
+    add = dele = 0
+    for name in names:
+        after = None
+        while True:
+            r = gq("query($o:String!,$n:String!,$id:ID!,$a:String){repository(owner:$o,name:$n){defaultBranchRef{target{... on Commit{"
+                   "history(first:100,after:$a,author:{id:$id}){pageInfo{hasNextPage endCursor} nodes{additions deletions}}}}}}}",
+                   o=login, n=name, id=uid, **({"a": after} if after else {}))["repository"]["defaultBranchRef"]
+            if not r:  # empty repository
+                break
+            h = r["target"]["history"]
+            add, dele = add + sum(c["additions"] for c in h["nodes"]), dele + sum(c["deletions"] for c in h["nodes"])
+            if not h["pageInfo"]["hasNextPage"]:
+                break
+            after = h["pageInfo"]["endCursor"]
+    return add, dele
+
+
+def compact(n):
+    if n >= 1_000_000:
+        return f"{n / 1_000_000:.1f}M".replace(".0M", "M")
+    return f"{n / 1000:.1f}k".replace(".0k", "k") if n >= 1000 else str(n)
 
 
 def frame(h, title, body, c):
@@ -140,12 +169,16 @@ def stats_svg(s, c):
     cur = list(yrs.items())[-1]
     figs = [(f"{cur[1]['total']:,}", f"contributions in {cur[0]}"),
             (str(cur[1]["prs"]), f"pull requests, {cur[1]['commits']} commits"),
-            (f"{s['private']} of {s['repos']}", "repositories are private")]
+            (f"{s['private']} of {s['repos']}", "repositories are private"),
+            (f"{s['stars']} / {s['forks']}", "stars / forks on my repos"),
+            (f"{s['contributed']}", "repositories contributed to"),
+            (compact(s["added"]) + " / " + compact(s["deleted"]), "lines added / deleted")]
     for i, (big, lab) in enumerate(figs):
-        fy = 378 + i * 44
-        b.append(t(470, fy, big, 34, c["ink"], "SB"))
-        b.append(t(470 + 170, fy - 2, lab, 14, c["muted"]))
-    return frame(506, f"GitHub activity: {tot:,} contributions, {pct}% private.", "".join(b), c)
+        fy = 372 + (i % 3) * 54
+        cx = 460 + (i // 3) * 200
+        b.append(t(cx, fy, big, 26, c["ink"], "SB"))
+        b.append(t(cx, fy + 20, lab, 12, c["muted"]))
+    return frame(520, f"GitHub activity: {tot:,} contributions, {pct}% private.", "".join(b), c)
 
 
 def about_svg(c):
