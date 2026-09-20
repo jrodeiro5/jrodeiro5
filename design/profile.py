@@ -195,11 +195,13 @@ def stacks_svg(c):
         reps = math.ceil(vw / period) + 1
         tiles = f'<g id="s{r}">{"".join(band)}</g>' + "".join(f'<use href="#s{r}" x="{k * period}"/>' for k in range(1, reps))
         a, z = (0, -period) if r % 2 == 0 else (-period, 0)
-        b.append(f'<g clip-path="url(#vp)"><g transform="translate({vx} 0)"><g>{tiles}'
+        b.append(f'<g clip-path="url(#vp)"><g transform="translate({vx + 24} 0)"><g>{tiles}'
                  f'<animateTransform attributeName="transform" type="translate" from="{a} 0" to="{z} 0" '
                  f'dur="{period / 30:.1f}s" repeatCount="indefinite"/></g></g></g>')
-    b.append(f'<rect x="{vx}" y="0" width="48" height="{h}" fill="url(#fl)"/>')
-    b.append(f'<rect x="{vx + vw - 48}" y="0" width="48" height="{h}" fill="url(#fr)"/>')
+    for r in range(rows):  # fade only the pills, never the row labels, and only a short edge
+        fy = top + r * row_h + 26
+        b.append(f'<rect x="{vx}" y="{fy}" width="24" height="40" fill="url(#fl)"/>')
+        b.append(f'<rect x="{vx + vw - 24}" y="{fy}" width="24" height="40" fill="url(#fr)"/>')
     return frame(h, "Stack: " + ", ".join(names) + ".", "".join(b), c)
 
 
