@@ -4,7 +4,9 @@ Reuses page.py's fonts/text helpers and build.py's logos. Needs `gh` authenticat
 owner (private contributions are only visible to the owner). Run: `.venv/bin/python design/profile.py`."""
 import collections
 import json
+import base64
 import math
+import struct
 import subprocess
 
 import build as B
@@ -234,11 +236,46 @@ def milestones_svg(c):
     return frame(cy + 32, "Milestones.", "".join(b), c)
 
 
-def badge_svg(i):
-    """One certification as its own SVG so the README can give it a hover title."""
-    slug, mark, col, _ = CERTS[i]
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 84 84" role="img">'
-            f'{badge(42, 42, 40, slug, mark, col, 0)}</svg>')
+TILE = 12  # each badge tile is 12% of the README width; rows are padded with same-colour fillers so the panel is seamless
+
+
+def tile(c, inner, wu=100):
+    """A wu x 100 unit SVG (one tile = 100 units) in the block background, so adjacent images read as one panel."""
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {wu:.3f} 100" role="img">'
+            f'<rect width="{wu:.3f}" height="100" fill="{c["bg"]}"/>{inner}</svg>')
+
+
+def png_inner(f, theme, wu, bw, bh):
+    """An issuer badge PNG embedded as a data URI, fitted in a bw x bh box centred in a wu x 100 tile."""
+    raw = (OUT / "certs" / f"{f}-{theme}.png").read_bytes()
+    w, h = struct.unpack(">II", raw[16:24])
+    k = min(bw / w, bh / h)
+    return (f'<image x="{(wu - w * k) / 2:.2f}" y="{(100 - h * k) / 2:.2f}" width="{w * k:.2f}" height="{h * k:.2f}" '
+            f'href="data:image/png;base64,{base64.b64encode(raw).decode()}"/>')
+
+
+def pad_of(items):
+    """Width in % of the filler on each side of a row, so that the row is centred and stays under 100%."""
+    return (99.6 - sum(p for _, _, p in items)) / 2
+
+
+def cert_panel(theme, c):
+    """Writes the certification tiles for one theme; returns README rows as (file, title, tile width in %) lists."""
+    d = OUT / "certs"
+    def w(name, svg):
+        (d / f"t-{name}-{theme}.svg").write_text(svg)
+        return f"t-{name}"
+    drawn = [(w(k[0], tile(c, badge(50, 50, 40, k[0], "", k[2], 0))), k[3], TILE) for k in CERTS]
+    agile = [(w(f, tile(c, png_inner(f, theme, 100, 80, 80))), n, TILE) for f, n in ISSUED if f != "cambridge-c2"]
+    wide = 100 / TILE * 100  # a full-width row is 100/TILE tiles wide
+    cam = [(w("cambridge-c2", tile(c, png_inner("cambridge-c2", theme, wide, wide * 0.4, 76), wide)), n, 100) for f, n in ISSUED if f == "cambridge-c2"]
+    (d / f"t-head-{theme}.svg").write_text(frame(44, "Certifications", t(32, 30, "Certifications", 13, c["muted"], "M"), c))
+    (d / f"t-pad-{theme}.svg").write_text(frame(24, "", "", c))
+    rows = [drawn, agile, cam]
+    for r in rows:  # fillers are as tall as a tile and as wide as the row's padding
+        if pad_of(r) > 0.05:
+            (d / f"t-fill{pad_of(r):.1f}-{theme}.svg").write_text(tile(c, "", pad_of(r) / TILE * 100))
+    return rows
 
 
 def stacks_svg(c):
@@ -277,6 +314,9 @@ def stacks_svg(c):
     return frame(h, "Stack: " + ", ".join(names) + ".", "".join(b), c)
 
 
+CERT_ROWS = []  # filled by cert_panel() before readme() runs
+
+
 def readme(s):
     """README.md is generated too, so no number or list lives in it by hand (alt text included)."""
     tot = sum(v["total"] for v in s["years"].values())
@@ -293,14 +333,18 @@ def readme(s):
         f'<picture>\n  <source media="(prefers-color-scheme: dark)" srcset="assets/{n}-dark.svg" />\n'
         f'  <img alt="{esc(a).replace(chr(34), "&quot;")}" src="assets/{n}-light.svg" width="100%" />\n</picture>'
         for n, a in alts.items())
-    def issued(f, n):
-        return (f'<picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/{f}-dark.png" />'
-                f'<img src="assets/certs/{f}-light.png" height="84" title="{esc(n)}" alt="{esc(n)}" /></picture>')
-    drawn = [f'<img src="assets/badge-{i}.svg" height="84" title="{esc(k[3])}" alt="{esc(k[3])}" />' for i, k in enumerate(CERTS)]
-    rows = [drawn, [issued(*x) for x in ISSUED[:5]], [issued(*x) for x in ISSUED[5:]]]  # data & analytics, agile, other
-    badges = "\n<br>\n".join("  " + "\n  ".join(r) for r in rows)
+    def pic(f, title, pct, alt=None):
+        alt = esc(title if alt is None else alt)
+        return (f'<picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/{f}-dark.svg" />'
+                f'<img src="assets/certs/{f}-light.svg" width="{pct:g}%" align="top" title="{alt}" alt="{alt}" /></picture>')
+
+    def row(items):  # centred with same-colour fillers; 0.4% of slack keeps the row from wrapping on rounding
+        pad = pad_of(items)
+        fill = pic(f"t-fill{pad:.1f}", "", pad, "") if pad > 0.05 else ""
+        return fill + "".join(pic(f, n, p) for f, n, p in items) + fill
+    badges = "<br>".join([pic("t-head", "Certifications", 100), *(row(r) for r in CERT_ROWS), pic("t-pad", "", 100, "")])
     parts = pics.split("\n<br>\n")  # stats, about, milestones, stacks
-    parts.insert(3, f'<p align="center"><sub>CERTIFICATIONS</sub><br>\n{badges}\n</p>')
+    parts.insert(3, f'<p align="center">{badges}</p>')
     pics = "\n<br>\n".join(parts)
     return f"""<h1 align="center">Javier Rodeiro</h1>
 <p align="center">{esc(HEADLINE)}</p>
@@ -322,7 +366,6 @@ if __name__ == "__main__":
         for f, svg in (("stats", stats_svg(s, mode)), ("about", about_svg(mode)),
                        ("milestones", milestones_svg(mode)), ("stacks", stacks_svg(mode))):
             (OUT / f"{f}-{name}.svg").write_text(svg)
-    for i in range(len(CERTS)):
-        (OUT / f"badge-{i}.svg").write_text(badge_svg(i))
+        CERT_ROWS[:] = cert_panel(name, mode)
     (OUT.parent / "README.md").write_text(readme(s))
     print("ok", s["since"], len(s["years"]), "years")
