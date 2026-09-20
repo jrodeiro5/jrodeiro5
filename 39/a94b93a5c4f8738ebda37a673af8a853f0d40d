@@ -1,0 +1,23 @@
+assets/stacks-light.svg
+  s_3e08413bbd9e82::t_a713978dfbd0fe 33
+design/profile.py
+  s_3e08413bbd9e82::t_a713978dfbd0fe 201-204
+assets/stacks-dark.svg
+  s_3e08413bbd9e82::t_a713978dfbd0fe 33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "39a94b93a5c4f8738ebda37a673af8a853f0d40d",
+  "prompts": {},
+  "sessions": {
+    "s_3e08413bbd9e82": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "32df498b-84e7-46f5-94f9-6c40d4496892",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
