@@ -10,7 +10,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
-  <img alt="GitHub activity: 3,303 contributions since April 2024, 88% in private repositories. Languages: Python 47%, TypeScript 19%, Go 12%." src="assets/stats-light.svg" width="100%" />
+  <img alt="GitHub activity: 3,304 contributions since April 2024, 88% in private repositories. Languages: Python 47%, TypeScript 19%, Go 12%." src="assets/stats-light.svg" width="100%" />
 </picture>
 <br>
 <picture>
