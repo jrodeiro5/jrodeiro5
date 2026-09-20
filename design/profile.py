@@ -63,13 +63,13 @@ def stats():
                         commits=c["totalCommitContributions"], prs=c["totalPullRequestContributions"])
     langs, after, repos, private, stars, forks, names = collections.Counter(), None, 0, 0, 0, 0, []
     while True:
-        r = gq("query($a:String){viewer{repositories(first:100,after:$a,ownerAffiliations:OWNER,isFork:false){pageInfo"
-               "{hasNextPage endCursor} nodes{name isPrivate stargazerCount forkCount languages(first:8,orderBy:{field:SIZE,direction:DESC})"
+        r = gq("query($a:String){viewer{repositories(first:100,after:$a,ownerAffiliations:[OWNER,ORGANIZATION_MEMBER,COLLABORATOR],isFork:false){pageInfo"
+               "{hasNextPage endCursor} nodes{nameWithOwner isPrivate stargazerCount forkCount languages(first:8,orderBy:{field:SIZE,direction:DESC})"
                "{edges{size node{name}}}}}}}", **({"a": after} if after else {}))["viewer"]["repositories"]
         for n in r["nodes"]:
             repos, private = repos + 1, private + n["isPrivate"]
             stars, forks = stars + n["stargazerCount"], forks + n["forkCount"]
-            names.append(n["name"])
+            names.append(n["nameWithOwner"])
             for e in n["languages"]["edges"]:
                 langs[e["node"]["name"]] += e["size"]
         if not r["pageInfo"]["hasNextPage"]:
@@ -81,20 +81,21 @@ def stats():
     top.append(("Other", 100 - sum(p for _, p in top)))
     since = min(years) if years else 0
     v = gq("{viewer{id login repositoriesContributedTo(first:1,contributionTypes:[COMMIT,PULL_REQUEST]){totalCount}}}")["viewer"]
-    add, dele = lines(v["login"], v["id"], names)
+    add, dele = lines(v["id"], names)
     return dict(years=years, langs=top, repos=repos, private=private, since=since, start=u["createdAt"][:7],
                 stars=stars, forks=forks, contributed=v["repositoriesContributedTo"]["totalCount"], added=add, deleted=dele)
 
 
-def lines(login, uid, names):
-    """Lines added/deleted by me on each owned repo's default branch (GraphQL commit history, paged)."""
+def lines(uid, names):
+    """Lines added/deleted by me on each owned or organisation repo's default branch (GraphQL commit history, paged)."""
     add = dele = 0
-    for name in names:
+    for full in names:
+        owner, name = full.split("/")
         after = None
         while True:
             r = gq("query($o:String!,$n:String!,$id:ID!,$a:String){repository(owner:$o,name:$n){defaultBranchRef{target{... on Commit{"
                    "history(first:100,after:$a,author:{id:$id}){pageInfo{hasNextPage endCursor} nodes{additions deletions}}}}}}}",
-                   o=login, n=name, id=uid, **({"a": after} if after else {}))["repository"]["defaultBranchRef"]
+                   o=owner, n=name, id=uid, **({"a": after} if after else {}))["repository"]["defaultBranchRef"]
             if not r:  # empty repository
                 break
             h = r["target"]["history"]
@@ -147,7 +148,7 @@ def stats_svg(s, c):
         b.append(f'<rect x="{lx}" y="{ly - 10}" width="10" height="10" fill="{SHADES[i]}"/>')
         b.append(t(lx + 16, ly, lab, 13, c["ink"]))
         lx += 16 + adv(lab, 13) + 22
-    b.append(t(32, ly + 28, f"Share of code by size across {s['repos']} owned repositories, notebooks excluded.", 13, c["muted"]))
+    b.append(t(32, ly + 28, f"Share of code by size across {s['repos']} repositories, organisations included, notebooks excluded.", 13, c["muted"]))
     # history: stacked private/public per year
     top, base, cw = 350, 450, 384
     mx = max(v["total"] for v in yrs.values())
