@@ -43,12 +43,11 @@ MILESTONES = [("2026", "AI & Analytics Developer at cinfo"),
               ("2025–26", "MSc in Big Data, Data Science and AI, Complutense University"),
               ("2023–24", "Master in Web Analytics, KSchool"),
               ("2022–24", "Data Analyst, Call Center CRO at Bysidecar (insurance, energy and telecom clients)")]
-ORANGE, INDIGO, GREEN, GREY = "#C2510E", "#3B3BD8", "#0B7F58", "#5B6B62"
-# (logo slug or None, text mark, colour, accessible name); the badge itself is the label
-CERTS = [("snowflake", "", GREEN, "Snowflake University Platform Skills Badge"),
-         ("googleanalytics", "", ORANGE, "Google Analytics Individual Qualification"),
-         ("adobe", "", ORANGE, "Adobe Analytics Foundations"),
-         ("googlebigquery", "", GREEN, "Query GA4 Data in Google BigQuery (Simmer)")]
+# drawn badges use each brand's own colour; the logo is drawn white on it
+CERTS = [("snowflake", "", "#29B5E8", "Snowflake University Platform Skills Badge"),
+         ("googlebigquery", "", "#4285F4", "Query GA4 Data in Google BigQuery (Simmer)"),
+         ("googleanalytics", "", "#E37400", "Google Analytics Individual Qualification"),
+         ("adobe", "", "#EB1000", "Adobe Analytics Foundations")]
 # issuer-made badges, cut out by design/cutout.py into assets/certs/<file>-{light,dark}.png
 ISSUED = [("scrum-master", "Scrum Master (Scrum Manager)"), ("product-owner", "Product Owner (Scrum Manager)"),
           ("agile-foundation", "Agile Foundation (Scrum Manager)"), ("kanban", "Kanban Essentials (Scrum Manager)"),
@@ -236,11 +235,10 @@ def milestones_svg(c):
 
 
 def badge_svg(i):
-    """One certification as its own SVG so the README can give it a hover title; alternate tilt and height."""
+    """One certification as its own SVG so the README can give it a hover title."""
     slug, mark, col, _ = CERTS[i]
-    up = i % 2
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="92" height="112" viewBox="0 0 92 112" role="img">'
-            f'{badge(46, 46 + (10 if up else 30) - 10, 42, slug, mark, col, 6 if up else -6)}</svg>')
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 84 84" role="img">'
+            f'{badge(42, 42, 40, slug, mark, col, 0)}</svg>')
 
 
 def stacks_svg(c):
@@ -295,11 +293,12 @@ def readme(s):
         f'<picture>\n  <source media="(prefers-color-scheme: dark)" srcset="assets/{n}-dark.svg" />\n'
         f'  <img alt="{esc(a).replace(chr(34), "&quot;")}" src="assets/{n}-light.svg" width="100%" />\n</picture>'
         for n, a in alts.items())
-    names = [k[3] for k in CERTS] + [n for _, n in ISSUED]
-    badges = "\n".join(f'  <img src="assets/badge-{i}.svg" height="112" title="{esc(n)}" alt="{esc(n)}" />'
-                        for i, n in enumerate(names[:len(CERTS)])) + "\n" + "\n".join(
-        f'  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/{f}-dark.png" />'
-        f'<img src="assets/certs/{f}-light.png" height="84" title="{esc(n)}" alt="{esc(n)}" /></picture>' for f, n in ISSUED)
+    def issued(f, n):
+        return (f'<picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/{f}-dark.png" />'
+                f'<img src="assets/certs/{f}-light.png" height="84" title="{esc(n)}" alt="{esc(n)}" /></picture>')
+    drawn = [f'<img src="assets/badge-{i}.svg" height="84" title="{esc(k[3])}" alt="{esc(k[3])}" />' for i, k in enumerate(CERTS)]
+    rows = [drawn, [issued(*x) for x in ISSUED[:5]], [issued(*x) for x in ISSUED[5:]]]  # data & analytics, agile, other
+    badges = "\n<br>\n".join("  " + "\n  ".join(r) for r in rows)
     parts = pics.split("\n<br>\n")  # stats, about, milestones, stacks
     parts.insert(3, f'<p align="center"><sub>CERTIFICATIONS</sub><br>\n{badges}\n</p>')
     pics = "\n<br>\n".join(parts)

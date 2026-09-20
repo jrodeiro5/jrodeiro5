@@ -10,7 +10,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
-  <img alt="GitHub activity: 3,319 contributions since April 2024, 87% in private repositories. Languages: Python 45%, TypeScript 18%, Go 11%." src="assets/stats-light.svg" width="100%" />
+  <img alt="GitHub activity: 3,320 contributions since April 2024, 87% in private repositories. Languages: Python 45%, TypeScript 18%, Go 11%." src="assets/stats-light.svg" width="100%" />
 </picture>
 <br>
 <picture>
@@ -24,15 +24,17 @@
 </picture>
 <br>
 <p align="center"><sub>CERTIFICATIONS</sub><br>
-  <img src="assets/badge-0.svg" height="112" title="Snowflake University Platform Skills Badge" alt="Snowflake University Platform Skills Badge" />
-  <img src="assets/badge-1.svg" height="112" title="Google Analytics Individual Qualification" alt="Google Analytics Individual Qualification" />
-  <img src="assets/badge-2.svg" height="112" title="Adobe Analytics Foundations" alt="Adobe Analytics Foundations" />
-  <img src="assets/badge-3.svg" height="112" title="Query GA4 Data in Google BigQuery (Simmer)" alt="Query GA4 Data in Google BigQuery (Simmer)" />
+  <img src="assets/badge-0.svg" height="84" title="Snowflake University Platform Skills Badge" alt="Snowflake University Platform Skills Badge" />
+  <img src="assets/badge-1.svg" height="84" title="Query GA4 Data in Google BigQuery (Simmer)" alt="Query GA4 Data in Google BigQuery (Simmer)" />
+  <img src="assets/badge-2.svg" height="84" title="Google Analytics Individual Qualification" alt="Google Analytics Individual Qualification" />
+  <img src="assets/badge-3.svg" height="84" title="Adobe Analytics Foundations" alt="Adobe Analytics Foundations" />
+<br>
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/scrum-master-dark.png" /><img src="assets/certs/scrum-master-light.png" height="84" title="Scrum Master (Scrum Manager)" alt="Scrum Master (Scrum Manager)" /></picture>
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/product-owner-dark.png" /><img src="assets/certs/product-owner-light.png" height="84" title="Product Owner (Scrum Manager)" alt="Product Owner (Scrum Manager)" /></picture>
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/agile-foundation-dark.png" /><img src="assets/certs/agile-foundation-light.png" height="84" title="Agile Foundation (Scrum Manager)" alt="Agile Foundation (Scrum Manager)" /></picture>
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/kanban-dark.png" /><img src="assets/certs/kanban-light.png" height="84" title="Kanban Essentials (Scrum Manager)" alt="Kanban Essentials (Scrum Manager)" /></picture>
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/lean-dark.png" /><img src="assets/certs/lean-light.png" height="84" title="Lean (Scrum Manager)" alt="Lean (Scrum Manager)" /></picture>
+<br>
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/make-advanced-dark.png" /><img src="assets/certs/make-advanced-light.png" height="84" title="Make Academy Advanced" alt="Make Academy Advanced" /></picture>
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/cambridge-c2-dark.png" /><img src="assets/certs/cambridge-c2-light.png" height="84" title="Cambridge C2 Proficiency in English" alt="Cambridge C2 Proficiency in English" /></picture>
 </p>
