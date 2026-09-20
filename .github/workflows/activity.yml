@@ -18,7 +18,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PROFILE_TOKEN }}
       - run: |
-          git add assets
+          git add assets README.md
           git diff --cached --quiet && exit 0
           git -c user.name=github-actions[bot] -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m "chore(assets): refresh activity"
           git push

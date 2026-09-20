@@ -30,6 +30,7 @@ STACKS = [
      ("powerbi", "Power BI")],
 ]
 
+HEADLINE = "AI & Analytics Developer at cinfo · A Coruña"
 ABOUT = ("AI & Analytics Developer at cinfo. Before that, two years of web and app analytics for PULL&BEAR "
          "(Inditex), where I built OmniZenit, the official debugger for Inditex's in-house analytics tool.")
 RESEARCH = [("Agents and MCP", "MCP servers that give models real tools: GTM, documentation, media."),
@@ -202,10 +203,41 @@ def stacks_svg(c):
     return frame(h, "Stack: " + ", ".join(names) + ".", "".join(b), c)
 
 
+def readme(s):
+    """README.md is generated too, so no number or list lives in it by hand (alt text included)."""
+    tot = sum(v["total"] for v in s["years"].values())
+    pct = round(100 * sum(v["private"] for v in s["years"].values()) / tot)
+    top = ", ".join(f"{k} {p:.0f}%" for k, p in s["langs"][:3])
+    alts = {
+        "stats": f"GitHub activity: {tot:,} contributions since {month(s['start'])}, {pct}% in private repositories. Languages: {top}.",
+        "stacks": "Stack. " + " ".join(f"{d}: {', '.join(n or {'piwikpro': 'Piwik PRO', 'apacheiceberg': 'Iceberg'}[k] for k, n in items)}."
+                                       for (d, _), items in zip(DOMAINS, STACKS)),
+        "about": f"About: {ABOUT} Research lines: {', '.join(h for h, _ in RESEARCH)}.",
+        "milestones": "Milestones: " + "; ".join(f"{y}, {w}" for y, w in MILESTONES) + ".",
+    }
+    pics = "\n<br>\n".join(
+        f'<picture>\n  <source media="(prefers-color-scheme: dark)" srcset="assets/{n}-dark.svg" />\n'
+        f'  <img alt="{esc(a).replace(chr(34), "&quot;")}" src="assets/{n}-light.svg" width="100%" />\n</picture>'
+        for n, a in alts.items())
+    return f"""<h1 align="center">Javier Rodeiro</h1>
+<p align="center">{esc(HEADLINE)}</p>
+
+<p align="center">
+  <a href="https://javierrodeiro.com">javierrodeiro.com</a> &nbsp;·&nbsp;
+  <a href="https://linkedin.com/in/javier-rodeiro-rodriguez">LinkedIn</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/newsletters/puppets-scripts-7290366362223284224/">Puppets &amp; Scripts</a> &nbsp;·&nbsp;
+  <a href="mailto:hello@javierrodeiro.com">hello@javierrodeiro.com</a>
+</p>
+
+{pics}
+"""
+
+
 if __name__ == "__main__":
     s = stats()
     for name, mode in THEMES.items():
         for f, svg in (("stats", stats_svg(s, mode)), ("about", about_svg(mode)),
                        ("milestones", milestones_svg(mode)), ("stacks", stacks_svg(mode))):
             (OUT / f"{f}-{name}.svg").write_text(svg)
+    (OUT.parent / "README.md").write_text(readme(s))
     print("ok", s["since"], len(s["years"]), "years")
