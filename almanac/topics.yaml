@@ -3,3 +3,11 @@ topics:
     title: Manual
     description: "Page writing standards and wiki maintenance workflows"
     parents: []
+  - slug: architecture
+    title: Architecture
+    description: "System areas, ownership, flows, and invariants"
+    parents: []
+  - slug: profile
+    title: Profile
+    description: "The GitHub profile README and its design/ generator"
+    parents: [architecture]
