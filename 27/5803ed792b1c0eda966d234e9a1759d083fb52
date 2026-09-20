@@ -1,0 +1,29 @@
+README.md
+  s_3e08413bbd9e82::t_5d48aa089531fd 13,28
+assets/stats-light.svg
+  s_3e08413bbd9e82::t_5d48aa089531fd 1
+assets/milestones-light.svg
+  s_3e08413bbd9e82::t_5d48aa089531fd 1-3
+assets/stats-dark.svg
+  s_3e08413bbd9e82::t_5d48aa089531fd 1
+design/profile.py
+  s_3e08413bbd9e82::t_5d48aa089531fd 46-55,214-225,228,233,235-238,287
+assets/milestones-dark.svg
+  s_3e08413bbd9e82::t_5d48aa089531fd 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "275803ed792b1c0eda966d234e9a1759d083fb52",
+  "prompts": {},
+  "sessions": {
+    "s_3e08413bbd9e82": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "32df498b-84e7-46f5-94f9-6c40d4496892",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
