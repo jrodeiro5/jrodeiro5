@@ -1,0 +1,46 @@
+assets/about-light.svg
+  s_3e08413bbd9e82::t_fde8da8c843051 1
+assets/about-dark.svg
+  s_3e08413bbd9e82::t_fde8da8c843051 1
+assets/stacks-light.svg
+  s_3e08413bbd9e82::t_62650452c7f8ce 8
+  s_3e08413bbd9e82::t_cfd19e9d976a55 2-7,9-32
+  s_3e08413bbd9e82::t_fde8da8c843051 1,33
+assets/milestones-dark.svg
+  s_3e08413bbd9e82::t_cfd19e9d976a55 1
+assets/milestones-light.svg
+  s_3e08413bbd9e82::t_cfd19e9d976a55 1
+assets/stats-dark.svg
+  s_3e08413bbd9e82::t_62650452c7f8ce 1
+.github/workflows/activity.yml
+  s_3e08413bbd9e82::t_f1015136c18e95 17,19
+assets/stacks-dark.svg
+  s_3e08413bbd9e82::t_cfd19e9d976a55 2-7,9-32
+  s_3e08413bbd9e82::t_fde8da8c843051 1,33
+  s_3e08413bbd9e82::t_62650452c7f8ce 8
+README.md
+  s_3e08413bbd9e82::t_f1015136c18e95 1-2,11-14,16-19,21-24,26-29
+  s_3e08413bbd9e82::t_fde8da8c843051 10,15,20,25
+assets/stats-light.svg
+  s_3e08413bbd9e82::t_62650452c7f8ce 1
+design/profile.py
+  s_3e08413bbd9e82::t_fde8da8c843051 25,30,33-35,146
+  s_3e08413bbd9e82::t_400a24ea9e27e6 1-24,26-27,29,31-32,36-133,136-138,140-145,147-192,194-212
+  s_3e08413bbd9e82::t_62650452c7f8ce 28,134-135,139,193
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e2ebb32b49b61519898ea6db80d18cca21e6af43",
+  "prompts": {},
+  "sessions": {
+    "s_3e08413bbd9e82": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "32df498b-84e7-46f5-94f9-6c40d4496892",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
