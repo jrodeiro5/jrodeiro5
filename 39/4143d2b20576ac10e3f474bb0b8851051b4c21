@@ -1,0 +1,61 @@
+design/logos/snowflake.svg
+  s_3e08413bbd9e82::t_cb67204b283fe3 1
+assets/about-dark.svg
+  s_3e08413bbd9e82::t_2844abb6028129 1
+assets/milestones-light.svg
+  s_3e08413bbd9e82::t_2844abb6028129 1
+README.md
+  s_3e08413bbd9e82::t_2844abb6028129 13,18,23,28
+assets/about-light.svg
+  s_3e08413bbd9e82::t_2844abb6028129 1
+assets/stacks-light.svg
+  s_3e08413bbd9e82::t_2844abb6028129 1
+assets/stats-dark.svg
+  s_3e08413bbd9e82::t_2844abb6028129 1
+assets/stacks-dark.svg
+  s_3e08413bbd9e82::t_2844abb6028129 1
+design/logos/docker.svg
+  s_3e08413bbd9e82::t_cb67204b283fe3 1
+design/logos/hotjar.svg
+  s_3e08413bbd9e82::t_cb67204b283fe3 1
+assets/milestones-dark.svg
+  s_3e08413bbd9e82::t_2844abb6028129 1
+design/logos/tailwindcss.svg
+  s_3e08413bbd9e82::t_cb67204b283fe3 1
+design/logos/pandas.svg
+  s_3e08413bbd9e82::t_cb67204b283fe3 1
+assets/stats-light.svg
+  s_3e08413bbd9e82::t_2844abb6028129 1
+design/profile.py
+  s_3e08413bbd9e82::t_2844abb6028129 23-29,34-35,45-47,207-209,214-220,244,266,269
+design/logos/polars.svg
+  s_3e08413bbd9e82::t_cb67204b283fe3 1
+assets/.playwright-cli/console-2026-09-19T22-42-37-059Z.log
+  s_bbdd381e6d76ad::t_b30698dc8a1574 1
+design/logos/react.svg
+  s_3e08413bbd9e82::t_cb67204b283fe3 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "394143d2b20576ac10e3f474bb0b8851051b4c21",
+  "prompts": {},
+  "sessions": {
+    "s_3e08413bbd9e82": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "32df498b-84e7-46f5-94f9-6c40d4496892",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    },
+    "s_bbdd381e6d76ad": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b558b59f-aa8c-4352-9967-b3557749e67c",
+        "model": "claude-opus-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
