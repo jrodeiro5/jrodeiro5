@@ -21,14 +21,20 @@ FONTS = ROOT / "fonts"
 LOGOS = ROOT / "logos"
 USER = "jrodeiro5"
 
+# One page of the same diary, under two lights. Light is the page in daylight: aged cream, iron-gall
+# ink gone brown at the edges. Dark is the same page by candle — the paper falls into shadow and the
+# ink is what catches the light, which is why it inverts. A diary has no dark mode; a room does.
+# `accent` is the ruled margin in both, and it is the only red on the page.
 THEMES = {
-    "dark": dict(bg="#0B0B0C", tile="#141416", line="#232326", cell="#1C1C1F",
-                 text="#EDEDEF", muted="#A0A0A8", faint="#7E7E86", accent="#8E97FF"),
-    "light": dict(bg="#FFFFFF", tile="#FAFAFA", line="#E6E6E8", cell="#EFEFF1",
-                  text="#0A0A0B", muted="#5F5F66", faint="#707078", accent="#4F5BD5"),
+    "dark": dict(bg="#191309", tile="#221A0F", line="#3A2E1D", cell="#241C11",
+                 text="#E3D8BC", muted="#A2957A", faint="#6E6450", accent="#8E3B31",
+                 stain="#4A3A1E", shade="#0A0703", grain=".085", vig=".62"),
+    "light": dict(bg="#EDE3CC", tile="#E5D9BE", line="#CFC0A0", cell="#E0D3B6",
+                  text="#25283C", muted="#5E5A55", faint="#928975", accent="#973A34",
+                  stain="#C7A87A", shade="#8A7A5C", grain=".05", vig=".30"),
 }
 
-EASE = "0.65 0 0.35 1"  # in-out, used for every morph segment
+EASE = "0.65 0 0.35 1"  # in-out, used for eased moves
 
 # --------------------------------------------------------------------------- fonts
 
@@ -36,7 +42,10 @@ CHARS = "".join(chr(c) for c in range(0x20, 0x7F)) + "ñ·—’é"
 
 
 def woff2(name: str) -> str:
-    font = TTFont(FONTS / name)
+    # recalcTimestamp=False keeps head.modified from the source font. Otherwise every build
+    # stamps "now" into the woff2, every embedded font blob changes, and the daily workflow
+    # commits all 18 SVGs whether or not anything actually moved.
+    font = TTFont(FONTS / name, recalcTimestamp=False)
     opts = subset.Options()
     opts.flavor = "woff2"
     opts.layout_features = ["kern", "liga", "calt", "tnum"]
@@ -49,16 +58,20 @@ def woff2(name: str) -> str:
     return base64.b64encode(buf.getvalue()).decode()
 
 
+# EB Garamond, instanced from the variable OFL release to static weights. A 1940s diary is set in a
+# Garamond-family old-style face, and the italic is a separate design rather than a slanted roman —
+# which is what lets the italic read as a second voice (the hand) against the roman (the print).
+# `G`/`GS`/`GM` are kept as the key names so every existing builder keeps working.
 FACES = {
-    "G": ("Geist-Regular.ttf", 400),
-    "GS": ("Geist-SemiBold.ttf", 600),
-    "GM": ("GeistMono-Regular.ttf", 400),
+    "G": ("EBGaramond-Regular.ttf", 400),
+    "GS": ("EBGaramond-Medium.ttf", 500),
+    "GM": ("EBGaramond-Italic.ttf", 400),
 }
 FONT_CSS = {k: f"@font-face{{font-family:{k};src:url(data:font/woff2;base64,{woff2(f)}) format('woff2');font-weight:{w}}}"
             for k, (f, w) in FACES.items()}
-STACK = {"G": "G,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif",
-         "GS": "GS,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif",
-         "GM": "GM,ui-monospace,'SF Mono',Menlo,Consolas,monospace"}
+STACK = {"G": "G,'Iowan Old Style','Palatino Linotype',Georgia,serif",
+         "GS": "GS,'Iowan Old Style','Palatino Linotype',Georgia,serif",
+         "GM": "GM,'Iowan Old Style',Georgia,serif"}
 
 
 _ADV = {}
@@ -77,14 +90,63 @@ def esc(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def svg(w, h, title, body, c, faces=("G", "GS", "GM")):
+GUTTER = 26  # width of the spine shadow; also the left edge every page lays its margin against
+
+
+def svg(w, h, title, body, c, faces=("G", "GS", "GM"), rules=None, stains=((0.82, 0.22, 0.13),)):
+    """Every asset is one leaf of the same book, not a card. Three things do all the work:
+
+    - **square corners and no frame.** A rounded stroked rectangle is the single detail that reads
+      as UI; paper has neither. This is what stops the sections looking like tiles.
+    - **the spine gutter** on the left: the dark gradient where a bound page curves into the
+      binding. It is the cheapest detail that says "book" rather than "rectangle".
+    - **foxing** (`stains`): the rust blooms age leaves in, placed in fractions of the leaf as
+      (x, y, radius). They are fixed per asset, never random, so rebuilds stay byte-identical.
+
+    `rules` is the feint horizontal ruling — a y-step in px, or None for an unruled leaf. The grain
+    sits above the content because paper tooth is in front of the ink, not behind it."""
     css = "".join(FONT_CSS[f] for f in faces)
     css += "".join(f".{f}{{font-family:{STACK[f]}}}" for f in faces)
     css += "text{font-kerning:normal}"
+    fox = "".join(f'<ellipse cx="{fx * w:.0f}" cy="{fy * h:.0f}" rx="{fr * w:.0f}" '
+                  f'ry="{fr * w * 0.74:.0f}" fill="url(#fox)"/>' for fx, fy, fr in stains)
+    rule = ""
+    if rules:
+        rule = "".join(f'<line x1="{GUTTER + 22}" y1="{y}" x2="{w - 34}" y2="{y}" '
+                       f'stroke="{c["line"]}" stroke-opacity=".5"/>'
+                       for y in range(rules, h - 20, rules))
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" '
             f'role="img" aria-label="{esc(title)}"><title>{esc(title)}</title><style>{css}</style>'
-            f'<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="16" fill="{c["bg"]}" stroke="{c["line"]}"/>'
-            f"{body}</svg>")
+            f'<defs>'
+            f'<linearGradient id="spine" x1="0" x2="1" y1="0" y2="0">'
+            f'<stop offset="0" stop-color="{c["shade"]}" stop-opacity=".40"/>'
+            f'<stop offset=".45" stop-color="{c["shade"]}" stop-opacity=".10"/>'
+            f'<stop offset="1" stop-color="{c["shade"]}" stop-opacity="0"/></linearGradient>'
+            f'<radialGradient id="fox"><stop offset="0" stop-color="{c["stain"]}" stop-opacity=".30"/>'
+            f'<stop offset=".6" stop-color="{c["stain"]}" stop-opacity=".10"/>'
+            f'<stop offset="1" stop-color="{c["stain"]}" stop-opacity="0"/></radialGradient>'
+            # the leaf is darker where it has been handled: the outer edge and the corners
+            f'<radialGradient id="vig" cx=".5" cy=".45" r=".80">'
+            f'<stop offset=".5" stop-color="{c["shade"]}" stop-opacity="0"/>'
+            f'<stop offset="1" stop-color="{c["shade"]}" stop-opacity="{c["vig"]}"/></radialGradient>'
+            f'<filter id="grain" x="0" y="0" width="100%" height="100%">'
+            f'<feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>'
+            f'<feColorMatrix type="saturate" values="0"/></filter>'
+            # wet ink sinks into the fibre: a blur merged *under* the glyph keeps the letterform
+            # sharp and only spreads the halo, which is what iron-gall does on soft paper.
+            f'<filter id="bloom" x="-50%" y="-50%" width="200%" height="200%">'
+            f'<feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/>'
+            f'<feMergeNode in="SourceGraphic"/></feMerge></filter></defs>'
+            f'<rect width="{w}" height="{h}" fill="{c["bg"]}"/>'
+            f"{fox}{rule}"
+            # the ruled margin, the one red on the leaf
+            f'<line x1="{GUTTER + 22}" y1="0" x2="{GUTTER + 22}" y2="{h}" stroke="{c["accent"]}" '
+            f'stroke-opacity=".34"/>'
+            f"{body}"
+            f'<rect width="{w}" height="{h}" fill="url(#vig)"/>'
+            f'<rect width="{GUTTER}" height="{h}" fill="url(#spine)"/>'
+            f'<rect width="{w}" height="{h}" filter="url(#grain)" opacity="{c["grain"]}" '
+            f'style="mix-blend-mode:overlay"/></svg>')
 
 
 def text(x, y, s, size, fill, face="G", anchor="start", track=0.0, extra=""):
@@ -93,69 +155,66 @@ def text(x, y, s, size, fill, face="G", anchor="start", track=0.0, extra=""):
             f'text-anchor="{anchor}"{ls}{extra}>{esc(s)}</text>')
 
 
-# --------------------------------------------------------------------------- morphing geometry
-# Every icon is one closed polyline on a 24-unit grid. Resampling them all to the
-# same point count (vertices kept exactly) lets SMIL interpolate `d` between them.
-
-N = 120
+_WIPE = [0]
 
 
-def resample(pts, n=N):
-    pts = list(pts) + [pts[0]]
-    segs = [(a, b, math.dist(a, b)) for a, b in zip(pts, pts[1:])]
-    total = sum(s[2] for s in segs)
-    raw = [n * s[2] / total for s in segs]
-    counts = [max(1, math.floor(r)) for r in raw]
-    for i in sorted(range(len(segs)), key=lambda i: raw[i] - counts[i], reverse=True):
-        if sum(counts) >= n:
-            break
-        counts[i] += 1
-    while sum(counts) > n:
-        counts[counts.index(max(counts))] -= 1
-    out = []
-    for (a, b, _), k in zip(segs, counts):
-        out += [(a[0] + (b[0] - a[0]) * j / k, a[1] + (b[1] - a[1]) * j / k) for j in range(k)]
-    return out
+def written(el, x, y, w, h, t0, dur=0.9):
+    """Lay `el` down left to right, the way a pen does. A mask whose rect grows from zero — not a
+    fade, because a fade is a UI transition and a nib is a moving point.
+
+    The rect carries its full width in the attribute and is zeroed by `<set>` at 0s, so a renderer
+    that ignores SMIL opens the mask completely and draws the finished line. That is the same
+    static-base idiom the contribution grid uses, and it is the whole reason this is safe to ship:
+    GitHub's own image cache never runs the animation."""
+    _WIPE[0] += 1
+    i = _WIPE[0]
+    return (f'<defs><mask id="w{i}"><rect x="{x}" y="{y}" width="{w}" height="{h}" fill="#fff">'
+            f'<set attributeName="width" to="0" begin="0s"/>'
+            f'<animate attributeName="width" from="0" to="{w}" begin="{t0:.2f}s" dur="{dur}s" '
+            f'fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.35 0 0.45 1"/>'
+            f'</rect></mask></defs><g mask="url(#w{i})">{el}</g>')
 
 
-def normalise(pts):
-    """Clockwise, starting at the vertex nearest the top-left, so morphs don't twist."""
-    area = sum(a[0] * b[1] - b[0] * a[1] for a, b in zip(pts, pts[1:] + pts[:1]))
-    if area < 0:
-        pts = pts[::-1]
-    i = min(range(len(pts)), key=lambda i: pts[i][0] + pts[i][1])
-    return pts[i:] + pts[:i]
+# --------------------------------------------------------------------------- morphing
+# The morphs are morphicons' spring physics, sampled by design/morph.mjs into
+# design/morphs.json (GitHub strips JS, so SMIL replays the baked keyframes).
+# Each morph gets its own <path>, because SMIL can only interpolate between `d`
+# values with the same structure, and every icon pair has its own plan.
+
+MORPHS = json.loads((ROOT / "morphs.json").read_text())
+SPRING = "0.2 0.9 0.3 1"  # rail easing, close to morphicons' "snappy" spring
 
 
-def path_d(pts, scale, ox, oy):
-    p = [f"{ox + x * scale:.1f} {oy + y * scale:.1f}" for x, y in pts]
-    return "M" + " L".join(p) + " Z"
-
-
-BARS = [(3, 21), (3, 14), (7.5, 14), (7.5, 21), (9.75, 21), (9.75, 8), (14.25, 8), (14.25, 21),
-        (16.5, 21), (16.5, 3.5), (21, 3.5), (21, 21)]
-CHECK = [(3.5, 12.5), (9, 18), (20.5, 6.5), (9, 18)]
-BOX = [(3, 7), (12, 2), (21, 7), (21, 17), (12, 22), (3, 17), (3, 7), (12, 12), (21, 7), (12, 12),
-       (12, 22), (12, 12)]
-PLANE = [(2.5, 10.5), (21.5, 2.5), (13.5, 21.5), (10.5, 13.5), (21.5, 2.5), (10.5, 13.5)]
-
-
-def morph(shapes, scale, ox, oy, dur, hold, stroke, width):
-    """Path cycling through `shapes`; each holds `hold` of its slot, then eases to the next."""
-    ds = [path_d(resample(normalise(s)), scale, ox, oy) for s in shapes]
-    k = len(ds)
-    values, times = [], []
-    for i, d in enumerate(ds):
-        values += [d, d]
-        times += [i / k, (i + hold) / k]
-    values.append(ds[0])
-    times.append(1)
-    splines = ";".join([EASE] * (len(values) - 1))
-    return (f'<path d="{ds[0]}" fill="none" stroke="{stroke}" stroke-width="{width}" '
-            f'stroke-linejoin="round" stroke-linecap="round">'
-            f'<animate attributeName="d" dur="{dur}s" repeatCount="indefinite" calcMode="spline" '
-            f'values="{";".join(values)}" keyTimes="{";".join(f"{t:.4f}" for t in times)}" '
-            f'keySplines="{splines}"/></path>')
+def morph(name, scale, ox, oy, stroke, width):
+    """Loop through the baked morphs of `name`, each played at the end of its slot."""
+    ms = MORPHS[name]
+    k = len(ms)
+    starts = [(i + HOLD) / k for i in range(k)]
+    b = []
+    for i, m in enumerate(ms):
+        f = m["frames"]
+        a = starts[i]
+        times = [0, a - 0.0005] + [a + m["dur"] / DUR * j / (len(f) - 1) for j in range(len(f))] + [1]
+        values = [f[-1], f[-1]] + f + [f[-1]]
+        if times[-2] >= 1:  # last morph ends the cycle
+            times, values = times[:-1], values[:-1]
+            times[-1] = 1
+        # visible from its own start until the next morph takes over
+        nxt = starts[(i + 1) % k]
+        if nxt > a:
+            vis = f'values="hidden;visible;hidden" keyTimes="0;{a:.4f};{nxt:.4f}"'
+            base = "hidden"
+        else:
+            vis = f'values="visible;hidden;visible" keyTimes="0;{nxt:.4f};{a:.4f}"'
+            base = "visible"
+        b.append(f'<path d="{f[-1]}" visibility="{base}">'
+                 f'<animate attributeName="d" dur="{DUR}s" repeatCount="indefinite" '
+                 f'values="{";".join(values)}" keyTimes="{";".join(f"{t:.4f}" for t in times)}"/>'
+                 f'<animate attributeName="visibility" dur="{DUR}s" repeatCount="indefinite" '
+                 f'calcMode="discrete" {vis}/></path>')
+    return (f'<g transform="translate({ox} {oy}) scale({scale})" fill="none" stroke="{stroke}" '
+            f'stroke-width="{width / scale:.2f}" stroke-linejoin="round" stroke-linecap="round">'
+            + "".join(b) + "</g>")
 
 
 def active(i, k, hold, on, off, attr="fill"):
@@ -169,165 +228,84 @@ def active(i, k, hold, on, off, attr="fill"):
             f'values="{off};{on};{off}" keyTimes="0;{start:.4f};{end:.4f}"/>')
 
 
-DUR, HOLD = 10, 0.72
+DUR = 13  # was 8: the spring is unchanged, the rests between morphs are longer. Melancholy is slow.
+HOLD = 1 - MORPHS["hero"][0]["dur"] * 4 / DUR  # rest, then the spring fills the slot
 
 # --------------------------------------------------------------------------- hero
 
 
 def hero(c):
+    """The opening entry. Nothing is laid out as a card: the leaf is ruled, the text hangs off the
+    red margin like handwriting does, and each line is written in rather than faded in."""
     w, h = 880, 300
+    x = GUTTER + 44  # text starts a nib's width right of the red rule
     steps = ["measure", "validate", "build", "ship"]
-    slot, x0, ry = 104, 48, 256
+    slot, ry = 104, 280
     b = []
-    b.append(text(48, 100, "Javier Rodeiro", 46, c["text"], "GS", track=-0.03))
-    b.append(text(48, 142, "AI & Analytics Developer at cinfo", 22, c["muted"]))
-    b.append(text(48, 192, "Clean data, rigorous validation,", 22, c["text"]))
-    b.append(text(48, 222, "and when the tool doesn’t exist, I build it.", 22, c["text"]))
-    # step rail, synced with the morph
-    b.append(f'<line x1="{x0}" y1="{ry + 14}" x2="{x0 + slot * 4 - 24}" y2="{ry + 14}" stroke="{c["line"]}"/>')
+    # the dateline a diary opens with, and the place, on the same line at opposite ends
+    b.append(written(text(x, 60, "20th September", 16, c["faint"], "GM")
+                     + text(w - 40, 60, "A Coruña", 16, c["faint"], "GM", "end"),
+                     x, 40, w - x - 30, 28, 0.2, 1.1))
+    b.append(f'<line x1="{x}" y1="76" x2="{w - 40}" y2="76" stroke="{c["line"]}">'
+             f'<set attributeName="x2" to="{x}" begin="0s"/>'
+             f'<animate attributeName="x2" from="{x}" to="{w - 40}" begin="0.5s" dur="0.8s" '
+             f'fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.35 0 0.45 1"/></line>')
+    lines = [(124, "Javier Rodeiro", 44, c["text"], "GS", -0.015),
+             (157, "AI & Analytics Developer at cinfo", 21, c["muted"], "GM", 0.0),
+             (208, "Clean data, rigorous validation,", 22, c["text"], "G", 0.0),
+             (239, "and when the tool doesn’t exist, I build it.", 22, c["text"], "G", 0.0)]
+    for i, (y, s, size, fill, face, tr) in enumerate(lines):
+        el = text(x, y, s, size, fill, face, track=tr, extra=' filter="url(#bloom)"')
+        b.append(written(el, x, y - size, width(s, size, face) + 14, size * 1.45,
+                         1.0 + i * 0.62, 0.55 + size * 0.016))
+    # the four steps, underlined one at a time by a nib that slides along under them
     for i, s in enumerate(steps):
-        b.append(f'<text x="{x0 + i * slot}" y="{ry}" class="GM" font-size="13" fill="{c["faint"]}">{s}'
+        b.append(f'<text x="{x + i * slot}" y="{ry}" class="GM" font-size="15" fill="{c["faint"]}">{s}'
                  f'{active(i, 4, HOLD, c["text"], c["faint"])}</text>')
-    bar_vals = ";".join(f"{x0 + i * slot};{x0 + i * slot}" for i in range(4)) + f";{x0}"
+    bar_vals = ";".join(f"{x + i * slot};{x + i * slot}" for i in range(4)) + f";{x}"
     k_times = ";".join(f"{i / 4:.4f};{(i + HOLD) / 4:.4f}" for i in range(4)) + ";1"
-    b.append(f'<rect x="{x0}" y="{ry + 13}" width="56" height="2" rx="1" fill="{c["accent"]}">'
+    b.append(f'<rect x="{x}" y="{ry + 7}" width="58" height="1.6" fill="{c["accent"]}" '
+             f'filter="url(#bloom)" opacity=".8">'
              f'<animate attributeName="x" dur="{DUR}s" repeatCount="indefinite" calcMode="spline" '
-             f'values="{bar_vals}" keyTimes="{k_times}" keySplines="{";".join([EASE] * 8)}"/></rect>')
-    # morph tile
-    tx, ty, ts = 640, 48, 192
-    b.append(f'<rect x="{tx}" y="{ty}" width="{ts}" height="{ts}" rx="14" fill="{c["tile"]}" stroke="{c["line"]}"/>')
-    b.append(morph([BARS, CHECK, BOX, PLANE], 4.5, tx + 42, ty + 42, DUR, HOLD, c["accent"], 5))
-    b.append(text(tx + ts, ry, "A Coruña, Spain", 13, c["faint"], "GM", "end"))
+             f'values="{bar_vals}" keyTimes="{k_times}" keySplines="{";".join([SPRING] * 8)}"/></rect>')
+    # the marginal sketch: the same morph, but drawn in ink on the leaf instead of sitting in a tile
+    b.append(f'<g opacity=".72" transform="rotate(-5 745 180)">'
+             f'{morph("hero", 4.4, 690, 132, c["text"], 4)}</g>')
     return svg(w, h, "Javier Rodeiro — AI & Analytics Developer at cinfo. Clean data, rigorous "
-                     "validation, and when the tool doesn't exist, I build it.", "".join(b), c)
+                     "validation, and when the tool doesn't exist, I build it.", "".join(b), c,
+               rules=None, stains=((0.88, 0.18, 0.15), (0.12, 0.86, 0.09)))
 
 
 # --------------------------------------------------------------------------- project cards
 
 
-def anim(attr, values, times, dur):
-    return (f'<animate attributeName="{attr}" dur="{dur}s" repeatCount="indefinite" calcMode="discrete" '
-            f'values="{";".join(values)}" keyTimes="{";".join(f"{t:.4f}" for t in times)}"/>')
-
-
-def pulse(on, off, t0, t1, dur, attr="fill"):
-    return anim(attr, [off, on, off], [0, t0, t1], dur)
-
-
-def sheet(c, x, y):
-    """Addocu: an audit sheet documenting itself row by row."""
-    b, dur = [], 9
-    cols = [(0, 22), (28, 34), (68, 36)]
-    for r in range(5):
-        ry = y + 26 + r * 21
-        t0 = 0.06 + r * 0.08
-        for j, (cx, cw) in enumerate(cols):
-            fill = c["accent"] if j == 0 else c["muted"]
-            b.append(f'<rect x="{x + 24 + cx}" y="{ry}" width="{cw}" height="13" rx="3" fill="{c["cell"]}"/>')
-            b.append(f'<rect x="{x + 24 + cx}" y="{ry}" width="{cw}" height="13" rx="3" fill="{fill}" opacity="0">'
-                     f'<animate attributeName="opacity" dur="{dur}s" repeatCount="indefinite" '
-                     f'values="0;0;{0.9 if j == 0 else 0.35};{0.9 if j == 0 else 0.35};0" '
-                     f'keyTimes="0;{t0 + j * 0.02:.3f};{t0 + j * 0.02 + 0.05:.3f};0.85;0.95"/></rect>')
-    return "".join(b)
-
-
-def lakehouse(c, x, y):
-    """SoloDShouse: one record falling through raw → clean → gold layers."""
-    b, dur = [], 6
-    b.append(f'<line x1="{x + 76}" y1="{y + 22}" x2="{x + 76}" y2="{y + 132}" stroke="{c["line"]}" stroke-width="2"/>')
-    for i, ly in enumerate([42, 71, 100]):
-        t = (ly + 9 - 22) / 110 * 0.7
-        b.append(f'<rect x="{x + 24}" y="{y + ly}" width="104" height="18" rx="5" fill="{c["cell"]}" '
-                 f'stroke="{c["line"]}"/>')
-        b.append(f'<rect x="{x + 24}" y="{y + ly}" width="104" height="18" rx="5" fill="{c["accent"]}" opacity="0">'
-                 f'<animate attributeName="opacity" dur="{dur}s" repeatCount="indefinite" '
-                 f'values="0;0;{0.25 + i * 0.25:.2f};0" keyTimes="0;{t - 0.04:.3f};{t:.3f};{t + 0.18:.3f}"/></rect>')
-    b.append(f'<circle cx="{x + 76}" cy="{y + 22}" r="5" fill="{c["accent"]}">'
-             f'<animate attributeName="cy" dur="{dur}s" repeatCount="indefinite" calcMode="spline" '
-             f'values="{y + 22};{y + 132};{y + 132}" keyTimes="0;0.7;1" keySplines="0.4 0 0.6 1;0 0 1 1"/>'
-             f'<animate attributeName="opacity" dur="{dur}s" repeatCount="indefinite" '
-             f'values="0;1;1;0;0" keyTimes="0;0.06;0.62;0.72;1"/></circle>')
-    return "".join(b)
-
-
-def search(c, x, y):
-    """FindingExcellence: a lens hopping across local files; the file it lands on lights up."""
-    b, dur = [], 10
-    stops = [(1, 0), (3, 1), (0, 2), (2, 1)]
-    cell = lambda i, j: (x + 24 + i * 28, y + 34 + j * 30)
-    k = len(stops)
-    for j in range(3):
-        for i in range(4):
-            cx, cy = cell(i, j)
-            b.append(f'<rect x="{cx}" y="{cy}" width="18" height="22" rx="3" fill="{c["cell"]}" stroke="{c["line"]}">')
-            if (i, j) in stops:
-                s = stops.index((i, j))
-                b.append(pulse(c["accent"], c["cell"], (s + 0.45) / k, (s + 0.95) / k, dur))
-            b.append("</rect>")
-            b.append(f'<line x1="{cx + 4}" y1="{cy + 8}" x2="{cx + 14}" y2="{cy + 8}" stroke="{c["line"]}" stroke-width="1.5"/>')
-            b.append(f'<line x1="{cx + 4}" y1="{cy + 13}" x2="{cx + 11}" y2="{cy + 13}" stroke="{c["line"]}" stroke-width="1.5"/>')
-    # lens rests on each stop for 40% of its slot, then eases to the next
-    vals, kt = [], []
-    for s, (i, j) in enumerate(stops):
-        px, py = cell(i, j)
-        vals += [f"{px + 9 - (x + 24)} {py + 11 - (y + 34)}"] * 2
-        kt += [s / k, (s + 0.4) / k]
-    vals.append(vals[0])
-    kt.append(1)
-    b.append(f'<g transform="translate({x + 24} {y + 34})">'
-             f'<circle r="15" fill="none" stroke="{c["text"]}" stroke-width="2.5"/>'
-             f'<line x1="11" y1="11" x2="19" y2="19" stroke="{c["text"]}" stroke-width="2.5" stroke-linecap="round"/>'
-             f'<animateTransform attributeName="transform" type="translate" additive="sum" dur="{dur}s" '
-             f'repeatCount="indefinite" calcMode="spline" values="{";".join(vals)}" '
-             f'keyTimes="{";".join(f"{t:.4f}" for t in kt)}" keySplines="{";".join([EASE] * (len(vals) - 1))}"/>'
-             f'</g>')
-    return "".join(b)
-
-
-def macropad(c, x, y):
-    """ajazz-deck: the AKP153's 15 keys firing their mapped commands."""
-    b, dur = [], 9
-    seq = [7, 2, 11, 4, 13, 0, 9]
-    for r in range(3):
-        for col in range(5):
-            idx = r * 5 + col
-            kx, ky = x + 22 + col * 22, y + 45 + r * 22
-            b.append(f'<rect x="{kx}" y="{ky}" width="18" height="18" rx="4" fill="{c["cell"]}" stroke="{c["line"]}">')
-            if idx in seq:
-                s = seq.index(idx)
-                t0 = (s + 0.1) / len(seq)
-                b.append(pulse(c["accent"], c["cell"], t0, t0 + 0.07, dur))
-            b.append("</rect>")
-    return "".join(b)
-
-
 ARROW = "M0 10 L10 0 M2.5 0 H10 V7.5"
 
 PROJECTS = [
-    ("addocu", "Addocu", sheet,
+    ("addocu", "Addocu",
      "Documents your whole Google marketing stack in seconds.",
      "Founder · open-source Google Sheets add-on · GA4 · GTM"),
-    ("solodshouse", "SoloDShouse", lakehouse,
+    ("solodshouse", "SoloDShouse",
      "MSc thesis · AI inference energy and cost analytics.",
      "Python · Iceberg · MLflow · LangGraph · local-first"),
-    ("findingexcellence", "FindingExcellence PRO", search,
+    ("findingexcellence", "FindingExcellence PRO",
      "File search with local AI. Nothing leaves your machine.",
      "Python · FastAPI · Ollama · zero external APIs"),
-    ("ajazz-deck", "ajazz-deck", macropad,
+    ("ajazz-deck", "ajazz-deck",
      "Linux daemon + CLI for the AJAZZ AKP153 macro pad.",
      "Python · Linux · one YAML file maps every key"),
 ]
 
 
-def card(c, name, title, draw, desc, meta):
-    w, h = 880, 200
-    b = [f'<rect x="24" y="24" width="152" height="152" rx="12" fill="{c["tile"]}" stroke="{c["line"]}"/>',
-         draw(c, 24, 24),
-         *([place(name, 208, 54, 34, c["text"])[0]] if (LOGOS / f"{name}.svg").exists() else []),
-         text(208 + (44 if (LOGOS / f"{name}.svg").exists() else 0), 82, title, 32, c["text"], "GS", track=-0.025),
-         text(208, 122, desc, 21, c["muted"]),
-         text(208, 164, meta, 15, c["faint"], "GM"),
-         f'<path d="{ARROW}" transform="translate(836 36)" fill="none" stroke="{c["faint"]}" '
+def card(c, name, title, desc, meta):
+    """A dated entry, not a tile: title in print, the description written in as the pen goes."""
+    w, h, x = 880, 128, GUTTER + 46
+    has = (LOGOS / f"{name}.svg").exists()
+    b = [*([place(name, x, 28, 34, c["text"])[0]] if has else []),
+         text(x + (44 if has else 0), 56, title, 32, c["text"], "GS", track=-0.025),
+         written(text(x, 88, desc, 21, c["muted"]), x, 70, width(desc, 21) + 14, 30, 0.4),
+         written(text(x, 112, meta, 16, c["faint"], "GM"), x, 98, width(meta, 16, "GM") + 14, 22, 1.3),
+         f'<path d="{ARROW}" transform="translate(836 32)" fill="none" stroke="{c["faint"]}" '
          f'stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>']
     return svg(w, h, f"{title} — {desc}", "".join(b), c)
 
@@ -398,7 +376,7 @@ def ticker(c):
     for r, (label, items) in enumerate(TOOLKIT):
         top = pad + r * row_h
         mid = top + row_h / 2
-        b.append(text(32, mid + 5, label, 14, c["faint"], "GM"))
+        b.append(text(GUTTER + 46, mid + 5, label, 17, c["faint"], "GM"))
         # one period of the band
         x, band = 0.0, []
         for slug, name in items:
@@ -420,7 +398,7 @@ def ticker(c):
                  f'dur="{period / 12:.1f}s" repeatCount="indefinite"/></g></g></g>')
     b.append(f'<rect x="{vx}" y="1" width="56" height="{h - 2}" fill="url(#fl)"/>')
     b.append(f'<rect x="{vx + vw - 72}" y="1" width="72" height="{h - 2}" fill="url(#fr)"/>')
-    b += [f'<line x1="24" y1="{pad + r * row_h}" x2="{w - 24}" y2="{pad + r * row_h}" stroke="{c["line"]}"/>'
+    b += [f'<line x1="{GUTTER + 22}" y1="{pad + r * row_h}" x2="{w - 24}" y2="{pad + r * row_h}" stroke="{c["line"]}"/>'
           for r in range(1, len(TOOLKIT))]
     flat = ", ".join(f"{lab}: " + ", ".join(n or "Piwik PRO" for _, n in items) for lab, items in TOOLKIT)
     return svg(w, h, f"Toolkit — {flat}.", "".join(b), c)
@@ -448,19 +426,19 @@ def credentials(c):
         y = top + i * row_h
         mid = y + row_h / 2
         if i:
-            b.append(f'<line x1="24" y1="{y}" x2="{w - 24}" y2="{y}" stroke="{c["line"]}"/>')
+            b.append(f'<line x1="{GUTTER + 22}" y1="{y}" x2="{w - 24}" y2="{y}" stroke="{c["line"]}"/>')
         last = i == n
         if not last:
             # checks draw once, in reading order, then hold (base offset 0 keeps them visible if SMIL never runs)
             t0 = (0.4 + i * 0.25) / dur
-            b.append(f'<path d="M{34} {mid} l6 6 l12 -12" fill="none" stroke="{c["accent"]}" stroke-width="2.5" '
+            b.append(f'<path d="M{66} {mid} l6 6 l12 -12" fill="none" stroke="{c["accent"]}" stroke-width="2.5" '
                      f'stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="26" stroke-dashoffset="0">'
                      f'<animate attributeName="stroke-dashoffset" dur="{dur}s" fill="freeze" '
                      f'values="26;26;0;0" keyTimes="0;{t0:.3f};{t0 + 0.4 / dur:.3f};1"/></path>')
         else:
-            b.append(f'<path d="M34 {mid} h18 M34 {mid - 6} h18 M34 {mid + 6} h12" stroke="{c["faint"]}" '
+            b.append(f'<path d="M66 {mid} h18 M66 {mid - 6} h18 M66 {mid + 6} h12" stroke="{c["faint"]}" '
                      f'stroke-width="2" stroke-linecap="round"/>')
-        b.append(text(76, mid + 7, name, 20, c["muted"] if last else c["text"]))
+        b.append(text(108, mid + 7, name, 20, c["muted"] if last else c["text"]))
         if slug:  # issuer mark, right-aligned
             lw = place(slug, 0, 0, 20, "")[1]
             b.append(place(slug, w - 32 - lw, mid - 10, 20, c["muted"])[0])
@@ -492,29 +470,38 @@ def focus(c):
     b = []
     for i, (shape, title, desc) in enumerate(FOCUS):
         col, row = i % 2, i // 2
-        x, y = 24 + col * 420, 24 + row * 144
-        b.append(f'<rect x="{x}" y="{y}" width="408" height="132" rx="12" fill="{c["tile"]}" stroke="{c["line"]}"/>')
-        b.append(f'<path d="{shape}" transform="translate({x + 24} {y + 28}) scale(2)" fill="none" '
+        x, y = GUTTER + 46 + col * 400, 24 + row * 144
+        b.append(f'<path d="{shape}" transform="translate({x} {y + 28}) scale(2)" fill="none" '
                  f'stroke="{c["muted"]}" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"/>')
-        b.append(text(x + 92, y + 48, title, 22, c["text"], "GS", track=-0.02))
+        b.append(text(x + 68, y + 48, title, 22, c["text"], "GS", track=-0.02))
         for k, line in enumerate(desc):
-            b.append(text(x + 92, y + 80 + k * 24, line, 17, c["muted"]))
+            b.append(text(x + 68, y + 80 + k * 24, line, 17, c["muted"]))
     flat = "; ".join(f"{t}: {' '.join(d)}" for _, t, d in FOCUS)
     return svg(w, h, f"Now building — {flat}", "".join(b), c)
 
 
 # --------------------------------------------------------------------------- activity (live)
 
-Q = """query($u:String!){user(login:$u){contributionsCollection{contributionCalendar{
-totalContributions weeks{contributionDays{contributionCount date}}}}}}"""
+# contributionCalendar.totalContributions is deliberately not read: on this account it reports 2,613
+# against 2,507 summed across the 365 day cells the same response returns. The counter below walks
+# the grid week by week, so it has to agree with the grid, not with a figure no cell accounts for.
+Q = """query($u:String!){user(login:$u){contributionsCollection{
+totalCommitContributions totalPullRequestContributions totalPullRequestReviewContributions
+totalRepositoriesWithContributedCommits
+contributionCalendar{weeks{contributionDays{contributionCount date}}}}}}"""
 
 
 def fetch_calendar():
     out = subprocess.run(["gh", "api", "graphql", "-f", f"query={Q}", "-F", f"u={USER}"],
                          check=True, capture_output=True, text=True).stdout
-    cal = json.loads(out)["data"]["user"]["contributionsCollection"]["contributionCalendar"]
-    return cal["totalContributions"], [[(d["date"], d["contributionCount"]) for d in wk["contributionDays"]]
-                                       for wk in cal["weeks"]]
+    cc = json.loads(out)["data"]["user"]["contributionsCollection"]
+    cal = cc["contributionCalendar"]
+    return {"weeks": [[(d["date"], d["contributionCount"]) for d in wk["contributionDays"]]
+                      for wk in cal["weeks"]],
+            "commits": cc["totalCommitContributions"],
+            "prs": cc["totalPullRequestContributions"],
+            "reviews": cc["totalPullRequestReviewContributions"],
+            "repos": cc["totalRepositoriesWithContributedCommits"]}
 
 
 def streaks(days):
@@ -531,48 +518,101 @@ def streaks(days):
     return cur, longest, sum(1 for n in counts if n)
 
 
-def activity(c, total, weeks):
-    w, h = 880, 292
+def odometer(x, y, steps, size, c):
+    """Count-up built from the real prefix values: one <text> per distinct number, shown on its
+    step and hidden by the next. The final value carries opacity="1" in the attribute, so a
+    renderer that ignores SMIL draws the finished figure and nothing else."""
+    out, prev = [], object()
+    for j, (t, v) in enumerate(steps):
+        if v == prev:
+            continue
+        prev = v
+        nxt = next((s for s, nv in steps[j + 1:] if nv != v), None)
+        if nxt is None:  # the run that reaches the end is the static base, emitted below
+            break
+        out.append(f'<text x="{x}" y="{y}" opacity="0">{v:,}'
+                   f'<set attributeName="opacity" to="1" begin="{t:.2f}s"/>'
+                   f'<set attributeName="opacity" to="0" begin="{nxt:.2f}s"/></text>')
+    final = steps[-1][1]
+    t_final = next(t for i, (t, v) in enumerate(steps)  # start of the final run, not an earlier tie
+                   if v == final and all(nv == final for _, nv in steps[i:]))
+    out.append(f'<text x="{x}" y="{y}" opacity="1">{final:,}'
+               f'<set attributeName="opacity" to="0" begin="0s"/>'
+               f'<set attributeName="opacity" to="1" begin="{t_final:.2f}s"/></text>')
+    return (f'<g class="GS" font-size="{size}" fill="{c["text"]}" letter-spacing="{-0.03 * size:.2f}">'
+            + "".join(out) + "</g>")
+
+
+def activity(c, cal):
+    w, h, weeks = 880, 344, cal["weeks"]
     days = [d for wk in weeks for d in wk]
     cur, longest, active_days = streaks(days)
+    total = sum(n for _, n in days)
     peak = max(n for _, n in days) or 1
-    stats = [(f"{total:,}", "contributions"), (f"{active_days}", "active days"),
-             (f"{longest}", "longest streak"), (f"{cur}", "current streak")]
+    # one column per week, left to right; every other animation hangs off these times
+    t0, span, fade = 0.3, 3.2, 0.5
+    starts = [t0 + span * i / max(1, len(weeks) - 1) for i in range(len(weeks))]
     b = []
-    for i, (v, lab) in enumerate(stats):
-        x = 40 + i * 200
-        b.append(text(x, 72, v, 36, c["text"], "GS", track=-0.03))
-        b.append(text(x, 98, lab, 14, c["faint"], "GM"))
+
+    # headline stats, stepped by the column that is filling: the counters follow the real
+    # cumulative curve of the year, so they speed up and stall exactly where the work did.
+    end, frames = 0, []
+    for i, wk in enumerate(weeks):
+        end += len(wk)
+        pre = days[:end]
+        pc, pl, pa = streaks(pre)
+        frames.append((starts[i], (sum(n for _, n in pre), pa, pl, pc)))
+    for k, lab in enumerate(["contributions", "active days", "longest streak", "current streak"]):
+        x = 72 + k * 190
+        b.append(odometer(x, 76, [(0.0, 0)] + [(t, f[k]) for t, f in frames], 36, c))
+        b.append(text(x, 102, lab, 14, c["faint"], "GM"))
+    # year totals with no per-week breakdown, so they hold until the playback has walked the year —
+    # showing them from the start reads as if they were accumulating too
+    row2 = []
+    for k, (v, lab) in enumerate([(cal["commits"], "commits"), (cal["prs"], "pull requests"),
+                                  (cal["reviews"], "reviews"), (cal["repos"], "repositories")]):
+        x = 72 + k * 190
+        row2.append(text(x, 140, f"{v:,}", 18, c["muted"], "GS", track=-0.02))
+        row2.append(text(x + width(f"{v:,}", 18, "GS") + 8, 140, lab, 13, c["faint"], "GM"))
+    b.append(f'<g opacity="1">{"".join(row2)}'
+             f'<set attributeName="opacity" to="0" begin="0s"/>'
+             f'<animate attributeName="opacity" values="0;1" begin="{t0 + span:.2f}s" dur="0.45s" '
+             f'fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.3 0 0.2 1"/></g>')
+
     cell, gap = 12, 3
-    x0, y0 = 40 + (800 - len(weeks) * (cell + gap) + gap) / 2, 140
+    x0, y0 = 72 + (776 - len(weeks) * (cell + gap) + gap) / 2, 196
+    b.append(f'<defs><path id="c" d="M3 1 L{cell - 3} {cell - 1}" fill="none" stroke-width="1.7" stroke-linecap="round"/></defs>')
     last_month = None
     for i, wk in enumerate(weeks):
         cx = x0 + i * (cell + gap)
         month = wk[0][0][:7]
         if month != last_month and (i or wk[0][0][8:] < "20"):  # skip a sliver of month at the left edge
-            b.append(text(cx, y0 - 12, date.fromisoformat(wk[0][0]).strftime("%b"), 12, c["faint"], "GM"))
+            b.append(text(cx, y0 - 14, date.fromisoformat(wk[0][0]).strftime("%b"), 12, c["faint"], "GM"))
         last_month = month
+        col = []
         for d, n in wk:
             j = date.fromisoformat(d).isoweekday() % 7
             if n:
                 lvl = 0.25 + 0.75 * min(1, math.sqrt(n / peak) * 1.3)
-                b.append(f'<rect x="{cx:.1f}" y="{y0 + j * (cell + gap)}" width="{cell}" height="{cell}" rx="3" '
-                         f'fill="{c["accent"]}" fill-opacity="{lvl:.2f}"/>')
+                col.append(f'<use href="#c" x="{cx:.1f}" y="{y0 + j * (cell + gap)}" '
+                           f'stroke="{c["accent"]}" stroke-opacity="{lvl:.2f}"/>')
             else:
-                b.append(f'<rect x="{cx:.1f}" y="{y0 + j * (cell + gap)}" width="{cell}" height="{cell}" rx="3" '
-                         f'fill="{c["cell"]}"/>')
-    # sweep: cells stay static (visible in any renderer), one scan pass on arrival, then gone
-    x_end = x0 + (len(weeks) - 1) * (cell + gap)
-    b.append(f'<rect x="{x0 - 2}" y="{y0 - 2}" width="{cell + 4}" height="{7 * (cell + gap) - gap + 4}" rx="4" '
-             f'fill="none" stroke="{c["accent"]}" stroke-width="1.5" opacity="0">'
-             f'<animate attributeName="x" values="{x0 - 2};{x_end - 2}" dur="4s" fill="freeze" '
-             f'calcMode="spline" keyTimes="0;1" keySplines="0.65 0 0.35 1"/>'
-             f'<animate attributeName="opacity" values="0;.7;.7;0" keyTimes="0;.08;.9;1" dur="4.4s" fill="freeze"/>'
-             f'</rect>')
+                col.append(f'<use href="#c" x="{cx:.1f}" y="{y0 + j * (cell + gap)}" stroke="{c["line"]}" stroke-opacity=".55"/>')
+        # the column is drawn whole and opaque; the <set> zeroes it only where SMIL runs, so the
+        # year plays back once and any renderer without SMIL still gets the finished grid
+        b.append(f'<g opacity="1">{"".join(col)}'
+                 f'<set attributeName="opacity" to="0" begin="0s"/>'
+                 f'<animate attributeName="opacity" values="0;1" begin="{starts[i]:.2f}s" dur="{fade}s" '
+                 f'fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.3 0 0.2 1"/>'
+                 f'<animateTransform attributeName="transform" type="translate" values="0 7;0 0" '
+                 f'begin="{starts[i]:.2f}s" dur="{fade}s" fill="freeze" calcMode="spline" keyTimes="0;1" '
+                 f'keySplines="{SPRING}"/></g>')
     today = days[-1][0]
-    b.append(text(w - 40, 270, f"last 12 months · updated {today}", 12, c["faint"], "GM", "end"))
-    return svg(w, h, f"GitHub activity, last 12 months: {total:,} contributions, {active_days} active days, "
-                     f"longest streak {longest} days, current streak {cur} days.", "".join(b), c)
+    b.append(text(w - 40, 322, f"last 12 months · updated {today}", 12, c["faint"], "GM", "end"))
+    return svg(w, h, f"GitHub activity, last 12 months: {total:,} contributions, {active_days} active "
+                     f"days, longest streak {longest} days, current streak {cur} days. "
+                     f"{cal['commits']:,} commits, {cal['prs']:,} pull requests, {cal['reviews']:,} reviews "
+                     f"across {cal['repos']} repositories.", "".join(b), c)
 
 
 # --------------------------------------------------------------------------- signature
@@ -615,6 +655,35 @@ def spline(pts):
 
 def signature(c, name="Javier Rodeiro"):
     h, size, x0, base, slant = 150, 72, 20, 88, 0.18
+    font, k, x, strokes = allure(), size / 1000, 0.0, []
+    for ch in name:
+        adv, d = font[ch]
+        strokes += [[(x0 + (x + px + py * slant) * k, base - py * k) for px, py in st] for st in glyph_strokes(d)]
+        x += adv + 30
+    xe = x0 + x * k
+    w = round(xe + 40)
+    swash = [(xe - 24, base - 4), (xe + 8, base - 10), (xe - 30, base + 26), (xe * 0.55, base + 20),
+             (x0 + 40, base + 18), (x0 + 14, base + 27)]
+    ds = [spline(st) for st in strokes] + [
+        f"M{swash[0][0]:.1f} {swash[0][1]} C{swash[1][0]:.1f} {swash[1][1]} {swash[2][0]:.1f} {swash[2][1]} "
+        f"{swash[3][0]:.1f} {swash[3][1]} S{swash[4][0]} {swash[4][1]} {swash[5][0]} {swash[5][1]}"]  # closing swash
+    # SVG restarts the dash pattern on every subpath, so each stroke gets its own path, timed
+    # by its length: the pen moves at one speed and lifts briefly between strokes.
+    lens = [sum(math.dist(a, b) for a, b in zip(st, st[1:])) for st in strokes + [swash]]
+    lens[-1] *= 0.75  # control polygon overestimates the curve
+    dur, lift = 4.5, 0.06
+    speed = (dur - 0.4 - lift * (len(lens) - 1)) / sum(lens)
+    t, paths = 0.4, []
+    for d, ln in zip(ds, lens):
+        a, z = t / dur, (t + ln * speed) / dur
+        # dasharray "1 2" keeps the undrawn stroke fully in the gap, so no round-cap dots before it starts
+        paths.append(f'<path d="{d}" pathLength="1" stroke-dasharray="1 2" stroke-dashoffset="0">'
+                     f'<animate attributeName="stroke-dashoffset" values="1;1;0;0" keyTimes="0;{a:.4f};{z:.4f};1" '
+                     f'dur="{dur}s" fill="freeze"/></path>')
+        t += ln * speed + lift
+    # base offset 0 shows the ink whole if SMIL never runs
+    nib = (f'<g id="ink">{"".join(paths)}</g>' +
+           "".join(f'<use href="#ink" x="{i * 0.45:.2f}" y="{-i * 0.45:.2f}"/>' for i in range(1, 7)))
     font, k, x, ds = allure(), size / 1000, 0.0, []
     for ch in name:
         adv, d = font[ch]
@@ -643,7 +712,7 @@ if __name__ == "__main__":
     cal = fetch_calendar()
     for theme, c in THEMES.items():
         files = {"hero": hero(c), "toolkit": ticker(c),
-                 "credentials": credentials(c), "focus": focus(c), "activity": activity(c, *cal),
+                 "credentials": credentials(c), "focus": focus(c), "activity": activity(c, cal),
                  "signature": signature(c)}
         for p in PROJECTS:
             files[f"card-{p[0]}"] = card(c, *p)

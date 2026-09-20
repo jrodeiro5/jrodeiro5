@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "lucide": "^1.47.0",
+    "morphicons": "1.7.1"
+  }
+}

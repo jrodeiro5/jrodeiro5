@@ -66,7 +66,7 @@ At **cinfo** I build AI and analytics solutions on a fully open-source stack. Be
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
-  <img alt="GitHub contribution activity over the last 12 months, updated daily." src="assets/activity-light.svg" width="100%" />
+  <img alt="GitHub activity over the last 12 months: contributions, active days, longest and current streak, then commits, pull requests, reviews and repositories contributed to, over a day-by-day contribution grid. Updated daily." src="assets/activity-light.svg" width="100%" />
 </picture>
 
 <h3>Writing &amp; talks</h3>

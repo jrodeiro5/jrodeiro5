@@ -1,1 +1,8 @@
 .gitnexus
+# Artefactos locales de agentes (no versionar)
+.omo/
+.mcp.json
+.claude/settings.local.json
+design/node_modules/
+.venv/
+__pycache__/
