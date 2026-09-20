@@ -106,11 +106,19 @@ def stats_svg(s, c):
         b.append(f'<rect x="{x:.1f}" y="{y0}" width="{max(w - 2, 1):.1f}" height="{sh}" fill="{SHADES[i]}"/>')
         if adv(k, 13) + 16 < w:
             b.append(t(round(x + 10, 1), y0 + sh - 12, k, 13, "#fff" if i < 3 else "#1B1B5A", "SB"))
-        b.append(t(round(x, 1), y0 + sh + 20, f"{p:.0f}%" if w > 36 else "", 12, c["muted"], "M"))
         x += w
-    b.append(t(32, y0 + sh + 46, f"Languages by code size across {s['repos']} owned repositories, notebooks excluded.", 13, c["muted"]))
+    # always-visible legend: an <img> SVG has no hover, so every share is printed, small ones included
+    lx, ly = 32, y0 + sh + 26
+    for i, (k, p) in enumerate(s["langs"]):
+        lab = f"{k} {p:.1f}%"
+        if lx + 22 + adv(lab, 13) > W - 32:
+            lx, ly = 32, ly + 22
+        b.append(f'<rect x="{lx}" y="{ly - 10}" width="10" height="10" fill="{SHADES[i]}"/>')
+        b.append(t(lx + 16, ly, lab, 13, c["ink"]))
+        lx += 16 + adv(lab, 13) + 22
+    b.append(t(32, ly + 28, f"Share of code by size across {s['repos']} owned repositories, notebooks excluded.", 13, c["muted"]))
     # history: stacked private/public per year
-    top, base, cw = 300, 400, 384
+    top, base, cw = 350, 450, 384
     mx = max(v["total"] for v in yrs.values())
     sc = lambda v: (base - top) * v / mx  # noqa: E731 — one scale for bars and labels
     n = len(yrs)
@@ -134,10 +142,10 @@ def stats_svg(s, c):
             (str(cur[1]["prs"]), f"pull requests, {cur[1]['commits']} commits"),
             (f"{s['private']} of {s['repos']}", "repositories are private")]
     for i, (big, lab) in enumerate(figs):
-        fy = 328 + i * 44
+        fy = 378 + i * 44
         b.append(t(470, fy, big, 34, c["ink"], "SB"))
         b.append(t(470 + 170, fy - 2, lab, 14, c["muted"]))
-    return frame(456, f"GitHub activity: {tot:,} contributions, {pct}% private.", "".join(b), c)
+    return frame(506, f"GitHub activity: {tot:,} contributions, {pct}% private.", "".join(b), c)
 
 
 def about_svg(c):
