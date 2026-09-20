@@ -20,19 +20,19 @@ THEMES = {
 DOMAINS = [("Programming", "#3B3BD8"), ("Marketing", "#C2510E"), ("Data", "#0B7F58")]
 SHADES = ["#3B3BD8", "#5757E6", "#7C7CF0", "#9B9BF4", "#B8B8F7", "#CFCFF9", "#DEDEFB"]
 
-STACKS = [
-    [("python", "Python"), ("typescript", "TypeScript"), ("go", "Go"), ("sql", "SQL"), ("fastapi", "FastAPI"),
-     ("nodedotjs", "Node.js"), ("modelcontextprotocol", "MCP"), ("claude", "Claude")],
-    [("googleanalytics", "GA4"), ("googletagmanager", "Tag Manager"), ("piwikpro", None),
-     ("adobe", "Adobe Analytics"), ("amplitude", "Amplitude"), ("posthog", "PostHog")],
-    [("googlebigquery", "BigQuery"), ("duckdb", "DuckDB"), ("apacheiceberg", None), ("mlflow", "MLflow"),
-     ("postgresql", "PostgreSQL"), ("supabase", "Supabase"), ("lookerstudio", "Looker Studio"),
-     ("powerbi", "Power BI")],
+STACKS = [  # ordered by how many of my local repos use each (see the stack survey in the commit message)
+    [("python", "Python"), ("typescript", "TypeScript"), ("sql", "SQL"), ("react", "React"), ("nextdotjs", "Next.js"),
+     ("fastapi", "FastAPI"), ("docker", "Docker"), ("modelcontextprotocol", "MCP")],
+    [("googleanalytics", "GA4"), ("googletagmanager", "Tag Manager"), ("adobe", "Adobe Analytics"),
+     ("lookerstudio", "Looker Studio"), ("powerbi", "Power BI"), ("tableau", "Tableau"), ("hotjar", "Hotjar")],
+    [("googlebigquery", "BigQuery"), ("snowflake", "Snowflake"), ("duckdb", "DuckDB"), ("postgresql", "PostgreSQL"),
+     ("supabase", "Supabase"), ("mlflow", "MLflow"), ("pandas", "pandas"), ("polars", "Polars")],
 ]
 
 HEADLINE = "AI & Analytics Developer at cinfo · A Coruña"
 ABOUT = ("AI & Analytics Developer at cinfo. Before that, two years of web and app analytics for PULL&BEAR "
-         "(Inditex), where I built OmniZenit, the official debugger for Inditex's in-house analytics tool.")
+         "(Inditex) at Ayesa, where I built OmniZenit, the official debugger for Inditex's in-house analytics tool. "
+         "I started as a data analyst at Bysidecar, improving lead conversion for insurance, energy and telecom clients.")
 RESEARCH = [("Agents and MCP", "MCP servers that give models real tools: GTM, documentation, media."),
             ("Knowledge systems", "Agent memory, RAG and search over what I save and read."),
             ("Local-first AI", "Models, speech and file search running on my own machine."),
@@ -42,7 +42,9 @@ MILESTONES = [("2026", "AI & Analytics Developer at cinfo"),
               ("2024–26", "Digital Data Analyst at Ayesa for PULL&BEAR (Inditex)"),
               ("2025–26", "MSc in Big Data, Data Science and AI, Complutense University"),
               ("2023–24", "Master in Web Analytics, KSchool"),
-              ("2022–24", "Data Analyst at Bysidecar")]
+              ("2022–24", "Data Analyst, Call Center CRO at Bysidecar (insurance, energy and telecom clients)")]
+CERTS = [("Analytics", "Google Analytics Individual Qualification"), ("Analytics", "Adobe Analytics Foundations"),
+         ("Agile", "Agile Certification Program, EBF Business School (Scrum Master, Product Owner)")]
 
 
 def gq(q, **v):
@@ -202,12 +204,20 @@ def about_svg(c):
 
 def milestones_svg(c):
     b = [t(32, 52, "Milestones", 13, c["muted"], "M")]
-    for i, (yr, what) in enumerate(MILESTONES):
+    rows = [(y, w) for y, w in MILESTONES]
+    cy = 92 + len(rows) * 44 + 12
+    for i, (yr, what) in enumerate(rows):
         y = 92 + i * 44
         b.append(f'<line x1="32" x2="{W - 32}" y1="{y - 27}" y2="{y - 27}" stroke="{c["line"]}"/>')
         b.append(t(32, y, yr, 15, c["priv"], "M"))
         b.append(t(150, y, what, 17, c["ink"]))
-    return frame(92 + len(MILESTONES) * 44 - 8, "Milestones.", "".join(b), c)
+    b.append(t(32, cy, "Certifications", 13, c["muted"], "M"))
+    for i, (kind, what) in enumerate(CERTS):
+        y = cy + 40 + i * 44
+        b.append(f'<line x1="32" x2="{W - 32}" y1="{y - 27}" y2="{y - 27}" stroke="{c["line"]}"/>')
+        b.append(t(32, y, kind, 15, c["priv"], "M"))
+        b.append(t(150, y, what, 17, c["ink"]))
+    return frame(cy + 40 + len(CERTS) * 44 - 8, "Milestones and certifications.", "".join(b), c)
 
 
 def stacks_svg(c):
@@ -231,7 +241,7 @@ def stacks_svg(c):
             if name:
                 band.append(t(round(x + 14 + lw + 8, 1), ry + 51, name, 14, "#fff", "SB"))
             x += pw + 10
-            names.append(name or {"piwikpro": "Piwik PRO", "apacheiceberg": "Iceberg"}[slug])
+            names.append(name)
         period = round(x)
         reps = math.ceil(vw / period) + 1
         tiles = f'<g id="s{r}">{"".join(band)}</g>' + "".join(f'<use href="#s{r}" x="{k * period}"/>' for k in range(1, reps))
@@ -253,10 +263,10 @@ def readme(s):
     top = ", ".join(f"{k} {p:.0f}%" for k, p in s["langs"][:3])
     alts = {
         "stats": f"GitHub activity: {tot:,} contributions since {month(s['start'])}, {pct}% in private repositories. Languages: {top}.",
-        "stacks": "Stack. " + " ".join(f"{d}: {', '.join(n or {'piwikpro': 'Piwik PRO', 'apacheiceberg': 'Iceberg'}[k] for k, n in items)}."
+        "stacks": "Stack. " + " ".join(f"{d}: {', '.join(n for _, n in items)}."
                                        for (d, _), items in zip(DOMAINS, STACKS)),
         "about": f"About: {ABOUT} Research lines: {', '.join(h for h, _ in RESEARCH)}.",
-        "milestones": "Milestones: " + "; ".join(f"{y}, {w}" for y, w in MILESTONES) + ".",
+        "milestones": "Milestones: " + "; ".join(f"{y}, {w}" for y, w in MILESTONES) + ". Certifications: " + "; ".join(w for _, w in CERTS) + ".",
     }
     pics = "\n<br>\n".join(
         f'<picture>\n  <source media="(prefers-color-scheme: dark)" srcset="assets/{n}-dark.svg" />\n'
