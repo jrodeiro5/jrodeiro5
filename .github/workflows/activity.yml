@@ -14,9 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
-      - run: uv run --with fonttools --with brotli design/page.py
+      - run: uv run --with fonttools --with brotli design/profile.py
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.PROFILE_TOKEN }}
       - run: |
           git add assets
           git diff --cached --quiet && exit 0
