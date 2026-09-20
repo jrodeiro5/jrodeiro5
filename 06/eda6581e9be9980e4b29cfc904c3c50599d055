@@ -1,0 +1,25 @@
+almanac/architecture/profile.md
+  s_0f89830565dc51::t_2a0d4176cba1d2 49,51,57-62,66,68,72,74
+  s_0f89830565dc51::t_e31dd472544017 1-35,37-38,40-48,50,52-56,63-65,67,69-71,73
+  s_0f89830565dc51::t_19466cbbd2d1be 36,39
+almanac/README.md
+  s_0f89830565dc51::t_a1eabf509c3905 35
+almanac/topics.yaml
+  s_0f89830565dc51::t_5d6bdd7f09edda 6-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "06eda6581e9be9980e4b29cfc904c3c50599d055",
+  "prompts": {},
+  "sessions": {
+    "s_0f89830565dc51": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0bde6-80ac-71e1-8f10-c4a44db5af24",
+        "model": "gpt-5.4-mini"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
