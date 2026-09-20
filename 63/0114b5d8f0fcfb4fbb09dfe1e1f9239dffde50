@@ -1,0 +1,133 @@
+assets/card-addocu-light.svg
+  s_3e08413bbd9e82::t_bf3f1284991544 1
+  s_3e08413bbd9e82::t_c3ebc981c720cd 54
+assets/focus-dark.svg
+  s_3e08413bbd9e82::t_c3ebc981c720cd 1
+design/build.py
+  s_bbdd381e6d76ad::t_4f23af322a383c 275
+  s_bbdd381e6d76ad::t_5c242a0a71b565 536-538
+  s_82c5c9225a3cad::t_1aa7b75640ba72 178-182,184-185,188-217,232,270
+  s_82c5c9225a3cad::t_9d45749368fdd0 37
+  s_bbdd381e6d76ad::t_8926b5df016991 93,95-107,111-117,120-130,135-136,138-139,141-144,147,149
+  s_bbdd381e6d76ad::t_a4734ae2e334c5 238-239,245-252,257-261,263,265,267-268,271,276
+  s_bbdd381e6d76ad::t_4445c12cc4c605 521-535,539-547,552-554,556-565,567-568,572-573,581,590,592,601-609,611,613-615
+  s_bbdd381e6d76ad::t_147bc5f2cc6d3f 45-48
+  s_bbdd381e6d76ad::t_ad7d8c9df48c3a 61-64,66-68,72-74
+  s_82c5c9225a3cad::t_46b593c201333b 658-680,682-686
+  s_bbdd381e6d76ad::t_11db3e0baba0a9 231
+  s_bbdd381e6d76ad::t_d2334fb929b4a1 612
+  s_bbdd381e6d76ad::t_c1fed59ded598a 550
+  s_bbdd381e6d76ad::t_f325586160d25a 569-571,575-580
+  s_bbdd381e6d76ad::t_f873e1ff8486ab 34
+  s_bbdd381e6d76ad::t_08b5541a2b7e68 241
+  s_bbdd381e6d76ad::t_f461e4498a6c30 158,161-163,165-175
+  s_bbdd381e6d76ad::t_56ecc9542d2dc7 485-487,491
+  s_bbdd381e6d76ad::t_487093f25e9e56 715
+  s_82c5c9225a3cad::t_7b9e4b380a4a5f 681
+  s_bbdd381e6d76ad::t_dcb35cfd5f8260 243,253-256,272-273
+  s_bbdd381e6d76ad::t_b40a8dfd5aa2ef 134,137
+  s_bbdd381e6d76ad::t_14de078e1cbd26 24-27,29-33
+  s_bbdd381e6d76ad::t_4f2f3360e014cc 499
+  s_bbdd381e6d76ad::t_6bb1a93e31c346 94,131-133,140,145-146,148
+  s_3e08413bbd9e82::t_f26f499a768177 285,288,291,294
+  s_3e08413bbd9e82::t_1b0d24291fea91 300-308,379,401,429,434,439,441,473-474,476,478,566,574,583-584,598,600
+  s_bbdd381e6d76ad::t_87ddc86d641d7e 488-490,497-498,500-504
+  s_bbdd381e6d76ad::t_af8d3546bee28d 597
+design/morph.mjs
+  s_82c5c9225a3cad::t_113d5717267df7 1-18,20-46
+  s_82c5c9225a3cad::t_ce9886baf59bfc 19
+design/test_activity.py
+  s_bbdd381e6d76ad::t_61366934b77a55 37
+  s_bbdd381e6d76ad::t_62ac0f243f104b 1-36,38-50
+assets/toolkit-dark.svg
+  s_3e08413bbd9e82::t_c3ebc981c720cd 1,8
+assets/card-findingexcellence-dark.svg
+  s_3e08413bbd9e82::t_bf3f1284991544 1
+assets/activity-light.svg
+  s_3e08413bbd9e82::t_c3ebc981c720cd 1
+assets/card-solodshouse-light.svg
+  s_3e08413bbd9e82::t_bf3f1284991544 1
+assets/signature-dark.svg
+  s_bbdd381e6d76ad::t_4623fedb87d83c 1
+assets/toolkit-light.svg
+  s_3e08413bbd9e82::t_c3ebc981c720cd 1,8
+assets/card-findingexcellence-light.svg
+  s_3e08413bbd9e82::t_bf3f1284991544 1
+assets/credentials-light.svg
+  s_3e08413bbd9e82::t_c3ebc981c720cd 1,8,15,17
+assets/card-addocu-dark.svg
+  s_3e08413bbd9e82::t_c3ebc981c720cd 54
+  s_3e08413bbd9e82::t_bf3f1284991544 1
+assets/card-solodshouse-dark.svg
+  s_3e08413bbd9e82::t_bf3f1284991544 1
+assets/credentials-dark.svg
+  s_3e08413bbd9e82::t_c3ebc981c720cd 1,8,15,17
+assets/activity-dark.svg
+  s_3e08413bbd9e82::t_c3ebc981c720cd 1
+.gitignore
+  s_82c5c9225a3cad::t_e5d9e51303625c 6
+  s_3e08413bbd9e82::t_03c063590b24e8 7-8
+  s_90c465f9003516::t_8c46e9824ec7f0 2-5
+assets/signature-light.svg
+  s_bbdd381e6d76ad::t_4623fedb87d83c 1
+assets/card-ajazz-deck-dark.svg
+  s_3e08413bbd9e82::t_bf3f1284991544 1
+assets/focus-light.svg
+  s_3e08413bbd9e82::t_c3ebc981c720cd 1
+design/package.json
+  s_82c5c9225a3cad::t_14b8e27faa440f 1-8
+README.md
+  s_bbdd381e6d76ad::t_25d207eb236a27 69
+assets/hero-light.svg
+  s_3e08413bbd9e82::t_c3ebc981c720cd 1
+design/requirements.txt
+  s_3e08413bbd9e82::t_d649ead5fdf7bf 1-2
+assets/card-ajazz-deck-light.svg
+  s_3e08413bbd9e82::t_bf3f1284991544 1
+assets/hero-dark.svg
+  s_bbdd381e6d76ad::t_dcb35cfd5f8260 1
+design/morphs.json
+  s_82c5c9225a3cad::t_ce9886baf59bfc 1
+design/pnpm-lock.yaml
+  s_82c5c9225a3cad::t_13636fada0c1fb 1-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "630114b5d8f0fcfb4fbb09dfe1e1f9239dffde50",
+  "prompts": {},
+  "sessions": {
+    "s_3e08413bbd9e82": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "32df498b-84e7-46f5-94f9-6c40d4496892",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    },
+    "s_82c5c9225a3cad": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e7888b3f-0220-48a7-8fc2-872352f74f87",
+        "model": "claude-opus-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    },
+    "s_90c465f9003516": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0820c-cd9a-7bc0-bbfd-c32359460b42",
+        "model": "gpt-5.4-mini"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    },
+    "s_bbdd381e6d76ad": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b558b59f-aa8c-4352-9967-b3557749e67c",
+        "model": "claude-opus-5"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
