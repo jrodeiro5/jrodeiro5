@@ -43,8 +43,16 @@ MILESTONES = [("2026", "AI & Analytics Developer at cinfo"),
               ("2025–26", "MSc in Big Data, Data Science and AI, Complutense University"),
               ("2023–24", "Master in Web Analytics, KSchool"),
               ("2022–24", "Data Analyst, Call Center CRO at Bysidecar (insurance, energy and telecom clients)")]
-CERTS = [("Analytics", "Google Analytics Individual Qualification"), ("Analytics", "Adobe Analytics Foundations"),
-         ("Agile", "Agile Certification Program, EBF Business School (Scrum Master, Product Owner)")]
+ORANGE, INDIGO, GREEN, GREY = "#C2510E", "#3B3BD8", "#0B7F58", "#5B6B62"
+# (logo slug or None, text mark, colour, accessible name); the badge itself is the label
+CERTS = [("snowflake", "", GREEN, "Snowflake University Platform Skills Badge"),
+         ("googleanalytics", "", ORANGE, "Google Analytics Individual Qualification"),
+         ("adobe", "", ORANGE, "Adobe Analytics Foundations"),
+         ("googlebigquery", "", GREEN, "Query GA4 Data in Google BigQuery (Simmer)"),
+         (None, "SM", INDIGO, "Scrum Master (Scrum Manager)"),
+         (None, "PO", INDIGO, "Product Owner (Scrum Manager)"),
+         (None, "GB", INDIGO, "Six Sigma Green Belt (PMI)"),
+         ("cambridgeenglish", "", GREY, "Cambridge C2 Proficiency in English")]
 
 
 def gq(q, **v):
@@ -203,22 +211,31 @@ def about_svg(c):
     return frame(y + 2 * 96 + 8, "About and research lines.", "".join(b), c)
 
 
+def badge(x, y, r, slug, mark, col, c, rot):
+    """Round merit-badge patch: coloured disc, stitched ring, white logo or text mark."""
+    g = [f'<circle r="{r}" fill="{col}" stroke="{c["bg"]}" stroke-width="4"/>',
+         f'<circle r="{r - 7}" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="3 3"/>']
+    if slug:
+        inner, lw = place(slug, 0, 0, 34, "#fff")
+        g.append(f'<g transform="translate({-lw / 2:.1f} -17)">{inner}</g>')
+    else:
+        g.append(t(0, 10, mark, 28, "#fff", "SB", "middle"))
+    return f'<g transform="translate({x} {y}) rotate({rot})">{"".join(g)}</g>'
+
+
 def milestones_svg(c):
     b = [t(32, 52, "Milestones", 13, c["muted"], "M")]
-    rows = [(y, w) for y, w in MILESTONES]
-    cy = 92 + len(rows) * 44 + 12
-    for i, (yr, what) in enumerate(rows):
+    for i, (yr, what) in enumerate(MILESTONES):
         y = 92 + i * 44
         b.append(f'<line x1="32" x2="{W - 32}" y1="{y - 27}" y2="{y - 27}" stroke="{c["line"]}"/>')
         b.append(t(32, y, yr, 15, c["priv"], "M"))
         b.append(t(150, y, what, 17, c["ink"]))
+    cy = 92 + len(MILESTONES) * 44 + 12
     b.append(t(32, cy, "Certifications", 13, c["muted"], "M"))
-    for i, (kind, what) in enumerate(CERTS):
-        y = cy + 40 + i * 44
-        b.append(f'<line x1="32" x2="{W - 32}" y1="{y - 27}" y2="{y - 27}" stroke="{c["line"]}"/>')
-        b.append(t(32, y, kind, 15, c["priv"], "M"))
-        b.append(t(150, y, what, 17, c["ink"]))
-    return frame(cy + 40 + len(CERTS) * 44 - 8, "Milestones and certifications.", "".join(b), c)
+    r, step = 46, 86  # step < 2r: patches overlap like badges on a sash
+    for i, (slug, mark, col, _) in enumerate(CERTS):
+        b.append(badge(32 + r + i * step, cy + 72 + (-10 if i % 2 else 10), r, slug, mark, col, c, 6 if i % 2 else -6))
+    return frame(cy + 150, "Milestones and certifications.", "".join(b), c)
 
 
 def stacks_svg(c):
@@ -267,7 +284,7 @@ def readme(s):
         "stacks": "Stack. " + " ".join(f"{d}: {', '.join(n for _, n in items)}."
                                        for (d, _), items in zip(DOMAINS, STACKS)),
         "about": f"About: {ABOUT} Research lines: {', '.join(h for h, _ in RESEARCH)}.",
-        "milestones": "Milestones: " + "; ".join(f"{y}, {w}" for y, w in MILESTONES) + ". Certifications: " + "; ".join(w for _, w in CERTS) + ".",
+        "milestones": "Milestones: " + "; ".join(f"{y}, {w}" for y, w in MILESTONES) + ". Certifications: " + "; ".join(k[3] for k in CERTS) + ".",
     }
     pics = "\n<br>\n".join(
         f'<picture>\n  <source media="(prefers-color-scheme: dark)" srcset="assets/{n}-dark.svg" />\n'

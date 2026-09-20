@@ -10,7 +10,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
-  <img alt="GitHub activity: 3,309 contributions since April 2024, 88% in private repositories. Languages: Python 45%, TypeScript 18%, Go 11%." src="assets/stats-light.svg" width="100%" />
+  <img alt="GitHub activity: 3,316 contributions since April 2024, 88% in private repositories. Languages: Python 45%, TypeScript 18%, Go 11%." src="assets/stats-light.svg" width="100%" />
 </picture>
 <br>
 <picture>
@@ -25,5 +25,5 @@
 <br>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/milestones-dark.svg" />
-  <img alt="Milestones: 2026, AI &amp; Analytics Developer at cinfo; 2025, Talk at MeasureCamp Madrid on MCP servers in data and analytics; 2024–26, Digital Data Analyst at Ayesa for PULL&amp;BEAR (Inditex); 2025–26, MSc in Big Data, Data Science and AI, Complutense University; 2023–24, Master in Web Analytics, KSchool; 2022–24, Data Analyst, Call Center CRO at Bysidecar (insurance, energy and telecom clients). Certifications: Google Analytics Individual Qualification; Adobe Analytics Foundations; Agile Certification Program, EBF Business School (Scrum Master, Product Owner)." src="assets/milestones-light.svg" width="100%" />
+  <img alt="Milestones: 2026, AI &amp; Analytics Developer at cinfo; 2025, Talk at MeasureCamp Madrid on MCP servers in data and analytics; 2024–26, Digital Data Analyst at Ayesa for PULL&amp;BEAR (Inditex); 2025–26, MSc in Big Data, Data Science and AI, Complutense University; 2023–24, Master in Web Analytics, KSchool; 2022–24, Data Analyst, Call Center CRO at Bysidecar (insurance, energy and telecom clients). Certifications: Snowflake University Platform Skills Badge; Google Analytics Individual Qualification; Adobe Analytics Foundations; Query GA4 Data in Google BigQuery (Simmer); Scrum Master (Scrum Manager); Product Owner (Scrum Manager); Six Sigma Green Belt (PMI); Cambridge C2 Proficiency in English." src="assets/milestones-light.svg" width="100%" />
 </picture>
