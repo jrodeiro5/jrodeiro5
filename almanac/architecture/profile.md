@@ -38,6 +38,12 @@ sources:
   - id: transcript-b558b59f
     type: conversation
     path: /Users/jrodeiro/.claude/projects/-Users-jrodeiro-dev-work-jrodeiro5/b558b59f-aa8c-4352-9967-b3557749e67c.jsonl
+  - id: design-cutout
+    type: file
+    path: design/cutout.py
+  - id: transcript-32df498b
+    type: conversation
+    path: /Users/jrodeiro/.claude/projects/-Users-jrodeiro-dev-work-jrodeiro5/32df498b-84e7-46f5-94f9-6c40d4496892.jsonl
 ---
 
 # GitHub profile README
@@ -66,6 +72,20 @@ GitHub renders these SVGs as `<img>`, which strips CSS, JavaScript, and external
 `design/test_activity.py` exists because the activity card's failure mode is silent: playback hides everything at t=0 and reveals it on a schedule, so a bug leaves an empty card for every SMIL-less renderer while looking correct in a browser. The test parses the SVG and asserts what a renderer without SMIL draws — one visible odometer value (the final one), week columns at full opacity, a year of cells, a playback that starts at 0s and ends inside the card, and a counter whose final value equals the `aria-label` total. `[@test-activity]`
 
 `build.py` deliberately does not read `contributionCalendar.totalContributions`: on this account it reports 2,613 against 2,507 summed across the 365 day cells the same response returns. The counter walks the grid week by week, so it must agree with the grid rather than with a figure no cell accounts for. `[@design-build]`
+
+## Certifications: a seamless panel
+
+The certifications section is a third subsystem of `design/profile.py`, separate from the four GitHub-data blocks and the "diary" builders in `build.py`. Each certification is embedded in a tile filled with the block background (`c["bg"]`), so adjacent images read as one continuous panel rather than discrete badges. `[@transcript-32df498b]`
+
+`cert_panel()` writes the tiles and feeds a module-level `CERT_ROWS` list that `readme()` consumes:
+
+- `tile(c, inner)` draws a 100-unit-wide rect filled with `c["bg"]` and returns it, so any badge placed inside inherits the block colour. `[@design-profile]`
+- Issuer badges are cut out by `design/cutout.py` into `assets/certs/<name>-{light,dark}.png`; `png_inner()` reads the PNG bytes and embeds them as a base64 data URI inside the tile, so the written SVG needs no external file. `[@design-cutout]`
+- Rows are centred with same-colour "filler" tiles (`t-fill*.svg`) whose width `pad_of()` derives from the row's leftover space; the Cambridge C2 badge is full-width, and a header row plus a pad row cap the block. `[@transcript-32df498b]`
+
+The panel only looks seamless if GitHub honours `align="top"` and renders the mosaic edges flush. If GitHub ignores the alignment, thin strips of page background show between rows; if it renders the seams, near-invisible lines may appear. Neither is verifiable from a local capture — the section was checked only in a Chrome capture forced to dark mode. The fallback is one SVG per row with a continuous background, which trades away the per-badge hover title. `[@transcript-32df498b]`
+
+To change the certifications, edit the `CERTS`/`ISSUED` lists and the `cert_panel()` helpers in `design/profile.py`, then run the build; do not edit `assets/certs/t-*.svg` by hand.
 
 ## Keeping it fresh
 
