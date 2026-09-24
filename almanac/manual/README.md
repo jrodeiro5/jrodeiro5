@@ -36,7 +36,7 @@ browseable Markdown tree.
 almanac/
 |-- README.md
 |-- topics.yaml
-|-- architecture/   (empty — placeholder for future standalone pages)
+|-- architecture/   (profile — the GitHub profile README system)
 |-- manual/         (13 bundled docs: how to write and maintain the wiki)
 `-- reference/      (empty — placeholder for future standalone pages)
 ```
