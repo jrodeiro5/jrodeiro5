@@ -1,0 +1,19 @@
+almanac/manual/README.md
+  s_7a5f7df0afdf54::t_438be6a5b9eea7 39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d563f2be1795afaec115ad09642aa365c1dcf6a8",
+  "prompts": {},
+  "sessions": {
+    "s_7a5f7df0afdf54": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d21d-b4a0-7031-b315-2f83e4442f8c",
+        "model": "gpt-5.4-mini"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
