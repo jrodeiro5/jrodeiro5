@@ -54,7 +54,7 @@ The repository root `README.md` is not project documentation; it is the rendered
 
 `design/profile.py` generates the four GitHub-data sections — `stats`, `about`, `milestones`, `stacks` — by querying the GraphQL API with `gh api`, so it must run authenticated as the profile owner to see private contributions. It writes `stats-{light,dark}.svg`, `about-*`, `milestones-*`, and `stacks-*`, then prints a one-line summary. `[@design-profile]`
 
-`design/build.py` is the "diary" visual system and holds the remaining builders — `hero`, `card`, `ticker` (the toolkit band), `credentials`, `focus`, `activity`, and `signature`. `profile.py` reuses `build.py` for fonts, text helpers, and logos, so the two files share the type layer. `[@design-build]` `design/page.py` renders the live activity page (blog feed plus contribution calendar) and is reused by `build.py`. `[@design-page]`
+`design/build.py` is the "diary" visual system and holds the remaining builders — `hero`, `card`, `ticker` (the toolkit band), `credentials`, `focus`, `activity`, and `signature`. `profile.py` reuses `build.py` for fonts, text helpers, and logos, so the two files share the type layer. `[@design-build]` `design/page.py` renders the whole profile as a single sidebar+column 'docs page' SVG (hero, selected work, toolkit, credentials, activity, writing, path). It reuses `build.py`'s helpers and content tables (logos, toolkit, focus icons, calendar fetch, projects) rather than the other way around: page.py imports build.py and is a standalone entry point (`python design/page.py`), not something `build.py` calls. `[@design-page]`
 
 ## The constraint is the whole design
 
