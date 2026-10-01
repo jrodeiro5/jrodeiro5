@@ -32,18 +32,9 @@ sources:
   - id: profile-readme
     type: file
     path: README.md
-  - id: transcript-e7888b3f
-    type: conversation
-    path: /Users/jrodeiro/.claude/projects/-Users-jrodeiro-dev-work-jrodeiro5/e7888b3f-0220-48a7-8fc2-872352f74f87.jsonl
-  - id: transcript-b558b59f
-    type: conversation
-    path: /Users/jrodeiro/.claude/projects/-Users-jrodeiro-dev-work-jrodeiro5/b558b59f-aa8c-4352-9967-b3557749e67c.jsonl
   - id: design-cutout
     type: file
     path: design/cutout.py
-  - id: transcript-32df498b
-    type: conversation
-    path: /Users/jrodeiro/.claude/projects/-Users-jrodeiro-dev-work-jrodeiro5/32df498b-84e7-46f5-94f9-6c40d4496892.jsonl
 ---
 
 # GitHub profile README
@@ -75,15 +66,15 @@ GitHub renders these SVGs as `<img>`, which strips CSS, JavaScript, and external
 
 ## Certifications: a seamless panel
 
-The certifications section is a third subsystem of `design/profile.py`, separate from the four GitHub-data blocks and the "diary" builders in `build.py`. Each certification is embedded in a tile filled with the block background (`c["bg"]`), so adjacent images read as one continuous panel rather than discrete badges. `[@transcript-32df498b]`
+The certifications section is a third subsystem of `design/profile.py`, separate from the four GitHub-data blocks and the "diary" builders in `build.py`. Each certification is embedded in a tile filled with the block background (`c["bg"]`), so adjacent images read as one continuous panel rather than discrete badges.
 
 `cert_panel()` writes the tiles and feeds a module-level `CERT_ROWS` list that `readme()` consumes:
 
 - `tile(c, inner)` draws a 100-unit-wide rect filled with `c["bg"]` and returns it, so any badge placed inside inherits the block colour. `[@design-profile]`
 - Issuer badges are cut out by `design/cutout.py` into `assets/certs/<name>-{light,dark}.png`; `png_inner()` reads the PNG bytes and embeds them as a base64 data URI inside the tile, so the written SVG needs no external file. `[@design-cutout]`
-- Rows are centred with same-colour "filler" tiles (`t-fill*.svg`) whose width `pad_of()` derives from the row's leftover space; the Cambridge C2 badge is full-width, and a header row plus a pad row cap the block. `[@transcript-32df498b]`
+- Rows are centred with same-colour "filler" tiles (`t-fill*.svg`) whose width `pad_of()` derives from the row's leftover space; the Cambridge C2 badge is full-width, and a header row plus a pad row cap the block.
 
-The panel only looks seamless if GitHub honours `align="top"` and renders the mosaic edges flush. If GitHub ignores the alignment, thin strips of page background show between rows; if it renders the seams, near-invisible lines may appear. Neither is verifiable from a local capture — the section was checked only in a Chrome capture forced to dark mode. The fallback is one SVG per row with a continuous background, which trades away the per-badge hover title. `[@transcript-32df498b]`
+The panel only looks seamless if GitHub honours `align="top"` and renders the mosaic edges flush. If GitHub ignores the alignment, thin strips of page background show between rows; if it renders the seams, near-invisible lines may appear. Neither is verifiable from a local capture — the section was checked only in a Chrome capture forced to dark mode. The fallback is one SVG per row with a continuous background, which trades away the per-badge hover title.
 
 To change the certifications, edit the `CERTS`/`ISSUED` lists and the `cert_panel()` helpers in `design/profile.py`, then run the build; do not edit `assets/certs/t-*.svg` by hand.
 
@@ -91,4 +82,6 @@ To change the certifications, edit the `CERTS`/`ISSUED` lists and the `cert_pane
 
 `.github/workflows/activity.yml` runs `design/profile.py` at 05:17 UTC (and on demand) with `secrets.PROFILE_TOKEN`, then commits and pushes refreshed `assets/` only when they changed. The token makes the run authenticated, which is what lets it see private contributions. `[@workflow-activity]`
 
-The build loop — `uv run --with fonttools --with brotli design/build.py`, then render the output in both themes — and the "never edit `assets/*.svg`" rule are documented in the project `readme-design` skill, which points at the spec `DESIGN.md`. `[@readme-skill]` The design narrative that shaped this system — the Hong Kong 90s "melancholy night" direction, the hand-written signature, and the switch from a hand-made morph to baked morphicons — came from the sessions that produced it. `[@transcript-e7888b3f][@transcript-b558b59f]`
+The build loop — `uv run --with fonttools --with brotli design/build.py`, then render the output in both themes — and the "never edit `assets/*.svg`" rule are documented in the project `readme-design` skill, which points at the spec `DESIGN.md`. `[@readme-skill]`
+
+The design narrative that shaped this system — the Hong Kong 90s "melancholy night" direction, the hand-written signature, and the switch from a hand-made morph to baked morphicons — came from the sessions that produced it. Those sessions were Claude Code transcripts stored under `~/.claude/projects/`; they have since been rotated out and are no longer recoverable, so this narrative stands here without a resolvable source. The hand-written signature and the baked-morph icon system it describes remain in `DESIGN.md` and the current `design/` code, but the "melancholy night" mood is no longer stated in the current spec.
