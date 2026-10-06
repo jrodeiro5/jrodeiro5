@@ -84,4 +84,10 @@ To change the certifications, edit the `CERTS`/`ISSUED` lists and the `cert_pane
 
 The build loop — `uv run --with fonttools --with brotli design/profile.py`, then render the output in both themes — and the "never edit `assets/*.svg`" rule are documented in the project `readme-design` skill, which points at the spec `DESIGN.md`. `[@readme-skill]`
 
+## The spec has drifted from the code
+
+No file in `design/` reads `DESIGN.md` at runtime: the builders hardcode their palettes, and the only external data they pull in comes from `morphs.json`, the SVG logos, the embedded fonts, and the GraphQL response. The spec is documentation only, so when it and the code disagree the code is authoritative.
+
+The current code and the shipped `assets/` render a cream-and-ink "diary" palette — light `#EDE3CC` / `#E7ECE6`, dark `#191309` / `#101512`, iron-gall-red accent `#8E3B31` — and the shipped SVGs carry exactly that palette (white and indigo appear nowhere in `assets/`). `DESIGN.md` v2.0, titled "Instrument", describes a different direction: a sober white (`#FFFFFF`) and indigo (`#4F5BD5`) Linear/Vercel-style profile. The code does not render that direction, so the profile that ships is the diary one. Edit `design/` to match the code, not the spec. `[@design-build][@design-page]`
+
 The design narrative that shaped this system — the Hong Kong 90s "melancholy night" direction, the hand-written signature, and the switch from a hand-made morph to baked morphicons — came from the sessions that produced it. Those sessions were Claude Code transcripts stored under `~/.claude/projects/`; they have since been rotated out and are no longer recoverable, so this narrative stands here without a resolvable source. The hand-written signature and the baked-morph icon system it describes remain in `DESIGN.md` and the current `design/` code, but the "melancholy night" mood is no longer stated in the current spec.
