@@ -29,6 +29,9 @@ sources:
   - id: readme-skill
     type: file
     path: .claude/skills/readme-design/SKILL.md
+  - id: readme-voice
+    type: file
+    path: .claude/skills/readme-voice/SKILL.md
   - id: profile-readme
     type: file
     path: README.md
@@ -83,6 +86,8 @@ To change the certifications, edit the `CERTS`/`ISSUED` lists and the `cert_pane
 `.github/workflows/activity.yml` runs `design/profile.py` at 05:17 UTC (and on demand) with `secrets.PROFILE_TOKEN`, then commits and pushes refreshed `assets/` only when they changed. The token makes the run authenticated, which is what lets it see private contributions. `[@workflow-activity]`
 
 The build loop — `uv run --with fonttools --with brotli design/profile.py`, then render the output in both themes — and the "never edit `assets/*.svg`" rule are documented in the project `readme-design` skill, which points at the spec `DESIGN.md`. `[@readme-skill]`
+
+Profile copy is a separate concern from the SVGs and is governed by the `readme-voice` skill, which holds the voice, points at the positioning in `PRODUCT.md`, and validates the result with the `hallmark` linter. Editing words on the profile should consult that skill rather than invent a voice. `[@readme-voice]`
 
 ## The spec has drifted from the code
 
