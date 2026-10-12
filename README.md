@@ -1,24 +1,16 @@
 <h1 align="center">Javier Rodeiro</h1>
 <p align="center">AI &amp; Analytics Developer at cinfo · A Coruña</p>
-<p align="center">When the tool a company needs does not exist, I build it: OmniZenit, Addocu and MCP servers.</p>
 
 <p align="center">
   <a href="https://javierrodeiro.com">javierrodeiro.com</a> &nbsp;·&nbsp;
   <a href="https://linkedin.com/in/javier-rodeiro-rodriguez">LinkedIn</a> &nbsp;·&nbsp;
-  <a href="https://medium.com/@jrodeiro.dev">Medium</a> &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/newsletters/puppets-scripts-7290366362223284224/">Puppets &amp; Scripts</a> &nbsp;·&nbsp;
   <a href="mailto:hello@javierrodeiro.com">hello@javierrodeiro.com</a>
 </p>
 
-<p align="center">
-  <a href="https://addocu.com">Addocu</a> &nbsp;·&nbsp;
-  <a href="https://github.com/jrodeiro5/ajazz-deck">ajazz-deck</a> &nbsp;·&nbsp;
-  <a href="https://github.com/jrodeiro5/media-tools">media-tools</a>
-</p>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
-  <img alt="GitHub activity: 3,603 contributions since April 2024, 87% in private repositories. Languages: Python 46%, TypeScript 18%, Go 11%." src="assets/stats-light.svg" width="100%" />
+  <img alt="GitHub activity: 3,644 contributions since April 2024, 87% in private repositories. Languages: Python 45%, TypeScript 18%, JavaScript 11%." src="assets/stats-light.svg" width="100%" />
 </picture>
 <br>
 <picture>
