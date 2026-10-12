@@ -1,0 +1,20 @@
+README.md
+  s_d7355368e4d7c3::t_d330af4c5935a6 3,8,13-16
+  s_d7355368e4d7c3::t_ac0c873ba398b5 17-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "111547bbd2dcf0df6512fafc38494429773d8428",
+  "prompts": {},
+  "sessions": {
+    "s_d7355368e4d7c3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ses_ed41bceceffe4qG4pFdH7L4min",
+        "model": "unknown"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
