@@ -1,0 +1,20 @@
+almanac/architecture/profile.md
+  s_d6f2150e252ee6::t_31bcda29f0be51 32-34,90
+  s_d6f2150e252ee6::t_35ab1ad5ff3388 91
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c4c86b06d66245956a0d36fc595d5bba1ac6028b",
+  "prompts": {},
+  "sessions": {
+    "s_d6f2150e252ee6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a124b6-a7a7-7111-bae4-a2be2efd710f",
+        "model": "gpt-5.4-mini"
+      },
+      "human_author": "jrodeiro5 <jrodeiro.dev@gmail.com>"
+    }
+  }
+}
