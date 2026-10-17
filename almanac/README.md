@@ -1,6 +1,6 @@
 ---
 title: CodeAlmanac Wiki
-topics: [manual]
+topics: []
 sources: []
 ---
 
@@ -27,11 +27,8 @@ Do not write pages that restate nearby code.
 
 ## Wiki Structure
 
-Pages live under `almanac/`. The wiki is organized into two areas:
+Pages live under `almanac/`. The wiki currently documents:
 
-- **Manual** — how to write CodeAlmanac pages, how the wiki works, and
-  how to maintain the graph.
-- **Standalone pages** — durable knowledge about this repository.
 - **GitHub profile** — how the generated SVG profile is built, constrained, and kept fresh ([profile](architecture/profile)).
 
 ## Topic Taxonomy

@@ -1,8 +1,4 @@
 topics:
-  - slug: manual
-    title: Manual
-    description: "Page writing standards and wiki maintenance workflows"
-    parents: []
   - slug: architecture
     title: Architecture
     description: "System areas, ownership, flows, and invariants"
