@@ -1,6 +1,6 @@
 ---
 title: CodeAlmanac Wiki
-topics: []
+topics: [architecture]
 sources: []
 ---
 
