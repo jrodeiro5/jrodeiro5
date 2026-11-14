@@ -1,0 +1,31 @@
+<h1 align="center">Javier Rodeiro</h1>
+<p align="center">AI &amp; Analytics Developer at cinfo · A Coruña</p>
+
+<p align="center">
+  <a href="https://javierrodeiro.com">javierrodeiro.com</a> &nbsp;·&nbsp;
+  <a href="https://linkedin.com/in/javier-rodeiro-rodriguez">LinkedIn</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/newsletters/puppets-scripts-7290366362223284224/">Puppets &amp; Scripts</a> &nbsp;·&nbsp;
+  <a href="mailto:hello@javierrodeiro.com">hello@javierrodeiro.com</a>
+</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
+  <img alt="GitHub activity: 4,052 contributions since April 2024, 0% in private repositories. Languages: Python 30%, nesC 20%, HTML 18%." src="assets/stats-light.svg" width="100%" />
+</picture>
+<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stacks-dark.svg" />
+  <img alt="Stack. Programming: Python, TypeScript, SQL, React, Next.js, FastAPI, Docker, MCP. Marketing: GA4, Tag Manager, Adobe Analytics, Looker Studio, Power BI, Tableau, Hotjar. Data: BigQuery, Snowflake, DuckDB, PostgreSQL, Supabase, MLflow, pandas, Polars." src="assets/stacks-light.svg" width="100%" />
+</picture>
+<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/about-dark.svg" />
+  <img alt="About: AI &amp; Analytics Developer at cinfo. Before that, two years of web and app analytics for PULL&amp;BEAR (Inditex) at Ayesa, where I built OmniZenit, the official debugger for Inditex's in-house analytics tool. I started as a data analyst at Bysidecar, improving lead conversion for insurance, energy and telecom clients. Research lines: Agents and MCP, Knowledge systems, Local-first AI, Data platforms." src="assets/about-light.svg" width="100%" />
+</picture>
+<br>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-head-dark.svg" /><img src="assets/certs/t-head-light.svg" width="100%" align="top" title="Certifications" alt="Certifications" /></picture><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-fill25.8-dark.svg" /><img src="assets/certs/t-fill25.8-light.svg" width="25.8%" align="top" title="" alt="" /></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-snowflake-dark.svg" /><img src="assets/certs/t-snowflake-light.svg" width="12%" align="top" title="Snowflake University Platform Skills Badge" alt="Snowflake University Platform Skills Badge" /></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-googlebigquery-dark.svg" /><img src="assets/certs/t-googlebigquery-light.svg" width="12%" align="top" title="Query GA4 Data in Google BigQuery (Simmer)" alt="Query GA4 Data in Google BigQuery (Simmer)" /></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-googleanalytics-dark.svg" /><img src="assets/certs/t-googleanalytics-light.svg" width="12%" align="top" title="Google Analytics Individual Qualification" alt="Google Analytics Individual Qualification" /></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-adobe-dark.svg" /><img src="assets/certs/t-adobe-light.svg" width="12%" align="top" title="Adobe Analytics Foundations" alt="Adobe Analytics Foundations" /></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-fill25.8-dark.svg" /><img src="assets/certs/t-fill25.8-light.svg" width="25.8%" align="top" title="" alt="" /></picture><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-fill19.8-dark.svg" /><img src="assets/certs/t-fill19.8-light.svg" width="19.8%" align="top" title="" alt="" /></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-scrum-master-dark.svg" /><img src="assets/certs/t-scrum-master-light.svg" width="12%" align="top" title="Scrum Master (Scrum Manager)" alt="Scrum Master (Scrum Manager)" /></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-product-owner-dark.svg" /><img src="assets/certs/t-product-owner-light.svg" width="12%" align="top" title="Product Owner (Scrum Manager)" alt="Product Owner (Scrum Manager)" /></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-agile-foundation-dark.svg" /><img src="assets/certs/t-agile-foundation-light.svg" width="12%" align="top" title="Agile Foundation (Scrum Manager)" alt="Agile Foundation (Scrum Manager)" /></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-kanban-dark.svg" /><img src="assets/certs/t-kanban-light.svg" width="12%" align="top" title="Kanban Essentials (Scrum Manager)" alt="Kanban Essentials (Scrum Manager)" /></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-lean-dark.svg" /><img src="assets/certs/t-lean-light.svg" width="12%" align="top" title="Lean (Scrum Manager)" alt="Lean (Scrum Manager)" /></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-fill19.8-dark.svg" /><img src="assets/certs/t-fill19.8-light.svg" width="19.8%" align="top" title="" alt="" /></picture><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-cambridge-c2-dark.svg" /><img src="assets/certs/t-cambridge-c2-light.svg" width="100%" align="top" title="Cambridge C2 Proficiency in English" alt="Cambridge C2 Proficiency in English" /></picture><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs/t-pad-dark.svg" /><img src="assets/certs/t-pad-light.svg" width="100%" align="top" title="" alt="" /></picture></p>
+<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/milestones-dark.svg" />
+  <img alt="Milestones: 2026, AI &amp; Analytics Developer at cinfo; 2025, Talk at MeasureCamp Madrid on MCP servers in data and analytics; 2024–26, Digital Data Analyst at Ayesa for PULL&amp;BEAR (Inditex); 2025–26, MSc in Big Data, Data Science and AI, Complutense University; 2023–24, Master in Web Analytics, KSchool; 2022–24, Data Analyst, Call Center CRO at Bysidecar (insurance, energy and telecom clients)." src="assets/milestones-light.svg" width="100%" />
+</picture>
